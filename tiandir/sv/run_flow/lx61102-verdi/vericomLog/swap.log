@@ -1,0 +1,32 @@
+version: (200506)
+
+available memory: 64M bytes
+used memory: 196608 bytes [need 128K bytes if disable swap]
+
+used block: 5699 [memory(2) file(5697)]
+                 [ 64K(5692) 128K(7) { total 357M bytes } ]
+overhead: (89246) bytes for (5699) blocks [Average: (15) bytes/block]
+
+write  => 0(times) 0K(bytes) [0K bytes to file]
+read   => 0(times) 0K(bytes) [0K bytes compressed data from file]
+access => 0(times) 0K(bytes)
+          [hit ratio: 0%]
+
+time: write(0) read(0)  unit: second
+
+swap file directory: (/mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/lx61102-verdi/vericomLog)
+used swap file number: (0)
+
+
+
+swap file manager:
+arrSize: (256)
+idxCnt: (2)
+closeHead: (1)
+closeTail: (1)
+openCnt: (1)
+fid(1): fd(11) fileName(/mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/lx61102-verdi/vericomLog/_swap_0001#-1463781758#89562)
+	size(0) lastModTime(0) curModTime(1705658260)
+	mode(w+b)	hot(0) cool(0) pos(0)
+fid(0): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)

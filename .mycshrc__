@@ -1,0 +1,173 @@
+#-------------------------------------------------
+# 	System settings
+#-------------------------------------------------
+set autolist
+#set complete=enhance
+set wrap
+set linebreak
+
+if (-e ~/.Xresources) then 
+	xrdb ~/.Xresources
+endif
+
+setenv TIENTQ_HOME /mnt/users/tientq
+setenv CURRENT_DIR `pwd`
+setenv PERL5LIB /mnt/users/tientq/perl_lib
+
+#-------------------------------------------------
+# 	set environment variable
+#-------------------------------------------------
+setenv VIM 						'~/.vim/plugged/'
+
+set BLACK       = "%{\033[1;30m%}"	;set DARK_BLACK       = "%{\033[0;30m%}"	
+set RED         = "%{\033[1;31m%}"	;set DARK_RED         = "%{\033[0;31m%}"	
+set GREEN       = "%{\033[1;32m%}"	;set DARK_GREEN       = "%{\033[0;32m%}"	
+set YELLOW      = "%{\033[1;33m%}"	;set DARK_YELLOW      = "%{\033[0;33m%}"	
+set BLUE        = "%{\033[1;34m%}"	;set DARK_BLUE        = "%{\033[0;34m%}"	
+set MAGENTA     = "%{\033[1;35m%}"	;set DARK_MAGENTA     = "%{\033[0;35m%}"	
+set CYAN        = "%{\033[1;36m%}"	;set DARK_CYAN        = "%{\033[0;36m%}"	
+set WHITE       = "%{\033[1;37m%}"	;set DARK_WHITE       = "%{\033[0;37m%}"	
+set RESET_COLOR = "%{\033[0m%}"		
+
+#-------------------------------------------------
+#  	Set color ls
+#-------------------------------------------------
+setenv LS_COLORS 'rs=0:di=01;36:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=01;33:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'# {{{# }}}
+
+#-------------------------------------------------
+# 	Command line 
+#-------------------------------------------------
+if ($CURRENT_DIR == $TIENTQ_HOME) then
+	if ($?WINDOWID) then
+		 set     prompt = "\n${BLUE}__XTERM__ ${GREEN}[ ${GREEN}`pwd`${GREEN} ] `date +%T`\n${BLUE}  (${BLUE}>.<${BLUE})${MAGENTA}   @${RESET_COLOR} "
+		 alias 	cd       'chdir \!*; set prompt = "\n${BLUE}__XTERM__ ${GREEN}[ ${GREEN}`pwd`${GREEN} ]\n${BLUE}  (${BLUE}>.<${BLUE})${MAGENTA}   @${RESET_COLOR} "; ls'
+	else    
+		 set     prompt = "\n${GREEN}[${GREEN}`hostname` ${GREEN}  : ${GREEN}`pwd`${GREEN}] `date +%T`\n${BLUE}  (${BLUE}>.<${BLUE})${MAGENTA}  @${RESET_COLOR} "
+		 alias 	cd       'chdir \!*; set prompt = "\n${GREEN}[${GREEN}`hostname` ${GREEN}  : ${GREEN}`pwd`${GREEN}]\n${BLUE}  (${BLUE}>.<${BLUE})${MAGENTA}  @${RESET_COLOR} "; ls'
+	endif
+endif
+
+#-------------------------------------------------
+# 	Alias
+#-------------------------------------------------
+
+alias line_cmt      'echo "#----------------------------------------------------------------------#"'
+alias b      		'cd ../ '
+alias bb     		'cd ../../'
+alias bbb     		'cd ../../../'
+
+alias ma            'mkdir'
+alias mm            'mv'
+alias mc            'cp -rf'
+alias pl			'perl'
+alias py			'python3'
+
+alias mkae			make
+alias so		    source
+alias vi          'vim -X'
+alias compilec    'make clean; make all'
+alias py_func     'python3 ~/python_dir/python_function.py'
+alias pdf         'xdg-open'
+alias precomp     'python3 ~/python_dir/precomp.py'
+alias pyhelp      'csh ~/tiandir/python/pyhelp.csh'
+
+#-------------------------------------------------
+# 	Alias for project
+#-------------------------------------------------
+#alias project_env "source /mnt/users/DV/utils/env.csh;source /mnt/users/DV/lx61100/env.csh; echo 'Getting environment for lx61100 was done!'; echo 'run gows to enter the ws'"
+#
+alias lx61100_env "source /mnt/users/DV/utils/env.csh; \
+    source /mnt/users/DV/lx61100/env.csh;              \
+    echo '#-------------------------------------------';  \
+    echo '#  Getting environment for lx61100 was done!';  \
+    echo '#-------------------------------------------';  \
+    goto_ws.pl"
+
+alias lx61102_env "source /mnt/users/DV/utils/env.csh; \
+    source /mnt/users/DV/lx61102/env.csh;              \
+    echo '#-------------------------------------------';  \
+    echo '#  Getting environment for lx61102 was done!';  \
+    echo '#-------------------------------------------';  \
+    goto_ws.pl"
+
+alias gosim       "goto_sim.pl"
+
+
+
+#-------------------------------------------------
+# Git
+#-------------------------------------------------
+# >>> git rev-parse --abbrev-ref HEAD # view current branch name
+git config --global color.branch auto
+git config --global color.diff auto
+git config --global color.interactive auto
+git config --global color.status auto
+git config --global color.ui true
+git config core.fileMode false
+git config --global core.excludesfile ~/.gitignore_global
+alias gb 'git branch'
+alias gc 'git checkout'
+alias ga 'git add'
+
+#-------------------------------------------------
+# auto run  
+#-------------------------------------------------
+#cd
+# LSF
+source /mnt/share/common/env/cshrc.env
+
+if ($CURRENT_DIR == $TIENTQ_HOME) then
+    clear
+	echo "          ------------"
+	echo "          < Hi there >"
+	echo "          ============"
+	echo "                \   ^__^"
+	echo "                 \  (oo)\_______"
+	echo "                    (__)\       )\/\"
+	echo "                        ||----w |"
+	echo "                        ||     ||"
+	echo "\033[0m"
+	date
+    echo ""
+    echo "------------------------------------"
+    echo "Which project you do?"
+    echo "    >> \033[1;31mlx61100_env\033[0m"
+    echo "    >> \033[1;32mlx61102_env\033[0m"
+    #project_env
+    echo "------------------------------------"
+endif
+
+
+
+
+#-------------------------------------------------------------------------
+# 	Note
+#-------------------------------------------------------------------------
+
+# Compress   : tar -zcvf folder.tar.gz folder
+# Decompress : tar -zxvf file.tar.gz
+#              tar  xjvf file.tar.bz2
+
+# Delete .nsf: lsof <.nsf_link>
+#
+# sed -i 's/pattern/replacement/g' file.txt
+# sed "15i avatar" <file> : add text to line 15
+#
+# verdi -cov -covdir <file>.vdb
+#
+# grep -rni: sensitive search
+# grep -rnI: skip search binary file
+# 
+# bsub -u all
+#
+
+# vim: set ft=csh:
+
+# bitbucket: "https://project.coasia.com/confluence/display/SOC/BITBUCKET"
+
+# for echo current git branch
+#set git_branch = `git symbolic-ref --short HEAD`
+#set     prompt = "\n${GREEN}[${GREEN}`hostname` ${GREEN}  : ${GREEN}`pwd`${GREEN}] ${RED}*${git_branch}\n${BLUE}  (${BLUE}>.<${BLUE})${MAGENTA}  @${RESET_COLOR} "
+#unalias cd
+#alias 	cd       'chdir \!*; set prompt = "\n${GREEN}[${GREEN}`hostname` ${GREEN}  : ${GREEN}`pwd`${GREEN}] ${RED}*${git_branch}\n${BLUE}  (${BLUE}>.<${BLUE})${MAGENTA}  @${RESET_COLOR} "; ls'
+#

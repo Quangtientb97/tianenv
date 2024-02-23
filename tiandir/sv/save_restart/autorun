@@ -1,0 +1,4 @@
+rm -rf lib_dbs
+bsub -Ip source 0_xrun_compile_lib.csh; \
+    source 1_xrun_save_boot.csh; \
+    source 2_xrun_restart.csh

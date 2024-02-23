@@ -1,0 +1,2979 @@
+xrun(64): 20.09-s018: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s018: Started on Jan 30, 2024 at 17:17:54 KST
+xrun
+	-64bit
+	-access +rwc
+	-sv
+	-disable_sem2009
+	-licq
+	-timescale 1ns/10ps
+	-vtimescale 10ps/10ps
+	-define UVM_NO_DEPRECATED
+	-define UVM_HDL_MAX_WIDTH=1248
+	-reflib /mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/lx61102-lib/lx61102_lib
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_clk_se/nx_ext_clk_se_if.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_clk_se/nx_ext_clk_se_pkg.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_rst/nx_ext_rst_if.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_rst/nx_ext_rst_pkg.sv
+	-loadvpi /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/verilog/libcdnsv.so:cdnsvVIP:export
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliMem.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliCdn_apb.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_apb/cdnApbUvmTop.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_apb2_m/cdn_apb2_m_if.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_apb2_m/cdn_apb2_m_pkg.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliCdn_ahb.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_ahb/cdnAhbUvmTop.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_ahb2_m/cdn_ahb2_m_if.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_ahb2_m/cdn_ahb2_m_pkg.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliSpi.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/spi/cdnSpiUvmTop.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_spi/spi_env_pkg.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/hdl_interfaces/spi/cdnSpiActiveInterface.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/hdl_interfaces/spi/cdnSpiPassiveInterface.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliJtag.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/jtag/cdnJtagUvmTop.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_jtag/cdnJtagInterface.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_jtag/cdn_jtag_pkg.sv
+	/mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/cdn-vip-lib/cdn_vip_lib/64bit/xmsim_psui.sv
+	-top specman
+	-top specman_wave
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliUart.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/uart/cdnUartUvmTop.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_uart/cdn_uart_if.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_uart/cdn_uart_pkg.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliCdn_i2c.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_i2c/cdnI2cUvmTop.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/cdn_i2c_env/cdnI2cUser_pkg.sv
+	/tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/hdl_interfaces/cdn_i2c/cdnI2cInterface.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/i2c_env_pkg.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_intf.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_defines.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_div_chk.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_source_clk_input_chk.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_pll_chk.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_chk.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_sel_chk.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_freq.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/wdt/wdt_intf.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_intf.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_defines.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_sysrst_deassert_chk.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_sysrst_ip_chk.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_bind_sysrst.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_trim_data_chk.sv
+	-incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv
+	-incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_apb
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_apb2_m
+	-incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_ahb
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_ahb2_m
+	-incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/spi
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_spi
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_spi/cdn_spi_env
+	-incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/jtag
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_jtag
+	-incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/uart
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_uart
+	-incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_i2c
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/cdn_i2c_env
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/wdt
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk
+	-define DENALI_UVM
+	-define CDN_AUTO_TEST
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cm3/uvm/cm3_nvic_if.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cm3/uvm/cm3_pkg.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tube/tube_pkg.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cmsdk/cmsdk_uart_capture_ard.v
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cmsdk/cmsdk_uart_capture_ard_bind.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/csv_uvmc_sdk/uvm/csv_uvmc_sdk_pkg.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/csv_uvmc_sdk/sv/csv_svc_sdk.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/reg_model/reg_model_pkg.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/lx61102/lx61102_pkg.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/common/common_pkg.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_if.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_env_pkg.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_sva_dnf_chk.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_sva_bind_dnf.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_if.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb_pkg.sv
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb.sv
+	-top soc_tb
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/top/top.sv
+	-define SIM_POWER_PINS
+	-define SIM_FAST_ERASE
+	-top top
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac_defs.v
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacB.v
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacE.v
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacI.v
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacM.v
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacR.v
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac.v
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacDSM.v
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac_undefs.v
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac_bind.sv
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cm3/uvm
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tube/
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/csv_uvmc_sdk/uvm
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/reg_model
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/lx61102
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/common
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/intr
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/ualdis
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_lic_defs
+	-define USE_TUBE
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_clk_se
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_rst
+	-define LX61102_VE
+	-define UVM_REG_ADDR_WIDTH=32
+	-define UVM_REG_DATA_WIDTH=32
+	-uvm
+	-uvmhome CDNS-1.2
+	-c
+	-process_save
+	-mkdbssnap
+	-xmlibdirname lx61102_dbs
+	-coverage all
+	-covoverwrite
+	-covdut lx61102
+	-write_metrics
+	-covfile /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/misc/coverage/coverage.ccf
+	/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/cpu/cpu_vseq_pkg.sv
+	-top cpu_vseq_pkg
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/cpu
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/rcu
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/ccu
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/wdt
+	-incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/pmu
+xrun: *N,SNPREC: The existing contents of the environment SPECMAN_PRE_COMMANDS will only be passed on to the simulation phase (test).
+xrun: *N,ROELAB: Library lx61102_lib is read-only for the elaborator.
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/XCELIUM/XCELIUM2009/tools/methodology/UVM/CDNS-1.2
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_clk_se/nx_ext_clk_se_if.sv
+	interface worklib.nx_ext_clk_se_if:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_clk_se/nx_ext_clk_se_pkg.sv
+	package worklib.nx_ext_clk_se_pkg:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_rst/nx_ext_rst_if.sv
+	interface worklib.nx_ext_rst_if:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_rst/nx_ext_rst_pkg.sv
+	package worklib.nx_ext_rst_pkg:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliMem.sv
+	package worklib.CdnSvVip:sv
+		errors: 0, warnings: 0
+	package worklib.DenaliSvMem:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliCdn_apb.sv
+	package worklib.DenaliSvCdn_apb:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_apb/cdnApbUvmTop.sv
+	package worklib.cdnApbUvm:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_apb2_m/cdn_apb2_m_if.sv
+	interface worklib.cdn_apb2_m_if:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_apb2_m/cdn_apb2_m_pkg.sv
+	package worklib.cdn_apb2_m_pkg:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliCdn_ahb.sv
+	package worklib.DenaliSvCdn_ahb:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_ahb/cdnAhbUvmTop.sv
+	package worklib.cdnAhbUvm:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_ahb2_m/cdn_ahb2_m_if.sv
+	interface worklib.cdn_ahb2_m_if:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_ahb2_m/cdn_ahb2_m_pkg.sv
+	package worklib.cdn_ahb2_m_pkg:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliSpi.sv
+	package worklib.DenaliSvSpi:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/spi/cdnSpiUvmTop.sv
+	package worklib.cdnSpiUvm:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_spi/spi_env_pkg.sv
+	package worklib.spi_env_pkg:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/hdl_interfaces/spi/cdnSpiActiveInterface.sv
+	interface worklib.cdnSpiActiveInterface:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/hdl_interfaces/spi/cdnSpiPassiveInterface.sv
+	interface worklib.cdnSpiPassiveInterface:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliJtag.sv
+	package worklib.DenaliSvJtag:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/jtag/cdnJtagUvmTop.sv
+	package worklib.cdnJtagUvm:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_jtag/cdnJtagInterface.sv
+	interface worklib.cdnJtagInterface:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_jtag/cdn_jtag_pkg.sv
+	package worklib.cdn_jtag_pkg:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/cdn-vip-lib/cdn_vip_lib/64bit/xmsim_psui.sv
+	module worklib.specman:sv
+		errors: 0, warnings: 0
+	module worklib.specman_wave:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliUart.sv
+	package worklib.DenaliSvUart:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/uart/cdnUartUvmTop.sv
+	package worklib.cdnUartUvm:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_uart/cdn_uart_if.sv
+	interface worklib.cdn_uart_if:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_uart/cdn_uart_pkg.sv
+	package worklib.cdn_uart_pkg:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliCdn_i2c.sv
+	package worklib.DenaliSvCdn_i2c:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_i2c/cdnI2cUvmTop.sv
+	package worklib.cdnI2cUvm:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/cdn_i2c_env/cdnI2cUser_pkg.sv
+	package worklib.cdnI2cUser_pkg:sv
+		errors: 0, warnings: 0
+file: /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/hdl_interfaces/cdn_i2c/cdnI2cInterface.sv
+	interface worklib.cdnI2cInterface:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/i2c_env_pkg.sv
+        slv_cfg.fs_speed_mode = 2; // FAST_PLUS
+                                |
+xmvlog: *W,ENUMERR (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/i2c_config_seq.sv,38|32): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+            mst_cfg.fs_speed_mode = 1; // CDN_I2C_CFG_FS_SPEED_MODE_FAST;
+                                    |
+xmvlog: *W,ENUMERR (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/i2c_config_seq.sv,58|36): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+            mst_cfg.fs_speed_mode  = 2; // CDN_I2C_CFG_FS_SPEED_MODE_FASTPLUS;
+                                     |
+xmvlog: *W,ENUMERR (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/i2c_config_seq.sv,64|37): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+	package worklib.i2c_env_pkg:sv
+		errors: 0, warnings: 3
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_intf.sv
+	interface worklib.ccu_intf:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_defines.sv
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_div_chk.sv
+	module worklib.ccu_sva_div_chk:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_source_clk_input_chk.sv
+	module worklib.ccu_source_clk_input_chk:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_pll_chk.sv
+	module worklib.ccu_sva_pll_chk:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv
+	module worklib.ccu_sva_freq_ip_chk:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_chk.sv
+	module worklib.ccu_sva_freq_chk:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_sel_chk.sv
+	module worklib.ccu_sva_sel_chk:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_freq.sv
+	module worklib.ccu_sva_bind_freq_m:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv
+	module worklib.ccu_sva_bind_mux_m:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/wdt/wdt_intf.sv
+	interface worklib.wdt_intf:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_intf.sv
+	interface worklib.rcu_intf:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_defines.sv
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_sysrst_deassert_chk.sv
+	module worklib.rcu_sva_sysrst_deassert_chk:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_sysrst_ip_chk.sv
+	module worklib.rcu_sva_sysrst_ip_chk:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_bind_sysrst.sv
+	module worklib.rcu_sva_system_rst_m:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_trim_data_chk.sv
+	module worklib.rcu_sva_trim_data_chk:sv
+		errors: 0, warnings: 0
+endmodule : rcu_sva_sysrst_ip_chk
+                                |
+xmvlog: *W,LBLMAT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_trim_data_chk.sv,72|32): Label/name mismatch: rcu_sva_trim_data_chk - rcu_sva_sysrst_ip_chk.
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cm3/uvm/cm3_nvic_if.sv
+	interface worklib.cm3_nvic_if:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cm3/uvm/cm3_pkg.sv
+	package worklib.cm3_pkg:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tube/tube_pkg.sv
+	package worklib.tube_pkg:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cmsdk/cmsdk_uart_capture_ard.v
+	module worklib.cmsdk_uart_capture_ard:v
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cmsdk/cmsdk_uart_capture_ard_bind.sv
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/csv_uvmc_sdk/uvm/csv_uvmc_sdk_pkg.sv
+	package worklib.csv_uvmc_sdk_pkg:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/csv_uvmc_sdk/sv/csv_svc_sdk.sv
+	module worklib.csv_svc_sdk:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/reg_model/reg_model_pkg.sv
+	package worklib.reg_model_pkg:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/lx61102/lx61102_pkg.sv
+	package worklib.lx61102_pkg:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/common/common_pkg.sv
+	package worklib.common_pkg:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_if.sv
+	interface worklib.gpio_if:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_env_pkg.sv
+	package worklib.gpio_env_pkg:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_sva_dnf_chk.sv
+	module worklib.gpio_sva_dnf_chk:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_sva_bind_dnf.sv
+	module worklib.gpio_sva_bind_dnf:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_if.sv
+	interface worklib.soc_if:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb_pkg.sv
+	package worklib.soc_tb_pkg:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb.sv
+    endfunction: buld_phase
+                          |
+xmvlog: *W,LBLMAT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/intr/intr_connection_check.sv,36|26): Label/name mismatch: build_phase - buld_phase.
+(`include file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/intr/intr_connection_check.sv line 36, file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb.sv line 7)
+	module worklib.soc_tb:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/top/top.sv
+	module worklib.top:sv
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac_defs.v
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacB.v
+	module worklib.tarmacB:v
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacE.v
+	module worklib.tarmacE:v
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacI.v
+	module worklib.tarmacI:v
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacM.v
+	module worklib.tarmacM:v
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacR.v
+	module worklib.tarmacR:v
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac.v
+	module worklib.tarmac:v
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacDSM.v
+	module worklib.tarmacDSM:v
+		errors: 0, warnings: 0
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac_undefs.v
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac_bind.sv
+file: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/cpu/cpu_vseq_pkg.sv
+	package worklib.cpu_vseq_pkg:sv
+		errors: 0, warnings: 0
+xmvlog: *W,SPDUSD: Include directory /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ given but not used.
+xmvlog: *W,SPDUSD: Include directory /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/rcu given but not used.
+xmvlog: *W,SPDUSD: Include directory /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/ccu given but not used.
+xmvlog: *W,SPDUSD: Include directory /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/wdt given but not used.
+xmvlog: *W,SPDUSD: Include directory /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/pmu given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 7
+	Elaborating the design hierarchy:
+xmelab: *N,CGNSWA: (File: /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/misc/coverage/coverage.ccf, Line: 4): A covergroup is not (de)selected with the "-all" option of the (de)select_coverage command. Use the coverage metric "-covergroup" with the (de)select_coverage command to (de)select a covergroup.
+		Caching library 'worklib' ....... Done
+		Caching library 'lx61102_lib' ....... Done
+        fpi u_fpi (
+                |
+xmelab: *W,CUVWSP (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/fpi_wrapper.sv,28|16): 2 output ports were not connected:
+xmelab: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/fpi.v,23): i2c_slave_sda_o
+xmelab: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/fpi.v,24): i2c_slave_sda_oen
+
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		nx_ext_clk_se_pkg
+		nx_ext_rst_pkg
+		DenaliSvMem
+		CdnSvVip
+		DenaliSvCdn_ahb
+		cdnAhbUvm
+		DenaliSvSpi
+		cdnSpiUvm
+		DenaliSvCdn_apb
+		cdnApbUvm
+		cdn_apb2_m_pkg
+		cdn_ahb2_m_pkg
+		spi_env_pkg
+		DenaliSvJtag
+		cdnJtagUvm
+		DenaliSvUart
+		cdnUartUvm
+		DenaliSvCdn_i2c
+		cdnI2cUvm
+		cdnI2cUser_pkg
+		cm3_pkg
+		reg_model_pkg
+		csv_uvmc_sdk_pkg
+		tube_pkg
+		lx61102_pkg
+		gpio_env_pkg
+		cdn_jtag_pkg
+		cdn_uart_pkg
+		i2c_env_pkg
+		soc_tb_pkg
+		$unit_0x6777c78d
+		$unit_0x72854a89
+		specman
+		specman_wave
+		soc_tb
+		top
+		cpu_vseq_pkg
+
+	Extracting FSMs for coverage:
+		lx61102_lib.cm3_sync
+		lx61102_lib.cm3_clk_gate
+		lx61102_lib.cm3_dpu_fetch_ctl
+			FSM extracted for state register state
+		lx61102_lib.cm3_dpu_fetch_ahbintf
+		lx61102_lib.cm3_dpu_fetch
+		lx61102_lib.cm3_dpu_16bit_dec
+		lx61102_lib.cm3_dpu_32bit_dec
+		lx61102_lib.cm3_dpu_br_dec
+		lx61102_lib.cm3_dpu_dec
+		lx61102_lib.cm3_dpu_exec
+		lx61102_lib.cm3_dpu_status
+		lx61102_lib.cm3_dpu_alu_ctl
+		lx61102_lib.cm3_dpu_alu_bshift
+		lx61102_lib.cm3_dpu_alu_srtdiv
+		lx61102_lib.cm3_dpu_alu_dp
+		lx61102_lib.cm3_dpu_alu
+		lx61102_lib.cm3_dpu_lsu_ctl
+			FSM extracted for state register state
+		lx61102_lib.cm3_dpu_lsu_ahbintf
+		lx61102_lib.cm3_dpu_lsu
+		lx61102_lib.cm3_dpu_regfile
+		lx61102_lib.cm3_dpu_regbank
+		lx61102_lib.cm3_dpu_etmintf
+		lx61102_lib.cm3_dpu
+		lx61102_lib.cm3_nvic_ppb_intf
+		lx61102_lib.cm3_nvic_reg
+		lx61102_lib.cm3_nvic_int_state
+		lx61102_lib.cm3_nvic_preempt
+		lx61102_lib.cm3_nvic_cell
+		lx61102_lib.cm3_nvic_tree
+		lx61102_lib.cm3_nvic_main
+		lx61102_lib.cm3_nvic
+		lx61102_lib.cm3_mpu_ppb_intf
+		lx61102_lib.cm3_mpu_align
+		lx61102_lib.cm3_mpu_maskgen
+		lx61102_lib.cm3_mpu_comp
+		lx61102_lib.cm3_mpu_region
+		lx61102_lib.cm3_mpu_regions
+		lx61102_lib.cm3_mpu_ahb_ctl
+		lx61102_lib.cm3_mpu_full
+		lx61102_lib.cm3_mpu_default
+		lx61102_lib.cm3_mpu
+		lx61102_lib.cm3_mtx_input_stage_dcore
+		lx61102_lib.cm3_mtx_input_stage_icore
+		lx61102_lib.cm3_mtx_input_stage_dap
+		lx61102_lib.cm3_mtx_decode_dcore
+		lx61102_lib.cm3_mtx_decode_icore
+		lx61102_lib.cm3_mtx_decode_dap
+		lx61102_lib.cm3_mtx_bit_master
+		lx61102_lib.cm3_mtx_output_stage_icode
+		lx61102_lib.cm3_mtx_output_stage_dcode
+		lx61102_lib.cm3_mtx_output_stage_sys
+		lx61102_lib.cm3_mtx_output_stage_ppb
+		lx61102_lib.cm3_bus_matrix
+		lx61102_lib.cm3_dap_ahb_ap_slv
+			FSM extracted for state register slv_state
+		lx61102_lib.cm3_dap_ahb_ap_mst
+			FSM extracted for state register mst_state
+		lx61102_lib.cm3_dap_ahb_ap_sync
+		lx61102_lib.cm3_dap_ahb_ap
+		lx61102_lib.cm3_ppb_decoder
+		lx61102_lib.cm3_fpb
+		lx61102_lib.cm3_dwt_apb_if
+		lx61102_lib.cm3_dwt_comp
+		lx61102_lib.cm3_dwt_packet_state
+			FSM extracted for state register sampler_status
+		lx61102_lib.cm3_dwt_packet_gen
+		lx61102_lib.cm3_dwt
+		lx61102_lib.cm3_ppb_ahb_to_apb
+		lx61102_lib.cm3_itm_if
+		lx61102_lib.cm3_itm_ts
+		lx61102_lib.cm3_itm_arb
+		lx61102_lib.cm3_itm_fifo_byte
+		lx61102_lib.cm3_itm_fifo
+		lx61102_lib.cm3_itm_emit
+			FSM extracted for state register emit_state
+		lx61102_lib.cm3_itm
+		lx61102_lib.cm3_htm_port
+		lx61102_lib.CORTEXM3
+		lx61102_lib.cm3_wic
+		lx61102_lib.DAPSwjWatcher
+			FSM extracted for state register State_cdc_check
+		lx61102_lib.DAPSwDpProtocol
+		lx61102_lib.DAPJtagDpProtocol
+			FSM extracted for state register JTAGcurr
+		lx61102_lib.DAPDpIMux
+		lx61102_lib.DAPSwDpApbIf
+			FSM extracted for state register APBcurr
+		lx61102_lib.DAPDpEnSync
+		lx61102_lib.DAPDpApbSync
+		lx61102_lib.DAPDpSync
+		lx61102_lib.DAPSwDpSync
+		lx61102_lib.DAPSWJDP
+		lx61102_lib.cm3_tpiu_apb_if
+		lx61102_lib.cm3_tpiu_atb_fifo
+		lx61102_lib.cm3_tpiu_trace_fifo
+		lx61102_lib.cm3_tpiu_formatter
+		lx61102_lib.cm3_tpiu_trace_out
+			FSM extracted for state register serial_state
+		lx61102_lib.cm3_tpiu_trace_clk
+		lx61102_lib.cm3_cdc_connect
+		lx61102_lib.cm3_cdc_capt_sync
+		lx61102_lib.cm3_tpiu_atb_sync
+		lx61102_lib.cm3_tpiu_trace_sync
+		lx61102_lib.cm3_tpiu
+		lx61102_lib.cm3_rom_table
+		lx61102_lib.CORTEXM3INTEGRATION
+		lx61102_lib.cm3
+		lx61102_lib.BLK_CPU
+		lx61102_lib.cmsdk_ahb_bm_input_stage_5x9
+		lx61102_lib.cmsdk_ahb_busmatrix_5x9_default_slave
+		lx61102_lib.cmsdk_ahb_bm_decode_5x9s0
+		lx61102_lib.cmsdk_ahb_bm_decode_5x9s1
+		lx61102_lib.cmsdk_ahb_bm_decode_5x9s2
+		lx61102_lib.cmsdk_ahb_bm_decode_5x9s3
+		lx61102_lib.cmsdk_ahb_bm_decode_5x9s4
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m0
+			FSM extracted for state register i_addr_in_port
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m0
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m1
+			FSM extracted for state register i_addr_in_port
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m1
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m2
+			FSM extracted for state register i_addr_in_port
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m2
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m3
+			FSM extracted for state register i_addr_in_port
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m3
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m4
+			FSM extracted for state register i_addr_in_port
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m4
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m5
+			FSM extracted for state register i_addr_in_port
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m5
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m6
+			FSM extracted for state register i_addr_in_port
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m6
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m7
+			FSM extracted for state register i_addr_in_port
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m7
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m8
+			FSM extracted for state register i_addr_in_port
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m8
+		lx61102_lib.cmsdk_ahb_busmatrix_5x9
+		lx61102_lib.cmsdk_ahb_busmatrix_5x9_lite
+		lx61102_lib.BLK_BUS
+		lx61102_lib.p_sse050_interconnect_f0_ahb_to_apb
+			FSM extracted for state register state_reg
+		lx61102_lib.p_sse050_interconnect_f0_apb_slave_mux
+		lx61102_lib.eflash_apb_mux
+		lx61102_lib.eflash_ahb
+		lx61102_lib.eflash_sfr
+		lx61102_lib.checksum
+			FSM extracted for state register r_cs_busy
+			FSM extracted for state register r_cs
+		lx61102_lib.eflash_red
+		lx61102_lib.eflash_ctrl
+			FSM extracted for state register r_curr_state
+		lx61102_lib.NX_SYNCHRONIZER_eflash_eco0
+		lx61102_lib.eflash_sub_top
+		lx61102_lib.sf_eflash16kx39x4_s300_lfr6lp_4000_assertion
+		lx61102_lib.sf_eflash16kx39x4_s300_lfr6lp_4000
+		lx61102_lib.sf_eflash16kx39x4_s300_lfr6lp_4000_wrapper
+		lx61102_lib.sf_eflash_dna_v1p22
+		lx61102_lib.DCT_REG_64_for_DNA
+		lx61102_lib.ssf_enc
+		lx61102_lib.ssf_dec
+		lx61102_lib.ecc_check
+		lx61102_lib.eflash_top_A
+		lx61102_lib.eflash_top_B
+		lx61102_lib.sf_eflash1kx39x4_s300_lfr6lp_4000_assertion
+		lx61102_lib.sf_eflash1kx39x4_s300_lfr6lp_4000
+		lx61102_lib.sf_eflash1kx39x4_s300_lfr6lp_4000_wrapper
+		lx61102_lib.eflash_top_16
+xmelab: *W,COVDNC: Coverage inside Verilog library cells and VHDL vital cells is not enabled by default; if needed, use the set_libcell_scoring command at elaboration.
+		lx61102_lib.lfr6lp_mc_vrom_hd_rvt_2048x39m8_wrapper
+		lx61102_lib.e_sse050_f0_ahb_to_sram
+			FSM extracted for state register c_state
+			FSM extracted for state register init_addr
+		lx61102_lib.s_ecc_check
+		lx61102_lib.lfr6lp_mc_ra1w_hs_rvtm6t_9216x39m32_wrapper
+		lx61102_lib.apb_slave
+		lx61102_lib.sram_ecc_ctrl
+		lx61102_lib.BLK_MEM
+		lx61102_lib.syscon_apbif
+		lx61102_lib.syscon_pmureg
+		lx61102_lib.syscon_ccureg
+		lx61102_lib.syscon_rcureg
+		lx61102_lib.syscon_ircreg
+		lx61102_lib.cm3_pmu
+			FSM extracted for state register pmu_state
+		lx61102_lib.pmu_ps
+		lx61102_lib.pmu
+		lx61102_lib.clk_gate
+		lx61102_lib.clk_inv
+		lx61102_lib.clk_and
+		lx61102_lib.clk_mux
+		lx61102_lib.clkmux2x1
+		lx61102_lib.clkmux5x1
+		lx61102_lib.clk_mux_scan
+		lx61102_lib.clk_div
+		lx61102_lib.clkmux5x1_wo_gf
+		lx61102_lib.clkdm6_wo_gf
+		lx61102_lib.ccu
+		lx61102_lib.stretch_pulse
+		lx61102_lib.rcu
+		lx61102_lib.irc
+		lx61102_lib.cmsdk_mcu_stclkctrl
+		lx61102_lib.stc
+		lx61102_lib.syscon
+		lx61102_lib.dma_ahbif
+		lx61102_lib.dma_and2
+		lx61102_lib.dma_dreq
+		lx61102_lib.dma_and3
+		lx61102_lib.dma_ldreq
+		lx61102_lib.dma_chctrl
+			FSM extracted for state register rCurrSt
+		lx61102_lib.dma_chmux
+		lx61102_lib.dma_fifo
+		lx61102_lib.dma_crc16
+		lx61102_lib.dma
+		lx61102_lib.dma_wrapper
+		lx61102_lib.sys_cfg
+		lx61102_lib.i2c_deglitch
+		lx61102_lib.fpi_i2c_slave
+		lx61102_lib.fpi_uart
+		lx61102_lib.serial2bus_bridge
+			FSM extracted for state register era_state
+		lx61102_lib.fpi_std_clk_gate
+		lx61102_lib.serial_ahb_master
+			FSM extracted for state register cur_state
+		lx61102_lib.fpi_buffer
+		lx61102_lib.serial_if
+		lx61102_lib.fpi
+		lx61102_lib.fpi_wrapper
+		lx61102_lib.BLK_SYS
+		lx61102_lib.iwdt_divider
+		lx61102_lib.iwdt_ctrl
+		lx61102_lib.iwdt_reg
+		lx61102_lib.iwdt
+		lx61102_lib.iwdt_wrapper
+		lx61102_lib.dtc_rstsync
+		lx61102_lib.synchronizer
+		lx61102_lib.synchronizer_async
+		lx61102_lib.apb_dualtimers_frc
+		lx61102_lib.apb_dualtimers
+		lx61102_lib.dual_timer
+		lx61102_lib.timers
+		lx61102_lib.timers_wrapper
+		lx61102_lib.mtue_wrapper
+		lx61102_lib.gpio_apbif
+		lx61102_lib.gpio_mux
+		lx61102_lib.gpio_dnf
+		lx61102_lib.gpio_sync
+		lx61102_lib.clk_buf
+		lx61102_lib.gpio_int
+		lx61102_lib.gpio_top
+		lx61102_lib.gpio_wrapper
+		lx61102_lib.cac_df
+		lx61102_lib.cac_reg
+		lx61102_lib.cac_div_ref
+		lx61102_lib.cac_edge
+		lx61102_lib.cac_div_measure
+		lx61102_lib.cac_ctrl
+		lx61102_lib.cac
+		lx61102_lib.cac_wrapper
+		lx61102_lib.SspApbif
+		lx61102_lib.SspTxFCntl
+		lx61102_lib.SspTxRegFile
+		lx61102_lib.SspTxLJustify
+		lx61102_lib.SspTxFIFO
+		lx61102_lib.SspRxFCntl
+		lx61102_lib.SspRxRegFile
+		lx61102_lib.SspRxFIFO
+		lx61102_lib.SspSynctoPCLK
+		lx61102_lib.SspIntGen
+		lx61102_lib.SspTest
+		lx61102_lib.SspRegCore
+		lx61102_lib.SspSynctoSSPCLK
+		lx61102_lib.SspScaleCntr
+		lx61102_lib.SspMTxRxCntl
+			FSM extracted for state register SspMTxRxState
+		lx61102_lib.SspSTxRxCntl
+			FSM extracted for state register SspSTxRxState
+		lx61102_lib.SspDataStp
+			FSM extracted for state register SspDataStpState
+		lx61102_lib.SspDMA
+		lx61102_lib.SspRevAnd
+		lx61102_lib.spi
+		lx61102_lib.spi_wrapper
+		lx61102_lib.i2cm_scanmx2
+		lx61102_lib.i2cm_filt
+		lx61102_lib.i2c_master_bit_ctrl
+			FSM extracted for state register c_state
+		lx61102_lib.i2c_master_byte_ctrl
+			FSM extracted for state register c_state
+		lx61102_lib.i2c_master
+		lx61102_lib.i2cm_wrapper
+		lx61102_lib.i2cs_scanmx2
+		lx61102_lib.i2cs_filt
+		lx61102_lib.i2c_ff
+		lx61102_lib.i2c_slave
+			FSM extracted for state register smcs
+		lx61102_lib.i2cs_wrapper
+		lx61102_lib.UartRegBlock
+		lx61102_lib.UartApbif
+		lx61102_lib.UartSynctoPCLK
+		lx61102_lib.UartSynctoUCLK
+		lx61102_lib.UartTest
+		lx61102_lib.UartRXCntl
+			FSM extracted for state register iUartRXCntlState
+		lx61102_lib.UartRXParShft
+		lx61102_lib.UartDataStp
+			FSM extracted for state register UartDataStpState
+		lx61102_lib.UartReceive
+		lx61102_lib.UartRXFCntl
+		lx61102_lib.UartRXRegFile
+		lx61102_lib.UartRXFIFO
+		lx61102_lib.UartTXRegFile
+		lx61102_lib.UartTXFCntl
+		lx61102_lib.UartTXFIFO
+		lx61102_lib.UartBaudCntr
+		lx61102_lib.UartTXCntl
+			FSM extracted for state register UartTXCntlState
+		lx61102_lib.UartDMA
+		lx61102_lib.UartInterrupt
+		lx61102_lib.UartRevAnd
+		lx61102_lib.uart
+		lx61102_lib.uart_wrapper
+		lx61102_lib.anacon_intf
+		lx61102_lib.anacon_adc_core_trg
+		lx61102_lib.anacon_adc_core_mctrl
+			FSM extracted for state register fsm_mctrl
+		lx61102_lib.anacon_adc_core_tconv
+			FSM extracted for state register fsm_tconv
+		lx61102_lib.anacon_adc_core_a_grp
+		lx61102_lib.anacon_adc_type_a
+		lx61102_lib.anacon_dac_ctrl
+		lx61102_lib.anacon_top
+		lx61102_lib.anacon_wrapper
+		lx61102_lib.BLK_PERI
+		lx61102_lib.tm_std_mux
+		lx61102_lib.tm_std_clk_buf
+		lx61102_lib.um_tst
+			FSM extracted for state register TS_TMODES
+		lx61102_lib.clib_cmux7
+		lx61102_lib.clib_cmux2
+		lx61102_lib.tm_std_nand
+		lx61102_lib.clib_cmux4
+		lx61102_lib.clib_cbuf
+		lx61102_lib.IHSOSC10MA_CAL_DUT_V2
+		lx61102_lib.ILSOSC32K_CAL_DUT_V2
+		lx61102_lib.um_tmux
+		lx61102_lib.tm
+		lx61102_lib.DTOP
+		lx61102_lib.IO_TOP_02A_r00
+		lx61102_lib.ILSOSC32K_r00_CORE
+		lx61102_lib.ILSOSC32K_r00
+		lx61102_lib.IPLL0_r00_CORE
+		lx61102_lib.IPLL0_r00
+		lx61102_lib.LXOSC_r00_CORE
+		lx61102_lib.LXOSC_r00
+		lx61102_lib.HXOSC_r00_CORE
+		lx61102_lib.HXOSC_r00
+		lx61102_lib.IHSOSC10MA_r00_CORE
+		lx61102_lib.IHSOSC9MA_r00
+		lx61102_lib.CIP_TOP_LX61100_S_r00
+		lx61102_lib.TSENSE_r00_CORE
+		lx61102_lib.TSENSE_r00
+		lx61102_lib.AMUX0_r00_CORE
+		lx61102_lib.AMUX0_r00
+		lx61102_lib.DAC0_r00_DUT_CORE
+		lx61102_lib.DAC0_r00
+		lx61102_lib.ADC0_r00_CORE
+		lx61102_lib.ADC0_r00
+		lx61102_lib.AIP_TOP_LX61100_S_r00
+		lx61102_lib.TIELO_HV_POR
+		lx61102_lib.OR2_D1_B_7TR_L90_A
+		lx61102_lib.NAND2_D1_B_7TR_L90_A
+		lx61102_lib.DFFRPQ_D1_N_7TR_L90_QN_A
+		lx61102_lib.BUF_D4_B_7TR_L90_A
+		lx61102_lib.INV_D1_B_7TR_L90_A
+		lx61102_lib.NOR2_D1_B_7TR_L90_A
+		lx61102_lib.TIEHI_D1_N_7TR_L90_A
+		lx61102_lib.TIELO_D1_N_7TR_L90_A
+		lx61102_lib.POR_DET_HOLD2_200A_r01
+		lx61102_lib.COMP_LSH2L_r00
+		lx61102_lib.LSL2H5V_POKB_R_r00
+		lx61102_lib.trnmos
+		lx61102_lib.POR_TEST_MUX
+		lx61102_lib.AND2_D1_B_7TR_L90_A
+		lx61102_lib.AND2_D4_B_7TR_L90_A
+		lx61102_lib.SDM_MX2X1M
+		lx61102_lib.BUF_D1_B_7TR_L90_A
+		lx61102_lib.POR_DET_HOLD_200A_r01
+		lx61102_lib.INVX1_H
+		lx61102_lib.LVD_TG
+		lx61102_lib.INV_D2_B_7TR_L90_A
+		lx61102_lib.NAND2_D2_B_7TR_L90_A
+		lx61102_lib.POR_LVSH2L_FILT_r00
+		lx61102_lib.INV_D4_B_7TR_L90_A
+		lx61102_lib.NAND3_D1_N_7TR_L90_A
+		lx61102_lib.BUF_D2_B_7TR_L90_A
+		lx61102_lib.LDO_LVSH_r00
+		lx61102_lib.PIP_LVSH2L_r00
+		lx61102_lib.LDO2P4V_r00_CORE
+		lx61102_lib.LDO2P4V_r00
+		lx61102_lib.POR_r00_CORE
+		lx61102_lib.POR_r00
+		lx61102_lib.POR_TIELOM
+		lx61102_lib.PIP_LVSL2H_r00
+		lx61102_lib.BGR_r00_CORE
+		lx61102_lib.BGR_r00
+		lx61102_lib.TIEHI_HV
+		lx61102_lib.POR_NAND2X_H
+		lx61102_lib.DFFRPQ_D1_HV
+		lx61102_lib.eFlash_Test_Logic
+		lx61102_lib.INVX1
+		lx61102_lib.opppcres
+		lx61102_lib.NOR
+		lx61102_lib.LDO_TIELOM_HV
+		lx61102_lib.LDO1P2V_r00_CORE
+		lx61102_lib.LDO1P2V_R00
+		lx61102_lib.PIP_TOP_LX61100_S_r00
+		lx61102_lib.lx61102
+	Total FSMs extracted = 41
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,58|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.dma.loclk,
+                                                                                     |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,62|85): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,71|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.fpi.loclk,
+                                                                                     |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,75|85): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,84|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.fctrl.loclk,
+                                                                                       |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,88|87): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,97|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.srctrl.loclk,
+                                                                                        |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,101|88): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,110|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.iwdt.loclk,
+                                                                                      |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,114|86): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,123|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.timers_ch1.loclk,
+                                                                                            |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,127|92): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,136|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.timers_ch2.loclk,
+                                                                                            |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,140|92): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,149|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.timers_ch3.loclk,
+                                                                                            |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,153|92): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,162|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.timers_ch4.loclk,
+                                                                                            |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,166|92): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,175|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.mtue_ch0.loclk,
+                                                                                          |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,179|90): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,188|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.mtue_ch1.loclk,
+                                                                                          |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,192|90): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,201|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.mtue_ch2.loclk,
+                                                                                          |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,205|90): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,214|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.mtue_ch3.loclk,
+                                                                                          |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,218|90): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,227|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.mtue_ch4.loclk,
+                                                                                          |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,231|90): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,240|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.mtue_ch5.loclk,
+                                                                                          |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,244|90): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,253|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.gpio.loclk,
+                                                                                      |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,257|86): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,266|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.cac.loclk,
+                                                                                     |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,270|85): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,279|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.spi0.loclk,
+                                                                                      |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,283|86): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,292|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.spi1.loclk,
+                                                                                      |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,296|86): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,305|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.i2cm.loclk,
+                                                                                      |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,309|86): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,318|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.i2cs.loclk,
+                                                                                      |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,322|86): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,331|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.uart0.loclk,
+                                                                                       |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,335|87): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,344|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.uart1.loclk,
+                                                                                       |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,348|87): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,357|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.uart2.loclk,
+                                                                                       |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,361|87): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,370|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.anacon.loclk,
+                                                                                        |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,374|88): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,383|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.anacon_adcif.loclk,
+                                                                                              |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,387|94): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,396|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.anacon_dacif.loclk,
+                                                                                              |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,400|94): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                {
+                                |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,409|32): port sizes differ in port connection(2/5) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+                                top.dut.u_DTOP.u_SYS.u_syscon.u_ccu.ccureg2ccu.pcr.dnf.loclk,
+                                                                                     |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv,413|85): port sizes differ in port connection(1/3) for the instance(soc_tb.ccu_sva_bind_mux_m) .
+    CKPLL_CPCUR[1:0], CKPLL_EN, CKPLL_RSTB, IHSOSC9MA_NTC_ADJ, 
+              |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/top/lx61102/rtl_codes/lx61102.sv,570|14): port sizes differ in port connection(2/3) for the instance(top.dut) .
+    OSC_T[6:0], PDIV[2:0], REFCLKSEL, XC10M_EN, XC10M_EXTCLK_SEL, 
+        |
+xmelab: *W,CUVMPW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/top/lx61102/rtl_codes/lx61102.sv,573|8): port sizes differ in port connection(7/8) for the instance(top.dut) .
+    .IHSOSC10MA_NTC_ADJ(IHSOSC9MA_NTC_ADJ), 
+                                        |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/240104/CoAsia_240103/CIP_TOP/CIP_TOP_LX61100_S_r00_DUT.sv,114|40): port sizes differ in port connection(1/4) for the instance(top.dut.u_CIP_TOP) .
+    .AVDD5_AMUX0(AVDD5_AMUX0*5),
+                            |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv,58|28): port sizes differ in port connection(32/1) for the instance(top.dut.u_AIP_TOP.AMUX0) .
+    .AVSS5_AMUX0(AVSS5_AMUX0*0),
+                            |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv,59|28): port sizes differ in port connection(32/1) for the instance(top.dut.u_AIP_TOP.AMUX0) .
+    .DVSS1P2_AMUX0(DVSS1P2_AMUX0*0),
+                                |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv,61|32): port sizes differ in port connection(32/1) for the instance(top.dut.u_AIP_TOP.AMUX0) .
+    .LDO1P2_POKB(LDO1P2_POKB*5),
+                            |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv,62|28): port sizes differ in port connection(32/1) for the instance(top.dut.u_AIP_TOP.AMUX0) .
+    .AVDD5_DAC0( AVDD5_DAC0*5   ),
+                           |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv,49|27): port sizes differ in port connection(32/1) for the instance(top.dut.u_AIP_TOP.DAC0) .
+    .DVSS1P2_DAC0( DVSS1P2_DAC0*0   ),
+                               |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv,52|31): port sizes differ in port connection(32/1) for the instance(top.dut.u_AIP_TOP.DAC0) .
+    .VREFH_DAC0( VREFH_DAC0*5   ),
+                           |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv,54|27): port sizes differ in port connection(32/1) for the instance(top.dut.u_AIP_TOP.DAC0) .
+    .LDO1P2_POKB(LDO1P2_POKB*5),
+                            |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/ADC0/ADC0_r00_DUT_REGWr.sv,60|28): port sizes differ in port connection(32/1) for the instance(top.dut.u_AIP_TOP.ADC0) .
+    .VREFH_ADC0(VREFH_ADC0*5),
+                          |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/ADC0/ADC0_r00_DUT_REGWr.sv,63|26): port sizes differ in port connection(32/1) for the instance(top.dut.u_AIP_TOP.ADC0) .
+	.PVSS5_L2P4V(PVSS5_L2P4V*0),
+	                        |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,120|25): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+	.PIP_SHDND(PIP_SHDND*5),
+	                    |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,122|21): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+	.LDO2P4_EN(LDO2P4_EN*5),
+	                    |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,123|21): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+    .PIP_STOP(PIP_STOP*5),
+                      |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,125|22): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+ 	.POR_PDM33(POR_PDM33*5),
+ 	                    |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,129|22): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+    .PORH(PORH*5),        
+              |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,130|14): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+	.LDO2P4_TEST_OFF(LDO2P4_TEST_OFF*5),
+	                                |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,132|33): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+	.LDO2P4_OV_EN(LDO2P4_OV_EN*5),		
+	                          |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,133|27): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+	.LDO2P4_UVTEST_EN(LDO2P4_UVTEST_EN*5),	
+	                                  |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,134|35): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+	.LDO2P4_OCP_EN(LDO2P4_OCP_EN*5),
+	                            |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,135|29): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+    .LDO2P4_SS_DONE(LDO2P4_SS_DONE*5),
+                                  |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,142|34): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+    .LDO1P2_UVFILT_HV(LDO1P2_UVFILT_HV*5),
+                                      |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv,143|38): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I5) .
+.PVSS5_POR(PVSS5_POR*0),
+                    |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv,133|20): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I4) .
+.PIP_SHDND(PIP_SHDND*5),			// por_on = ~PIP_SHDND & ~LDO1P2V_POKB
+                    |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv,135|20): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I4) .
+.PIP_STOP(PIP_STOP*5),		    // Stop Mode 1 -> OVP0(), OVP1 is off
+                  |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv,136|18): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I4) .
+.LDO1P2_POKB(LDO1P2_POKB*5),        // ~ldo1p2_uv_reg => 1.2V Power OK Signal bar
+                        |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv,137|24): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I4) .
+    .PVSS5_L1P2V(PVSS5_L1P2V*0),
+                            |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv,106|28): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I2) .
+    .PIP_SHDND(PIP_SHDND*5),
+                        |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv,113|24): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I2) .
+    .LDO1P2_TEST_OFF(LDO1P2_TEST_OFF*5),
+                                    |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv,114|36): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I2) .
+    .LDO1P2_UVTEST_EN(LDO1P2_UVTEST_EN*5),
+                                      |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv,115|38): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I2) .
+    .LDO1P2_OV_EN(LDO1P2_OV_EN*5),
+                              |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv,116|30): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I2) .
+    .PIP_STOP(PIP_STOP*5),
+                      |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv,122|22): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I2) .
+    .LDO1P2_OCP_EN(LDO1P2_OCP_EN*5),
+                                |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv,124|32): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I2) .
+    .LDO2P4_SS_DONE(LDO2P4_SS_DONE*5),
+                                  |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv,125|34): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I2) .
+    .PORH(PORH*5),//modify 230228 jjy
+              |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv,140|14): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I2) .
+    .L2P4_UUV(L2P4_UUV*5), //modify 230228 jjy
+                      |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv,141|22): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I2) .
+    .PIP_SHDNB_DLY(PIP_SHDNB_DLY*5), //modify 230228 jjy
+                                |
+xmelab: *W,CUVMPW (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv,142|32): port sizes differ in port connection(32/1) for the instance(top.dut.u_PIP_TOP.I2) .
+xmelab: *W,COVEOS: Currently, by default, coverage is not scored for expressions containing struct datatypes. In 13.1 release, such expressions can be scored using the "set_expr_scoring -struct" coverage configuration file command. In subsequent releases, the default scoring of expressions containing struct datatypes will be enabled. This change may prevent refinements from 13.1 release to be applied on coverage databases generated using subsequent releases in the default mode.
+	Building instance overlay tables: 
+xmelab: *W,COVFHT: FSM hold transitions (transitions to the current state) are not extracted for any FSM in default mode.
+.
+xmelab: *W,COVSEC: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash1kx39x4_s300_lfr6lp_4000.sv,2412|26): SOP expression evaluates to a constant: not checked.
+xmelab: *W,COVSEC: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash1kx39x4_s300_lfr6lp_4000.sv,2417|26): SOP expression evaluates to a constant: not checked.
+xmelab: *W,COVSEC: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash1kx39x4_s300_lfr6lp_4000.sv,2422|26): SOP expression evaluates to a constant: not checked.
+xmelab: *W,COVSEC: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash1kx39x4_s300_lfr6lp_4000.sv,2427|26): SOP expression evaluates to a constant: not checked.
+xmelab: *W,COVSEC: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash1kx39x4_s300_lfr6lp_4000.sv,2432|26): SOP expression evaluates to a constant: not checked.
+xmelab: *W,COVSEC: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash16kx39x4_s300_lfr6lp_4000.sv,2407|26): SOP expression evaluates to a constant: not checked.
+xmelab: *W,COVSEC: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash16kx39x4_s300_lfr6lp_4000.sv,2412|26): SOP expression evaluates to a constant: not checked.
+xmelab: *W,COVSEC: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash16kx39x4_s300_lfr6lp_4000.sv,2417|26): SOP expression evaluates to a constant: not checked.
+xmelab: *W,COVSEC: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash16kx39x4_s300_lfr6lp_4000.sv,2422|26): SOP expression evaluates to a constant: not checked.
+xmelab: *W,COVSEC: (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash16kx39x4_s300_lfr6lp_4000.sv,2427|26): SOP expression evaluates to a constant: not checked.
+        slv_cfg.fs_speed_mode = 2; // FAST_PLUS
+                                |
+xmelab: *W,ENUMERR (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/i2c_config_seq.sv,38|32): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+            mst_cfg.fs_speed_mode = 1; // CDN_I2C_CFG_FS_SPEED_MODE_FAST;
+                                    |
+xmelab: *W,ENUMERR (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/i2c_config_seq.sv,58|36): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+            mst_cfg.fs_speed_mode  = 2; // CDN_I2C_CFG_FS_SPEED_MODE_FASTPLUS;
+                                     |
+xmelab: *W,ENUMERR (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/i2c_config_seq.sv,64|37): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+        if ((ratio2freq(clkoutprdrise) > $itor(max_freq)) &&enable && !err_flag) begin
+                                                      |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,58|54): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+                                                                                                  |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|98): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+                                                                                                            |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|108): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+|
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|0): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+|
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|0): Real argument supplied to integer parameter.
+        if ((ratio2freq(clkoutprdrise) > $itor(max_freq)) &&enable && !err_flag) begin
+                                                      |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,58|54): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+                                                                                                  |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|98): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+                                                                                                            |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|108): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+|
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|0): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+|
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|0): Real argument supplied to integer parameter.
+        if ((ratio2freq(clkoutprdrise) > $itor(max_freq)) &&enable && !err_flag) begin
+                                                      |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,58|54): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+                                                                                                  |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|98): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+                                                                                                            |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|108): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+|
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|0): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+|
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|0): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+                                                                                                            |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|108): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+|
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|0): Real argument supplied to integer parameter.
+        if ((ratio2freq(clkoutprdrise) > $itor(max_freq)) &&enable && !err_flag) begin
+                                                      |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,58|54): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+                                                                                                  |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|98): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+                                                                                                            |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|108): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+|
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|0): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+|
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|0): Real argument supplied to integer parameter.
+        if ((ratio2freq(clkoutprdrise) > $itor(max_freq)) &&enable && !err_flag) begin
+                                                      |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,58|54): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+                                                                                                  |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|98): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+                                                                                                            |
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|108): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+|
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|0): Real argument supplied to integer parameter.
+    ASSERT_CLK_FREQ_CHECK: assert property (CLK_FREQ_CHECK(enable, clk_out, clkoutprdrise, max_freq, min_freq))
+|
+xmelab: *W,RELINT (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv,77|0): Real argument supplied to integer parameter.
+................... Done
+	Using implicit TMP libraries; associated with library worklib
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.tarmacB:v <0x37a5fb7d>
+			streams:   6, words: 34834
+		worklib.tarmacE:v <0x5a14588d>
+			streams:  15, words: 34184
+		worklib.tarmacR:v <0x3cf98961>
+			streams:   6, words: 31838
+		worklib.tarmacM:v <0x3812745c>
+			streams:   6, words: 35179
+		worklib.tarmacI:v <0x247ebe42>
+			streams: 517, words: 21608929
+		worklib.tarmacDSM:v <0x799c3301>
+			streams:   8, words:  6324
+		worklib.tarmac:v <0x1632f656>
+			streams:   2, words:   408
+		worklib.cmsdk_uart_capture_ard:v <0x40048336>
+			streams:  15, words: 12433
+		worklib.gpio_sva_dnf_chk:sv <0x1dbb3602>
+			streams:  20, words: 18643
+		worklib.gpio_sva_bind_dnf:sv <0x3f621cb5>
+			streams:   3, words:  9263
+		worklib.ccu_sva_sel_chk:sv <0x5f744687>
+			streams:   6, words:  3807
+		worklib.ccu_sva_sel_chk:sv <0x5a7e15ce>
+			streams:   6, words:  3794
+		worklib.ccu_sva_bind_mux_m:sv <0x3c758e82>
+			streams:  95, words: 18028
+		worklib.ccu_sva_pll_chk:sv <0x54bd434e>
+			streams:  12, words: 11303
+		worklib.ccu_source_clk_input_chk:sv <0x6866ed84>
+			streams:   9, words:  8259
+		worklib.ccu_source_clk_input_chk:sv <0x1485a5a6>
+			streams:   9, words:  8259
+		worklib.ccu_source_clk_input_chk:sv <0x12bef802>
+			streams:   9, words:  8259
+		worklib.ccu_source_clk_input_chk:sv <0x5efe74f2>
+			streams:   9, words:  8259
+		worklib.ccu_source_clk_input_chk:sv <0x4953ab67>
+			streams:   9, words:  8259
+		worklib.ccu_sva_div_chk:sv <0x4a40eafe>
+			streams:  10, words:  7656
+		worklib.ccu_sva_freq_chk:sv <0x73938b7d>
+			streams:  20, words: 14196
+		worklib.ccu_sva_freq_chk:sv <0x346a0810>
+			streams:  20, words: 14196
+		worklib.ccu_sva_freq_ip_chk:sv <0x38c7bddb>
+			streams:  25, words: 18812
+		worklib.ccu_sva_freq_ip_chk:sv <0x1a3e3409>
+			streams:  25, words: 18812
+		worklib.ccu_sva_freq_ip_chk:sv <0x79975096>
+			streams:  25, words: 18812
+		worklib.ccu_sva_freq_ip_chk:sv <0x4ea0ac8f>
+			streams:  25, words: 18812
+		worklib.ccu_sva_freq_ip_chk:sv <0x6346cd21>
+			streams:  25, words: 18812
+		worklib.ccu_sva_freq_ip_chk:sv <0x6ba32144>
+			streams:  25, words: 18812
+		worklib.ccu_sva_bind_freq_m:sv <0x00f40eb3>
+			streams:  77, words: 18497
+		worklib.rcu_sva_trim_data_chk:sv <0x10cac433>
+			streams:   7, words: 12109
+		worklib.rcu_sva_sysrst_ip_chk:sv <0x0f62dc9b>
+			streams:   5, words:  4660
+		worklib.rcu_sva_sysrst_ip_chk:sv <0x516bb6ce>
+			streams:   5, words:  4660
+		worklib.rcu_sva_sysrst_deassert_chk:sv <0x21e90548>
+			streams:   5, words:  4231
+		worklib.rcu_sva_system_rst_m:sv <0x7ea1a422>
+			streams:  10, words: 10506
+		worklib.specman_wave:sv <0x2a02cbb8>
+			streams: 101, words: 70958
+		worklib.specman:sv <0x3b6ef88d>
+			streams:   6, words:  6218
+		worklib.uvm_pkg:sv <0x7f01ed19>
+			streams:   8, words: 10755
+		worklib.uvm_pkg:sv <0x07bde6c3>
+			streams:   8, words: 10415
+		worklib.uvm_pkg:sv <0x20970c37>
+			streams:   7, words:  9825
+		worklib.uvm_pkg:sv <0x318a834a>
+			streams:  29, words: 33363
+		worklib.uvm_pkg:sv <0x347e5e29>
+			streams:   7, words:  3072
+		worklib.uvm_pkg:sv <0x339ec9e8>
+			streams:  26, words: 67806
+		worklib.uvm_pkg:sv <0x6114f2df>
+			streams:   7, words:  3072
+		worklib.uvm_pkg:sv <0x2aab0c68>
+			streams:   7, words:  4830
+		worklib.uvm_pkg:sv <0x33ac34b7>
+			streams:  17, words: 25596
+		worklib.uvm_pkg:sv <0x3274a204>
+			streams:  26, words: 44559
+		worklib.uvm_pkg:sv <0x652faeeb>
+			streams:  16, words: 28305
+		worklib.uvm_pkg:sv <0x3b1eccb8>
+			streams:  26, words: 39951
+		worklib.uvm_pkg:sv <0x79414392>
+			streams:  25, words: 68155
+		worklib.uvm_pkg:sv <0x5798f89d>
+			streams:  27, words: 43177
+		worklib.uvm_pkg:sv <0x06b6d424>
+			streams:  26, words: 55514
+		worklib.uvm_pkg:sv <0x1120a8d5>
+			streams:  27, words: 46103
+		worklib.uvm_pkg:sv <0x2cc68a5d>
+			streams:  25, words: 63264
+		worklib.uvm_pkg:sv <0x10b8bfe1>
+			streams:  27, words: 48181
+		worklib.uvm_pkg:sv <0x13a05f82>
+			streams:  25, words: 67572
+		worklib.uvm_pkg:sv <0x55f00111>
+			streams:  27, words: 53266
+		worklib.uvm_pkg:sv <0x2365b89f>
+			streams:  25, words: 60057
+		worklib.uvm_pkg:sv <0x311cd34c>
+			streams:  25, words: 63378
+		worklib.uvm_pkg:sv <0x25e884a0>
+			streams:  27, words: 45244
+		worklib.uvm_pkg:sv <0x7d4e6ed4>
+			streams:  25, words: 59900
+		worklib.uvm_pkg:sv <0x784957c9>
+			streams:  29, words: 99370
+		worklib.uvm_pkg:sv <0x26b4321a>
+			streams:  72, words: 152386
+		worklib.cdns_uvm_pkg:sv <0x59d6e3c3>
+			streams:   9, words:  9209
+		worklib.cdns_uvm_pkg:sv <0x0a0e5bb2>
+			streams:  10, words: 10448
+		worklib.uvm_pkg:sv <0x63b93a1f>
+			streams:  24, words: 29142
+		worklib.uvm_pkg:sv <0x02944288>
+			streams:  24, words: 29142
+		worklib.uvm_pkg:sv <0x011212e1>
+			streams:  24, words: 29127
+		worklib.uvm_pkg:sv <0x2e8b8768>
+			streams:  24, words: 29127
+		worklib.uvm_pkg:sv <0x3deb4861>
+			streams:  27, words: 39578
+		worklib.uvm_pkg:sv <0x6358068c>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x68ced76d>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x3d9ccda3>
+			streams:  25, words: 31521
+		worklib.uvm_pkg:sv <0x52ec8750>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x63a73464>
+			streams:  25, words: 31323
+		worklib.uvm_pkg:sv <0x1858f34c>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x57e2a456>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x6a0c87a8>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x324ad7ce>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x2d4baecb>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x4fe4ac7a>
+			streams:  26, words: 44346
+		worklib.uvm_pkg:sv <0x742918cc>
+			streams:  25, words: 32022
+		worklib.uvm_pkg:sv <0x3385992a>
+			streams:  25, words: 32022
+		worklib.uvm_pkg:sv <0x6332ce6f>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x3abad7c6>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x34c6bb4f>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x11392289>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x6c026319>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x533a1aed>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x62ea079d>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x08d0328b>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x07515672>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x5cb307c4>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x6059c458>
+			streams:  24, words: 29172
+		worklib.cdnAhbUvm:sv <0x54c4d2bf>
+			streams:  26, words: 251340
+		worklib.uvm_pkg:sv <0x40cc07dd>
+			streams:  31, words: 49718
+		worklib.cdnAhbUvm:sv <0x6e4cce11>
+			streams:  27, words: 40190
+		worklib.cdnAhbUvm:sv <0x7d4e7e40>
+			streams:  24, words: 29026
+		worklib.uvm_pkg:sv <0x4e40afde>
+			streams:  27, words: 40190
+		worklib.uvm_pkg:sv <0x4059e9a6>
+			streams:  25, words: 47709
+		worklib.uvm_pkg:sv <0x3ec96157>
+			streams:  25, words: 47709
+		worklib.uvm_pkg:sv <0x3e3e8414>
+			streams:  25, words: 54988
+		worklib.uvm_pkg:sv <0x45474e0d>
+			streams:  24, words: 29127
+		worklib.uvm_pkg:sv <0x648bb8a3>
+			streams:  24, words: 29127
+		worklib.uvm_pkg:sv <0x3df22d03>
+			streams:  25, words: 56315
+		worklib.cdnApbUvm:sv <0x0c6571af>
+			streams:  27, words: 39578
+		worklib.uvm_pkg:sv <0x58d2034a>
+			streams:  24, words: 29127
+		worklib.cdnApbUvm:sv <0x1bee7224>
+			streams:  24, words: 29026
+		worklib.uvm_pkg:sv <0x53353e45>
+			streams:  28, words: 61991
+		worklib.uvm_pkg:sv <0x3f867f30>
+			streams:  94, words: 161345
+		worklib.uvm_pkg:sv <0x5b4ffde7>
+			streams:  94, words: 161345
+		worklib.uvm_pkg:sv <0x304aae31>
+			streams:  25, words: 49568
+		worklib.uvm_pkg:sv <0x43e36c79>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x7b297ad3>
+			streams:  24, words: 29172
+		worklib.cdn_apb2_m_pkg:sv <0x16ff2675>
+			streams:  25, words: 83247
+		worklib.uvm_pkg:sv <0x2e6667c1>
+			streams:  94, words: 161668
+		worklib.uvm_pkg:sv <0x76bebfaa>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x568fa1e0>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x74a7ed96>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x0d440d6b>
+			streams:  24, words: 29026
+		worklib.uvm_pkg:sv <0x18a73e5b>
+			streams:  91, words: 147808
+		worklib.uvm_pkg:sv <0x69fcf95a>
+			streams:  26, words: 55789
+		worklib.uvm_pkg:sv <0x1b45e71b>
+			streams:  33, words: 45542
+		worklib.uvm_pkg:sv <0x35591015>
+			streams:  24, words: 29026
+		worklib.uvm_pkg:sv <0x387d6e66>
+			streams:  27, words: 73547
+		worklib.uvm_pkg:sv <0x747dcbaf>
+			streams:  25, words: 65256
+		worklib.uvm_pkg:sv <0x305dd995>
+			streams:  25, words: 49303
+		worklib.spi_env_pkg:sv <0x4c6630ab>
+			streams:  37, words: 75494
+		worklib.uvm_pkg:sv <0x0cbf4ffb>
+			streams:  24, words: 94084
+		worklib.uvm_pkg:sv <0x2fb68c2f>
+			streams:  24, words: 31839
+		worklib.uvm_pkg:sv <0x21ed91d7>
+			streams:  24, words: 31839
+		worklib.uvm_pkg:sv <0x03645ba6>
+			streams:  24, words: 32459
+		worklib.uvm_pkg:sv <0x47313066>
+			streams:  24, words: 32209
+		worklib.uvm_pkg:sv <0x59f28472>
+			streams:  24, words: 32343
+		worklib.uvm_pkg:sv <0x71d4c346>
+			streams:  24, words: 29256
+		worklib.uvm_pkg:sv <0x5153f7fc>
+			streams:  24, words: 29664
+		worklib.uvm_pkg:sv <0x657d30d9>
+			streams:  24, words: 30284
+		worklib.cdnI2cUser_pkg:sv <0x50824f3c>
+			streams:  24, words: 29872
+		worklib.uvm_pkg:sv <0x095f33a1>
+			streams:  24, words: 29196
+		worklib.uvm_pkg:sv <0x2d27ce05>
+			streams:  24, words: 29731
+		worklib.uvm_pkg:sv <0x43baaefc>
+			streams:  24, words: 29226
+		worklib.uvm_pkg:sv <0x34dadb1f>
+			streams:  24, words: 29222
+		worklib.uvm_pkg:sv <0x305ae768>
+			streams:  24, words: 29845
+		worklib.cdnI2cUser_pkg:sv <0x458a4747>
+			streams:  24, words: 29192
+		worklib.uvm_pkg:sv <0x4bcda6cf>
+			streams:  24, words: 29196
+		worklib.uvm_pkg:sv <0x12eec623>
+			streams:  24, words: 29252
+		worklib.uvm_pkg:sv <0x259af899>
+			streams:  24, words: 29226
+		worklib.uvm_pkg:sv <0x2e147771>
+			streams:  25, words: 32736
+		worklib.uvm_pkg:sv <0x4df25d81>
+			streams:  26, words: 38075
+		worklib.uvm_pkg:sv <0x093b0f8f>
+			streams:  25, words: 60759
+		worklib.uvm_pkg:sv <0x236034d9>
+			streams:  28, words: 56064
+		worklib.uvm_pkg:sv <0x1993bfa0>
+			streams:  26, words: 156741
+		worklib.uvm_pkg:sv <0x3d7bfa39>
+			streams:  32, words: 100459
+		worklib.uvm_pkg:sv <0x30add9b2>
+			streams:  25, words: 32575
+		worklib.uvm_pkg:sv <0x78def548>
+			streams:  25, words: 32575
+		worklib.uvm_pkg:sv <0x7363e831>
+			streams:  25, words: 32575
+		worklib.uvm_pkg:sv <0x7b43403c>
+			streams:  25, words: 32575
+		worklib.uvm_pkg:sv <0x188749f8>
+			streams:  25, words: 32575
+		worklib.uvm_pkg:sv <0x3461a4c2>
+			streams:  25, words: 32575
+		worklib.cdnI2cUser_pkg:sv <0x25d9d2ce>
+			streams:  28, words: 109278
+		worklib.uvm_pkg:sv <0x430a183b>
+			streams:  26, words: 48523
+		worklib.uvm_pkg:sv <0x3a40a336>
+			streams:  26, words: 57249
+		worklib.uvm_pkg:sv <0x05f016c0>
+			streams:  25, words: 35057
+		worklib.uvm_pkg:sv <0x38ae0bbd>
+			streams:  26, words: 46132
+		worklib.uvm_pkg:sv <0x6c2e7d93>
+			streams:  26, words: 57047
+		worklib.uvm_pkg:sv <0x065f1516>
+			streams:  28, words: 60803
+		worklib.uvm_pkg:sv <0x67b3c6c2>
+			streams:  25, words: 38076
+		worklib.uvm_pkg:sv <0x46c84781>
+			streams:  26, words: 69923
+		worklib.uvm_pkg:sv <0x7cca3d8c>
+			streams:  25, words: 39981
+		worklib.uvm_pkg:sv <0x027c6647>
+			streams:  28, words: 81713
+		worklib.uvm_pkg:sv <0x0cc047fb>
+			streams:  25, words: 32575
+		worklib.cdnI2cUser_pkg:sv <0x699ad8cf>
+			streams:  26, words: 63483
+		worklib.uvm_pkg:sv <0x63eed3c7>
+			streams:  26, words: 50930
+		worklib.uvm_pkg:sv <0x10a0a44c>
+			streams:  26, words: 48300
+		worklib.cdnI2cUser_pkg:sv <0x237ad80d>
+			streams:  27, words: 43223
+		worklib.uvm_pkg:sv <0x24be66df>
+			streams:  25, words: 35479
+		worklib.cdnI2cUser_pkg:sv <0x686cbb88>
+			streams:  25, words: 37294
+		worklib.uvm_pkg:sv <0x4a10314d>
+			streams:  24, words: 35244
+		worklib.uvm_pkg:sv <0x6a07e7cf>
+			streams:  26, words: 71986
+		worklib.uvm_pkg:sv <0x04d20ca1>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x5bcfa0d9>
+			streams:  24, words: 29142
+		worklib.uvm_pkg:sv <0x35ff4e30>
+			streams:  24, words: 29142
+		worklib.cm3_pkg:sv <0x29b13118>
+			streams:  26, words: 82448
+		worklib.cdn_ahb2_m_pkg:sv <0x417b7897>
+			streams:  25, words: 82766
+		worklib.uvm_pkg:sv <0x6f685ba1>
+			streams:  24, words: 29142
+		worklib.uvm_pkg:sv <0x21b1e7bf>
+			streams:  24, words: 29142
+		worklib.cm3_pkg:sv <0x500a857a>
+			streams:  26, words: 117419
+		worklib.cdn_ahb2_m_pkg:sv <0x74bc2d6a>
+			streams:  25, words: 124312
+		worklib.uvm_pkg:sv <0x2fe19e94>
+			streams:  24, words: 29589
+		worklib.uvm_pkg:sv <0x54545520>
+			streams:  24, words: 30361
+		worklib.uvm_pkg:sv <0x79fb9402>
+			streams:  25, words: 74523
+		worklib.uvm_pkg:sv <0x242e203c>
+			streams:  25, words: 67110
+		worklib.uvm_pkg:sv <0x5f9f596f>
+			streams:  24, words: 29026
+		worklib.uvm_pkg:sv <0x0f8666a9>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x40bc079d>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x3977daf9>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x25e6fca4>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x317447a7>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x653cb438>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x15c1dc95>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x2dd7d01f>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x3fe8e848>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x37e64755>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x14227757>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x4842b8c5>
+			streams:  26, words: 121279
+		worklib.uvm_pkg:sv <0x15ca1b94>
+			streams:  26, words: 121279
+		worklib.uvm_pkg:sv <0x6783910c>
+			streams:  25, words: 32416
+		worklib.uvm_pkg:sv <0x244e2860>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x4df7a2a4>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x4718152a>
+			streams:  24, words: 29172
+		worklib.cdn_uart_pkg:sv <0x7bb18b69>
+			streams:  26, words: 47555
+		worklib.uvm_pkg:sv <0x6656e8be>
+			streams:  26, words: 33629
+		worklib.uvm_pkg:sv <0x25a7216d>
+			streams:  28, words: 71913
+		worklib.cdn_uart_pkg:sv <0x527bbfab>
+			streams:  28, words: 70077
+		worklib.uvm_pkg:sv <0x1c9eff71>
+			streams:  26, words: 45680
+		worklib.uvm_pkg:sv <0x33be37d1>
+			streams:  24, words: 54492
+		worklib.uvm_pkg:sv <0x52c3850b>
+			streams:  27, words: 61159
+		worklib.uvm_pkg:sv <0x766daf0c>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x6945796b>
+			streams:  24, words: 29172
+		worklib.uvm_pkg:sv <0x1edaefc9>
+			streams:  24, words: 29071
+		worklib.uvm_pkg:sv <0x6dbcb92a>
+			streams:  24, words: 29071
+		worklib.uvm_pkg:sv <0x21a36a52>
+			streams:  24, words: 29071
+		worklib.uvm_pkg:sv <0x54ade4a8>
+			streams:  24, words: 29071
+		worklib.uvm_pkg:sv <0x4f134d17>
+			streams:  25, words: 40697
+		worklib.uvm_pkg:sv <0x64a60392>
+			streams:  23, words: 43391
+		worklib.soc_tb_pkg:sv <0x1b43baa6>
+			streams:  25, words: 48903
+		worklib.uvm_pkg:sv <0x2eb7c17c>
+			streams:  25, words: 44474
+		worklib.uvm_pkg:sv <0x2687d7c3>
+			streams:  25, words: 29127
+		worklib.uvm_pkg:sv <0x60717589>
+			streams:  24, words: 29071
+		worklib.uvm_pkg:sv <0x5313d9eb>
+			streams:  25, words: 37676
+		worklib.uvm_pkg:sv <0x6b065f93>
+			streams:  24, words: 29142
+		worklib.uvm_pkg:sv <0x59215249>
+			streams:  24, words: 29142
+		worklib.uvm_pkg:sv <0x1f48d726>
+			streams:  24, words: 29142
+		worklib.uvm_pkg:sv <0x67ad3b45>
+			streams:  35, words: 54086
+		worklib.uvm_pkg:sv <0x0ebf9bd6>
+			streams:  24, words: 29142
+		worklib.uvm_pkg:sv <0x6e961bf9>
+			streams:  35, words: 54172
+		worklib.uvm_pkg:sv <0x7ac28375>
+			streams:  24, words: 29071
+		worklib.uvm_pkg:sv <0x0c7961b1>
+			streams:  24, words: 29071
+		worklib.uvm_pkg:sv <0x255304c6>
+			streams:  24, words: 29071
+		worklib.uvm_pkg:sv <0x5ec123f4>
+			streams: 248, words: 4484126
+		worklib.uvm_pkg:sv <0x435e4e29>
+			streams:   7, words:  4830
+		worklib.uvm_pkg:sv <0x14753dfe>
+			streams:  24, words: 32927
+		worklib.uvm_pkg:sv <0x4689bc3c>
+			streams:  25, words: 32398
+		worklib.uvm_pkg:sv <0x5d8d8b59>
+			streams:  27, words: 47955
+		worklib.uvm_pkg:sv <0x7868e270>
+			streams:  25, words: 37458
+		worklib.uvm_pkg:sv <0x53b1347a>
+			streams:  27, words: 54256
+		worklib.uvm_pkg:sv <0x4154ffaa>
+			streams:  25, words: 42305
+		worklib.cdnI2cUser_pkg:sv <0x2788a39a>
+			streams:  25, words: 42617
+		worklib.uvm_pkg:sv <0x2de667c4>
+			streams:  24, words: 29026
+		worklib.uvm_pkg:sv <0x321cef4c>
+			streams:  26, words: 38059
+		worklib.uvm_pkg:sv <0x386060ec>
+			streams:  26, words: 44253
+		worklib.uvm_pkg:sv <0x77c7a896>
+			streams:  25, words: 39748
+		worklib.uvm_pkg:sv <0x525a9189>
+			streams:  25, words: 40615
+		worklib.uvm_pkg:sv <0x13e9ce71>
+			streams:  28, words: 50342
+		worklib.uvm_pkg:sv <0x4e22f2f4>
+			streams:  25, words: 32398
+		worklib.uvm_pkg:sv <0x44d53b83>
+			streams:  25, words: 38551
+		worklib.uvm_pkg:sv <0x16407c1d>
+			streams:  25, words: 34644
+		worklib.uvm_pkg:sv <0x1b9fda68>
+			streams:  28, words: 53606
+		worklib.uvm_pkg:sv <0x374f14b4>
+			streams:  28, words: 53598
+		worklib.uvm_pkg:sv <0x3e6d4662>
+			streams:  25, words: 34210
+		worklib.uvm_pkg:sv <0x7fd6a8d2>
+			streams:  25, words: 33150
+		worklib.uvm_pkg:sv <0x71735d75>
+			streams:  25, words: 33150
+		worklib.uvm_pkg:sv <0x0e39f961>
+			streams:  25, words: 65469
+		worklib.uvm_pkg:sv <0x064450ef>
+			streams: 278, words: 772490
+		worklib.uvm_pkg:sv <0x4037cf0b>
+			streams:  45, words: 159847
+		worklib.soc_tb_pkg:sv <0x2d8be3b0>
+			streams:  24, words: 29071
+		worklib.uvm_pkg:sv <0x0aa98932>
+			streams:  28, words: 77152
+		worklib.uvm_pkg:sv <0x7620cfe6>
+			streams:  26, words: 45680
+		worklib.soc_tb:sv <0x16bcfb6a>
+			streams: 520, words: 574691
+		worklib.csv_svc_sdk:sv <0x4e897796>
+			streams:  29, words: 135593
+		worklib.cpu_vseq_pkg:sv <0x54327579>
+			streams:   0, words:     0
+		worklib.top:sv <0x311975d4>
+			streams:  30, words: 47785
+		worklib.ccu_intf:sv <0x0e9cdefb>
+			streams:   8, words:  3494
+		worklib.cdn_apb2_m_if:sv <0x32b0f49d>
+			streams:   8, words:  2507
+		worklib.cdn_apb2_m_if:sv <0x1bfa3332>
+			streams:   8, words:  2489
+		worklib.cdn_ahb2_m_if:sv <0x54a71667>
+			streams:  13, words:  3681
+		worklib.cdnSpiPassiveInterface:sv <0x23ec0dd9>
+			streams:   3, words:  1350
+		worklib.cdnSpiActiveInterface:sv <0x2c31a534>
+			streams: 15091, words: 23798155
+		worklib.uvm_pkg:sv <0x21197a56>
+			streams:  23, words: 29327
+		worklib.uvm_pkg:sv <0x2f29fdb4>
+			streams:  43, words: 66948
+		worklib.uvm_pkg:sv <0x3604c043>
+			streams:  23, words: 28633
+		worklib.uvm_pkg:sv <0x1d1a852c>
+			streams:  34, words: 43360
+		worklib.uvm_pkg:sv <0x62ec0389>
+			streams:  23, words: 28688
+		worklib.cdn_jtag_pkg:sv <0x6e86a36c>
+			streams:  24, words: 30647
+		worklib.uvm_pkg:sv <0x2a8d4ab7>
+			streams: 314, words: 474596
+		worklib.uvm_pkg:sv <0x2c9a4b3e>
+			streams:  33, words: 48332
+		worklib.uvm_pkg:sv <0x0da464cd>
+			streams: 314, words: 474596
+		worklib.uvm_pkg:sv <0x7ce96f47>
+			streams:  33, words: 66529
+		worklib.uvm_pkg:sv <0x1d11fb38>
+			streams:  26, words: 46374
+		worklib.tube_pkg:sv <0x036282af>
+			streams:  31, words: 51213
+		worklib.uvm_pkg:sv <0x2b781d9a>
+			streams:  43, words: 83774
+		worklib.uvm_pkg:sv <0x5e3a651b>
+			streams:  25, words: 53023
+		worklib.nx_ext_clk_se_pkg:sv <0x4873e8f4>
+			streams:   0, words:     0
+		worklib.nx_ext_rst_pkg:sv <0x1d78c8d3>
+			streams:   0, words:     0
+		worklib.cdnSpiUvm:sv <0x14979120>
+			streams: 649, words: 1565652
+		worklib.DenaliSvSpi:sv <0x07e6771d>
+			streams: 573, words: 1042874
+		worklib.tube_pkg:sv <0x4cddf3be>
+			streams:   0, words:     0
+		worklib.cdn_jtag_pkg:sv <0x6047951c>
+			streams:   0, words:     0
+		worklib.cdnJtagUvm:sv <0x792e8dae>
+			streams: 719, words: 1582499
+		worklib.cdn_uart_pkg:sv <0x4f59adad>
+			streams:   0, words:     0
+		worklib.cdnUartUvm:sv <0x53b8ba5c>
+			streams: 885, words: 1956477
+		worklib.DenaliSvUart:sv <0x542369fb>
+			streams: 619, words: 1061912
+		worklib.DenaliSvJtag:sv <0x4e740600>
+			streams: 620, words: 1319871
+		worklib.cdn_apb2_m_pkg:sv <0x10364fdd>
+			streams:  32, words: 65756
+		worklib.cdnApbUvm:sv <0x6a7f3436>
+			streams: 12193, words: 48259856
+		worklib.DenaliSvCdn_apb:sv <0x0849e7b0>
+			streams: 672, words: 1496951
+		worklib.cdn_ahb2_m_pkg:sv <0x211002ab>
+			streams:  32, words: 65756
+		worklib.uvm_pkg:sv <0x5e72b06e>
+			streams:   7, words:  4153
+		worklib.cdnI2cUvm:sv <0x38b52701>
+			streams: 1063, words: 2998978
+		worklib.cdnAhbUvm:sv <0x5f1e28f7>
+			streams: 4115, words: 10250494
+		worklib.CdnSvVip:sv <0x79a7dd0d>
+			streams:  20, words: 11195
+		worklib.CdnSvVip:sv <0x7e88acef>
+			streams:   6, words:  4398
+		worklib.uvm_pkg:sv <0x682ffc33>
+			streams:  18, words: 19966
+		worklib.DenaliSvCdn_ahb:sv <0x06d57bcd>
+			streams: 960, words: 3209193
+		worklib.uvm_pkg:sv <0x2dfcbe71>
+			streams:   7, words:  4830
+		worklib.CdnSvVip:sv <0x214c53f9>
+			streams:   0, words:     0
+		worklib.DenaliSvCdn_i2c:sv <0x129df9ee>
+			streams: 651, words: 1512812
+		worklib.DenaliSvMem:sv <0x7c66f0cd>
+			streams: 178, words: 397918
+		worklib.csv_uvmc_sdk_pkg:sv <0x52f467cd>
+			streams:   0, words:     0
+		worklib.cdns_uvm_pkg:sv <0x2dc7305b>
+			streams: 232, words: 470361
+		worklib.cdns_uvmapi:svp <0x367feb6f>
+			streams:  27, words: 38518
+		worklib.cdns_assert2uvm_pkg:sv <0x229ec1a4>
+			streams:   3, words:  2490
+		worklib.uvm_pkg:sv <0x3b6fa20c>
+			streams: 5457, words: 11070603
+		lx61102_lib.LDO1P2V_r00_CORE:sv <0x39fe07ee>
+			streams:  43, words: 31063
+		lx61102_lib.LDO1P2V_R00:sv <0x371f3102>
+			streams:  55, words: 25937
+		lx61102_lib.LDO_TIELOM_HV:sv <0x3cd70944>
+			streams:   1, words:   454
+		lx61102_lib.NOR:sv <0x60688bb5>
+			streams:   1, words:   412
+		lx61102_lib.opppcres:sv <0x4c5738c9>
+			streams:   1, words:   341
+		lx61102_lib.INVX1:sv <0x048532ae>
+			streams:   1, words:   361
+		lx61102_lib.DFFRPQ_D1_HV:sv <0x7b4a0aa6>
+			streams:   4, words:  2603
+		lx61102_lib.POR_NAND2X_H:sv <0x47c690d2>
+			streams:   1, words:   408
+		lx61102_lib.TIEHI_HV:sv <0x08e16a51>
+			streams:   1, words:   341
+		lx61102_lib.BGR_r00_CORE:sv <0x5f349d8e>
+			streams:  39, words: 51214
+		lx61102_lib.BGR_r00:sv <0x63d7902d>
+			streams:  75, words: 46670
+		lx61102_lib.POR_TIELOM:sv <0x7b3859be>
+			streams:   1, words:   341
+		lx61102_lib.POR_r00_CORE:sv <0x28f8d2ea>
+			streams: 119, words: 111112
+		lx61102_lib.POR_r00:sv <0x1376e557>
+			streams:  60, words: 30244
+		lx61102_lib.LDO2P4V_r00_CORE:sv <0x78707dee>
+			streams:  60, words: 35180
+		lx61102_lib.LDO2P4V_r00:sv <0x5727c4d9>
+			streams:  60, words: 27459
+		lx61102_lib.BUF_D2_B_7TR_L90_A:sv <0x09dd08ac>
+			streams:   1, words:   359
+		lx61102_lib.NAND3_D1_N_7TR_L90_A:sv <0x7ca6feee>
+			streams:   1, words:   426
+		lx61102_lib.INV_D4_B_7TR_L90_A:sv <0x2103bede>
+			streams:   1, words:   361
+		lx61102_lib.LSL2H5V_POKB_R_r00:sv <0x084690f5>
+			streams:   1, words:   712
+		lx61102_lib.INVX1_H:sv <0x3a4d30c2>
+			streams:   1, words:   361
+		lx61102_lib.LDO_LVSH_r00:sv <0x4c1f1de3>
+			streams:  17, words:  7353
+		lx61102_lib.NAND2_D2_B_7TR_L90_A:sv <0x6c06e2a3>
+			streams:   1, words:   408
+		lx61102_lib.INV_D2_B_7TR_L90_A:sv <0x632d2e94>
+			streams:   1, words:   361
+		lx61102_lib.LVD_TG:sv <0x7d4d3025>
+			streams:   1, words:   770
+		lx61102_lib.INVX1_H:sv <0x5c490008>
+			streams:   1, words:   361
+		lx61102_lib.BUF_D1_B_7TR_L90_A:sv <0x5f8e5e80>
+			streams:   1, words:   359
+		lx61102_lib.SDM_MX2X1M:sv <0x5c547dbe>
+			streams:   1, words:   751
+		lx61102_lib.AND2_D4_B_7TR_L90_A:sv <0x3a73ff4e>
+			streams:   1, words:   392
+		lx61102_lib.AND2_D1_B_7TR_L90_A:sv <0x652d3cac>
+			streams:   1, words:   392
+		lx61102_lib.POR_TEST_MUX:sv <0x43b262e4>
+			streams:   1, words:   450
+		lx61102_lib.LSL2H5V_POKB_R_r00:sv <0x4551000b>
+			streams:   1, words:   741
+		lx61102_lib.COMP_LSH2L_r00:sv <0x20c7f8fc>
+			streams:   1, words:   341
+		lx61102_lib.COMP_LSH2L_r00:sv <0x46c3c836>
+			streams:   1, words:   341
+		lx61102_lib.TIELO_D1_N_7TR_L90_A:sv <0x0415793a>
+			streams:   1, words:   341
+		lx61102_lib.TIEHI_D1_N_7TR_L90_A:sv <0x0cb5ac41>
+			streams:   1, words:   341
+		lx61102_lib.NOR2_D1_B_7TR_L90_A:sv <0x1f613ea4>
+			streams:   1, words:   412
+		lx61102_lib.INV_D1_B_7TR_L90_A:sv <0x023a66b1>
+			streams:   1, words:   361
+		lx61102_lib.BUF_D4_B_7TR_L90_A:sv <0x7e0aa2b5>
+			streams:   1, words:   359
+		lx61102_lib.DFFRPQ_D1_N_7TR_L90_QN_A:sv <0x029ded02>
+			streams:   4, words:  2603
+		lx61102_lib.NAND2_D1_B_7TR_L90_A:sv <0x30076ced>
+			streams:   1, words:   408
+		lx61102_lib.OR2_D1_B_7TR_L90_A:sv <0x682058cd>
+			streams:   1, words:   402
+		lx61102_lib.TIELO_HV_POR:sv <0x14ae2774>
+			streams:   1, words:   341
+		lx61102_lib.POR_LVSH2L_FILT_r00:sv <0x7a26c3ed>
+			streams:  13, words:  5504
+		lx61102_lib.PIP_LVSH2L_r00:sv <0x57641274>
+			streams:  25, words: 10552
+		lx61102_lib.ADC0_r00_CORE:sv <0x577ec0a4>
+			streams:  32, words: 22112
+		lx61102_lib.ADC0_r00:sv <0x79392f56>
+			streams:  18, words:  7519
+		lx61102_lib.DAC0_r00_DUT_CORE:sv <0x21155d28>
+			streams:  22, words: 17563
+		lx61102_lib.DAC0_r00:sv <0x13a14f38>
+			streams:  15, words:  6026
+		lx61102_lib.AMUX0_r00_CORE:sv <0x39282dcf>
+			streams:   6, words: 10324
+		lx61102_lib.AMUX0_r00:sv <0x0f27a67b>
+			streams:  32, words: 14687
+		lx61102_lib.TSENSE_r00_CORE:sv <0x2a117a3b>
+			streams:   7, words:  3327
+		lx61102_lib.TSENSE_r00:sv <0x1e1b64ab>
+			streams:  10, words:  3977
+		lx61102_lib.AIP_TOP_LX61100_S_r00:sv <0x208d193e>
+			streams:   3, words:  1490
+		lx61102_lib.IHSOSC10MA_r00_CORE:sv <0x666625dd>
+			streams:  29, words: 21029
+		lx61102_lib.IHSOSC9MA_r00:sv <0x4bbe6729>
+			streams:  14, words:  5948
+		lx61102_lib.HXOSC_r00_CORE:sv <0x70b5f72c>
+			streams:  14, words: 10645
+		lx61102_lib.HXOSC_r00:sv <0x383a0a52>
+			streams:  14, words:  6003
+		lx61102_lib.LXOSC_r00_CORE:sv <0x534ec559>
+			streams:  10, words:  7435
+		lx61102_lib.LXOSC_r00:sv <0x282cf19a>
+			streams:  11, words:  5076
+		lx61102_lib.IPLL0_r00_CORE:sv <0x2758b53b>
+			streams:  50, words: 37288
+		lx61102_lib.IPLL0_r00:sv <0x7a8d489d>
+			streams:  16, words:  6750
+		lx61102_lib.ILSOSC32K_r00_CORE:sv <0x1e170274>
+			streams:  18, words: 12957
+		lx61102_lib.ILSOSC32K_r00:sv <0x7ace2bf1>
+			streams:   9, words:  3844
+		lx61102_lib.PVNN_M5V3A_M6:sv <0x05776ec8>
+			streams:   0, words:     0
+		lx61102_lib.POC5_130_M6:sv <0x25563787>
+			streams:   1, words:   293
+		lx61102_lib.POC5_130_M6:sv <0x72d286b9>
+			streams:   1, words:   293
+		lx61102_lib.PVBAR5_DD_M5V3A_M6:sv <0x0219ee8c>
+			streams:   0, words:     0
+		lx61102_lib.PUDW02SOPD_130_M6_XTAL_32K_D6:sv <0x0e714b15>
+			streams:  11, words:  2990
+		lx61102_lib.PUDW02SOPD_130_M6:sv <0x61034e54>
+			streams:  10, words:  2553
+		lx61102_lib.PUDW02SOPD_130_M6:sv <0x1253bf23>
+			streams:  10, words:  2553
+		lx61102_lib.PUDW02SOPD_130_M6:sv <0x3bdec946>
+			streams:  10, words:  2553
+		lx61102_lib.PUDW02SOPD_130_M6:sv <0x1fff9144>
+			streams:  10, words:  2553
+		lx61102_lib.ILSOSC32K_CAL_DUT_V2:sv <0x12802498>
+			streams:  24, words:  9917
+		lx61102_lib.IHSOSC10MA_CAL_DUT_V2:sv <0x0f2cc6c1>
+			streams:  25, words: 10484
+		lx61102_lib.clib_cbuf:sv <0x0a2ed4f3>
+			streams:   1, words:   341
+		lx61102_lib.tm_std_mux:v <0x4037c6c8>
+			streams:   0, words:     0
+		lx61102_lib.clib_cmux4:sv <0x65ed7d27>
+			streams:   2, words:   834
+		lx61102_lib.clib_cmux2:sv <0x0c0eb534>
+			streams:   2, words:   560
+		lx61102_lib.tm_std_nand:v <0x2642441c>
+			streams:   0, words:     0
+		lx61102_lib.clib_cmux2:sv <0x2d68608c>
+			streams:   2, words:   560
+		lx61102_lib.clib_cmux2:sv <0x1882091f>
+			streams:   2, words:   560
+		lx61102_lib.clib_cmux7:sv <0x744d7e78>
+			streams:   2, words:  1283
+		lx61102_lib.um_tmux:sv <0x4d653629>
+			streams: 396, words: 402971
+		lx61102_lib.tm_std_clk_buf:v <0x26b02cd5>
+			streams:   0, words:     0
+		lx61102_lib.um_tst:v <0x09a3d5b7>
+			streams:   5, words:  4608
+		lx61102_lib.tm_std_mux:v <0x359c5f8b>
+			streams:   0, words:     0
+		lx61102_lib.tm:sv <0x697b042c>
+			streams:   8, words:  2398
+		lx61102_lib.anacon_adc_core_a_grp:v <0x092a9323>
+			streams:  15, words: 21308
+		lx61102_lib.anacon_adc_core_tconv:v <0x74353a40>
+			streams:  19, words: 11772
+		lx61102_lib.anacon_adc_core_mctrl:v <0x13bcfdb9>
+			streams:   9, words: 38108
+		lx61102_lib.anacon_adc_core_trg:v <0x244564a7>
+			streams:  23, words: 19660
+		lx61102_lib.anacon_intf:v <0x7493c221>
+			streams:  93, words: 114822
+		lx61102_lib.UartRevAnd:v <0x1fe904e2>
+			streams:   0, words:     0
+		lx61102_lib.UartInterrupt:v <0x201639f8>
+			streams:   3, words:   802
+		lx61102_lib.UartDMA:v <0x4187bea6>
+			streams:   9, words:  7126
+		lx61102_lib.UartTXCntl:v <0x0dc41d3d>
+			streams:  16, words: 26085
+		lx61102_lib.UartBaudCntr:v <0x3a70c481>
+			streams:  39, words: 18795
+		lx61102_lib.UartTXFCntl:v <0x3efceb5e>
+			streams:  36, words: 27491
+		lx61102_lib.UartTXRegFile:v <0x3503b37e>
+			streams:   4, words: 22815
+		lx61102_lib.UartTXFIFO:v <0x1df9fe07>
+			streams:   1, words:   124
+		lx61102_lib.UartRXRegFile:v <0x5fe626ff>
+			streams:   4, words: 21151
+		lx61102_lib.UartRXFCntl:v <0x4164f4bf>
+			streams:  44, words: 29364
+		lx61102_lib.UartRXFIFO:v <0x1936174e>
+			streams:   2, words:   661
+		lx61102_lib.UartDataStp:v <0x414e25df>
+			streams:   8, words:  4598
+		lx61102_lib.UartRXParShft:v <0x251c79d5>
+			streams:  11, words:  6752
+		lx61102_lib.UartRXCntl:v <0x40499f5d>
+			streams:  28, words: 29978
+		lx61102_lib.UartReceive:v <0x5851039b>
+			streams:   0, words:     0
+		lx61102_lib.UartTest:v <0x45c1b4bd>
+			streams:  28, words:  8999
+		lx61102_lib.UartSynctoUCLK:v <0x21aa6c3c>
+			streams:  18, words: 32294
+		lx61102_lib.UartSynctoPCLK:v <0x1c6962b0>
+			streams:   9, words: 14501
+		lx61102_lib.UartApbif:v <0x223e365a>
+			streams:  13, words: 13170
+		lx61102_lib.UartRegBlock:v <0x1128c20d>
+			streams:  52, words: 21647
+		lx61102_lib.i2c_ff:v <0x50bf5e99>
+			streams:  26, words:  8094
+		lx61102_lib.i2cs_filt:v <0x18567235>
+			streams:  15, words:  4550
+		lx61102_lib.i2cs_scanmx2:v <0x3478fcef>
+			streams:   0, words:     0
+		lx61102_lib.i2cm_filt:v <0x2c8a403f>
+			streams:  13, words:  4010
+		lx61102_lib.i2cm_scanmx2:v <0x7240b9b3>
+			streams:   0, words:     0
+		lx61102_lib.i2cm_filt:v <0x57cad51f>
+			streams:  13, words:  4010
+		lx61102_lib.i2c_master_bit_ctrl:v <0x12d1488f>
+			streams:  29, words: 25151
+		lx61102_lib.i2c_master_byte_ctrl:v <0x19ef12f2>
+			streams:  31, words: 21600
+		lx61102_lib.i2cm_scanmx2:v <0x14448979>
+			streams:   0, words:     0
+		lx61102_lib.SspRevAnd:v <0x0abe5582>
+			streams:   0, words:     0
+		lx61102_lib.SspDMA:v <0x0687bbc5>
+			streams:   7, words:  5208
+		lx61102_lib.SspDataStp:v <0x7f4b78c0>
+			streams:   9, words:  4984
+		lx61102_lib.SspSTxRxCntl:v <0x6fed1e53>
+			streams:  15, words: 52174
+		lx61102_lib.SspMTxRxCntl:v <0x036bb1a6>
+			streams:  25, words: 67538
+		lx61102_lib.SspScaleCntr:v <0x398c2b84>
+			streams:  15, words:  4771
+		lx61102_lib.SspSynctoSSPCLK:v <0x477fad88>
+			streams:   3, words:  9380
+		lx61102_lib.SspRegCore:v <0x4ea9ab96>
+			streams:  16, words: 13356
+		lx61102_lib.SspTest:v <0x78de5d39>
+			streams:  28, words:  7606
+		lx61102_lib.SspIntGen:v <0x7a411b4d>
+			streams:   1, words:   248
+		lx61102_lib.SspSynctoPCLK:v <0x3eb28b91>
+			streams:   3, words:  5869
+		lx61102_lib.SspRxRegFile:v <0x5952b75f>
+			streams:   6, words:  6847
+		lx61102_lib.SspRxFCntl:v <0x47428dd3>
+			streams:  20, words: 14561
+		lx61102_lib.SspTxLJustify:v <0x4a2dfdc0>
+			streams:   3, words:  3064
+		lx61102_lib.SspTxRegFile:v <0x3d7e2a6e>
+			streams:   5, words:  6533
+		lx61102_lib.SspTxFCntl:v <0x246621ea>
+			streams:  21, words: 13298
+		lx61102_lib.SspApbif:v <0x137eaa40>
+			streams:   7, words: 10270
+		lx61102_lib.synchronizer:v <0x10c07bf7>
+			streams:   3, words:   809
+		lx61102_lib.cac_div_measure:v <0x360b9222>
+			streams:   4, words:  1614
+		lx61102_lib.cac_edge:v <0x7779ae4a>
+			streams:   6, words:  3246
+		lx61102_lib.cac_div_ref:v <0x4509b530>
+			streams:   4, words:  1782
+		lx61102_lib.cac_reg:v <0x1fe5d95a>
+			streams:  65, words: 31406
+		lx61102_lib.cac_df:v <0x2ef05236>
+			streams:  11, words:  3991
+		lx61102_lib.clk_mux:sv <0x21168426>
+			streams:   1, words:   435
+		lx61102_lib.clk_buf:sv <0x013e4335>
+			streams:   1, words:   341
+		lx61102_lib.gpio_int:v <0x6563203c>
+			streams:  11, words:  3235
+		lx61102_lib.gpio_sync:v <0x21d941ac>
+			streams:   3, words:  1233
+		lx61102_lib.gpio_dnf:v <0x37f719ef>
+			streams:   6, words:  2252
+		lx61102_lib.gpio_mux:v <0x41b316c0>
+			streams: 246, words: 106392
+		lx61102_lib.gpio_apbif:v <0x3e626c0a>
+			streams: 148, words: 140979
+			streams:   4, words:  1919
+			streams:   4, words:  2273
+			streams:   3, words:   801
+			streams:   2, words:  1146
+			streams:   2, words:  1426
+			streams:  19, words:  9414
+			streams:   5, words:  2053
+			streams:  12, words:  8140
+			streams:  37, words: 12962
+			streams:   6, words:  1806
+			streams:   2, words:  3313
+			streams:  19, words:  9414
+			streams:   5, words:  2053
+			streams:   7, words:  2241
+			streams: 128, words: 149723
+		lx61102_lib.synchronizer:v <0x641ef9a6>
+			streams:   3, words:   809
+		lx61102_lib.synchronizer_async:v <0x2c065fe2>
+			streams:   3, words:   789
+		lx61102_lib.synchronizer:v <0x53d795b6>
+			streams:   3, words:   809
+		lx61102_lib.apb_dualtimers_frc:v <0x13a61a54>
+			streams:  56, words: 29043
+		lx61102_lib.dtc_rstsync:v <0x2d7f405c>
+			streams:   4, words:  1047
+		lx61102_lib.dual_timer:v <0x2589e413>
+			streams:   2, words:   322
+		lx61102_lib.iwdt_reg:v <0x4f055169>
+			streams:  70, words: 31455
+		lx61102_lib.iwdt_ctrl:v <0x4782bf83>
+			streams:  28, words: 47298
+		lx61102_lib.clk_mux:sv <0x187dd587>
+			streams:   1, words:   435
+		lx61102_lib.iwdt_divider:v <0x70fc4fcd>
+			streams:   4, words:  2258
+		lx61102_lib.p_sse050_interconnect_f0_apb_slave_mux:v <0x58839938>
+			streams:   7, words:  8183
+		lx61102_lib.p_sse050_interconnect_f0_apb_slave_mux:v <0x273c7ba1>
+			streams:   7, words:  8183
+		lx61102_lib.p_sse050_interconnect_f0_apb_slave_mux:v <0x2f34e56c>
+			streams:   7, words:  8183
+		lx61102_lib.p_sse050_interconnect_f0_ahb_to_apb:v <0x2e2f686a>
+			streams:  25, words: 14730
+		lx61102_lib.BLK_PERI:sv <0x5aad99e2>
+			streams:  98, words: 35275
+		lx61102_lib.fpi_buffer:v <0x5134f981>
+			streams:  35, words: 27269
+		lx61102_lib.fpi_std_clk_gate:v <0x13105a3f>
+			streams:   1, words:   254
+		lx61102_lib.serial_ahb_master:v <0x270e6322>
+			streams:  22, words: 13560
+		lx61102_lib.serial2bus_bridge:v <0x6bb3f754>
+			streams:  63, words: 39076
+		lx61102_lib.fpi_uart:v <0x7f2f4106>
+			streams: 146, words: 78607
+		lx61102_lib.fpi_i2c_slave:v <0x2d13673f>
+			streams:  99, words: 55178
+		lx61102_lib.i2c_deglitch:v <0x5385860f>
+			streams:  20, words: 18708
+		lx61102_lib.serial_if:v <0x6e1398d8>
+			streams:   5, words:   904
+		lx61102_lib.sys_cfg:v <0x1afa0e64>
+			streams:  13, words:  8930
+		lx61102_lib.fpi_wrapper:sv <0x0f768567>
+			streams:  19, words:  4168
+		lx61102_lib.dma_crc16:v <0x1fb0f7af>
+			streams:  20, words: 13350
+		lx61102_lib.dma_fifo:v <0x450053cf>
+			streams:  17, words: 22921
+		lx61102_lib.dma_chmux:v <0x372663a8>
+			streams:  16, words:  9027
+		lx61102_lib.dma_chctrl:v <0x1df84899>
+			streams:  72, words: 181692
+		lx61102_lib.dma_and3:v <0x37854fce>
+			streams:   0, words:     0
+		lx61102_lib.dma_ldreq:v <0x382f8eec>
+			streams:   9, words: 16391
+		lx61102_lib.dma_and2:v <0x7f8ff6f9>
+			streams:   0, words:     0
+		lx61102_lib.dma_dreq:v <0x79ca4aa9>
+			streams:   9, words: 16781
+		lx61102_lib.dma_ahbif:v <0x0bda69cd>
+			streams:  94, words: 129436
+		lx61102_lib.cmsdk_mcu_stclkctrl:v <0x4b2cd6ae>
+			streams:   5, words:  1648
+		lx61102_lib.stc:sv <0x34057300>
+			streams:   2, words:   503
+		lx61102_lib.stretch_pulse:sv <0x0c0831ba>
+			streams:   7, words:  2223
+		lx61102_lib.stretch_pulse:sv <0x27308457>
+			streams:   7, words:  2408
+		lx61102_lib.clkdm6_wo_gf:sv <0x7b8757ae>
+			streams:  32, words:  6615
+		lx61102_lib.clkmux5x1_wo_gf:sv <0x7bd9fe98>
+			streams:  12, words:  2760
+		lx61102_lib.clk_div:sv <0x3acf3220>
+			streams:   3, words:   820
+		lx61102_lib.clk_gate:sv <0x10a07879>
+			streams:   4, words:   980
+		lx61102_lib.clk_mux_scan:sv <0x2597d4d8>
+			streams:   1, words:   435
+		lx61102_lib.clkmux2x1:sv <0x155a8b33>
+			streams:  30, words:  6084
+		lx61102_lib.clk_mux:sv <0x57e3c24f>
+			streams:   1, words:   435
+		lx61102_lib.clk_and:sv <0x2e2ad28b>
+			streams:   1, words:   392
+		lx61102_lib.clk_and:sv <0x61b4c543>
+			streams:   1, words:   392
+		lx61102_lib.clk_inv:sv <0x67da4805>
+			streams:   1, words:   361
+		lx61102_lib.clk_inv:sv <0x28445fcd>
+			streams:   1, words:   361
+		lx61102_lib.clkmux2x1:sv <0x1dfcfbf5>
+			streams:  30, words:  6084
+		lx61102_lib.clk_gate:sv <0x3d5d440d>
+			streams:   4, words:   980
+		lx61102_lib.cm3_pmu:v <0x4bc4f9ae>
+			streams:  26, words:  9845
+		lx61102_lib.syscon_apbif:sv <0x0003e49a>
+			streams:  17, words:  8733
+		lx61102_lib.BLK_SYS:sv <0x6305aff5>
+			streams:  85, words: 39856
+		lx61102_lib.apb_slave:v <0x1065d251>
+			streams:  16, words:  5759
+		lx61102_lib.s_ecc_check:v <0x691a527f>
+			streams:   1, words:   437
+		lx61102_lib.sram_ecc_ctrl:v <0x3872b325>
+			streams:  32, words: 11747
+		lx61102_lib.ssf_dec:v <0x267604e2>
+			streams:  37, words: 10768
+			streams:  11, words:  3031
+			streams: 104, words: 48102
+			streams:  10, words:  2480
+		lx61102_lib.sf_eflash_dna_v1p22:v <0x51bd8271>
+			streams:  15, words:  2548
+		lx61102_lib.sf_eflash1kx39x4_s300_lfr6lp_4000_assertion:sv <0x29429e16>
+			streams:  48, words: 58632
+		lx61102_lib.sf_eflash1kx39x4_s300_lfr6lp_4000_wrapper:v <0x48c2b4b6>
+			streams:   7, words:  3907
+		lx61102_lib.eflash_red:v <0x5dcd2539>
+			streams:   1, words:  4758
+		lx61102_lib.eflash_red:v <0x4fb2fbd2>
+			streams:   1, words:  4574
+		lx61102_lib.eflash_ctrl:v <0x4b260052>
+			streams: 570, words: 447094
+		lx61102_lib.eflash_sfr:v <0x5047701a>
+			streams:  83, words: 88304
+		lx61102_lib.eflash_ahb:v <0x737f1555>
+			streams:   5, words:   760
+		lx61102_lib.eflash_sub_top:v <0x3e6eb0dd>
+			streams:  23, words:  8858
+		lx61102_lib.ssf_dec:v <0x38d7af4e>
+			streams:  67, words: 21005
+		lx61102_lib.ssf_enc:v <0x7b5f8fde>
+			streams:   2, words:  3360
+		lx61102_lib.ecc_check:v <0x322b36ac>
+			streams:  22, words: 10961
+		lx61102_lib.DCT_REG_64_for_DNA:v <0x711f72d3>
+			streams:  26, words: 19209
+		lx61102_lib.EFLASH_GENERIC_SYNCHRONIZER:v <0x57159497>
+			streams:   3, words:   600
+			streams:   1, words:   160
+		lx61102_lib.EFLASH_GENERIC_CLKMUX2:v <0x08a76219>
+			streams:   0, words:     0
+			streams:  11, words:  3037
+			streams:  14, words: 16516
+			streams:   4, words:   520
+			streams:  14, words: 16629
+			streams:   3, words:   561
+			streams:   7, words:  1089
+		lx61102_lib.EFLASH_GENERIC_SYNCHRONIZER:v <0x16acddb6>
+			streams:   3, words:   598
+			streams:   0, words:     0
+		lx61102_lib.EFLASH_GENERIC_CLKBUF:v <0x305d1fb0>
+			streams:   0, words:     0
+			streams:  11, words:  5503
+			streams: 104, words: 48102
+			streams:  10, words:  2480
+			streams:  86, words: 31186
+			streams:  13, words:  3453
+		lx61102_lib.sf_eflash_dna_v1p22:v <0x35e587d8>
+			streams:  15, words:  2548
+		lx61102_lib.sf_eflash16kx39x4_s300_lfr6lp_4000_assertion:sv <0x2c162c51>
+			streams:  48, words: 58632
+		lx61102_lib.sf_eflash16kx39x4_s300_lfr6lp_4000_wrapper:v <0x2be68381>
+			streams:   7, words:  3907
+		lx61102_lib.NX_SYNCHRONIZER_eflash_eco0:v <0x6c5bbf94>
+			streams:  10, words:  3603
+		lx61102_lib.eflash_red:v <0x4ca11e5a>
+			streams:   1, words:  4770
+		lx61102_lib.eflash_red:v <0x5edec0b1>
+			streams:   1, words:  4586
+		lx61102_lib.checksum:v <0x4a29eaaf>
+			streams:  29, words: 12243
+		lx61102_lib.eflash_sfr:v <0x6a247406>
+			streams:  83, words: 88290
+		lx61102_lib.eflash_ahb:v <0x43204da1>
+			streams:   5, words:   760
+		lx61102_lib.eflash_sub_top:v <0x37fe2597>
+			streams:  23, words:  8858
+		lx61102_lib.eflash_apb_mux:v <0x118aba46>
+			streams:   3, words:   909
+		lx61102_lib.p_sse050_interconnect_f0_apb_slave_mux:v <0x329a10d8>
+			streams:   7, words:  8183
+		lx61102_lib.p_sse050_interconnect_f0_ahb_to_apb:v <0x3b46bb84>
+			streams:  25, words: 14730
+		lx61102_lib.BLK_MEM:sv <0x0946b81a>
+			streams: 297, words: 67351
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m8:v <0x47488cf7>
+			streams:   9, words:  9465
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m8:v <0x25d0e21a>
+			streams:  16, words: 18247
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m7:v <0x48cd12a3>
+			streams:   9, words:  9465
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m7:v <0x58523f8c>
+			streams:  16, words: 18247
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m6:v <0x38114d90>
+			streams:   9, words: 10521
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m6:v <0x050b0afb>
+			streams:  16, words: 22567
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m5:v <0x2c50b348>
+			streams:   9, words: 10521
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m5:v <0x4697f785>
+			streams:  16, words: 22567
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m4:v <0x43beedde>
+			streams:   9, words: 13545
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m4:v <0x0576900d>
+			streams:  16, words: 30852
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m3:v <0x1d50d349>
+			streams:   9, words: 13545
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m3:v <0x744005d4>
+			streams:  16, words: 30852
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m2:v <0x03c588c8>
+			streams:   9, words: 13545
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m2:v <0x2036678c>
+			streams:  16, words: 30852
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m1:v <0x4aedd298>
+			streams:   9, words: 13545
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m1:v <0x363b77b7>
+			streams:  16, words: 30852
+		lx61102_lib.cmsdk_ahb_bm_output_arb_5x9m0:v <0x54788919>
+			streams:   9, words: 13545
+		lx61102_lib.cmsdk_ahb_bm_output_stage_5x9m0:v <0x624d15ef>
+			streams:  16, words: 30852
+		lx61102_lib.cmsdk_ahb_bm_decode_5x9s4:v <0x1cd638fc>
+			streams:   9, words: 32885
+		lx61102_lib.cmsdk_ahb_bm_decode_5x9s3:v <0x7fba8188>
+			streams:   9, words: 25573
+		lx61102_lib.cmsdk_ahb_bm_decode_5x9s2:v <0x1c0da916>
+			streams:   9, words: 25573
+		lx61102_lib.cmsdk_ahb_bm_decode_5x9s1:v <0x0711c7ba>
+			streams:   9, words: 41022
+		lx61102_lib.cmsdk_ahb_busmatrix_5x9_default_slave:v <0x4b8a5517>
+			streams:   7, words:  1776
+		lx61102_lib.cmsdk_ahb_bm_decode_5x9s0:v <0x7fc68ece>
+			streams:   9, words: 41022
+		lx61102_lib.cmsdk_ahb_bm_input_stage_5x9:v <0x4d201f6a>
+			streams:  28, words: 18068
+		lx61102_lib.cmsdk_ahb_busmatrix_5x9:v <0x5460c82e>
+			streams:   6, words:  1151
+		lx61102_lib.BLK_BUS:sv <0x48ab96db>
+			streams: 187, words: 40570
+		lx61102_lib.cm3_rom_table:v <0x5a533015>
+			streams:   5, words:  4143
+		lx61102_lib.cm3_tpiu_trace_sync:v <0x563785f0>
+			streams:   5, words:   685
+		lx61102_lib.cm3_cdc_capt_sync:v <0x72b38aa2>
+			streams:   3, words:   809
+		lx61102_lib.cm3_tpiu_atb_sync:v <0x53ac7c70>
+			streams:   6, words:   796
+		lx61102_lib.cm3_cdc_connect:v <0x2256e1c7>
+			streams:   0, words:     0
+		lx61102_lib.cm3_cdc_connect:v <0x2d7787ca>
+			streams:   1, words:   203
+		lx61102_lib.cm3_tpiu_trace_clk:v <0x71457147>
+			streams:   3, words:   623
+		lx61102_lib.cm3_tpiu_trace_out:v <0x1334b3ff>
+			streams:  53, words: 24080
+		lx61102_lib.cm3_tpiu_formatter:v <0x6b45874f>
+			streams:  77, words: 30602
+		lx61102_lib.cm3_tpiu_trace_fifo:v <0x2a4768cb>
+			streams:  10, words:  2960
+		lx61102_lib.cm3_tpiu_trace_fifo:v <0x2911ab65>
+			streams:  10, words:  3002
+		lx61102_lib.cm3_tpiu_atb_fifo:v <0x4b4826f5>
+			streams:  29, words:  8350
+		lx61102_lib.cm3_tpiu_atb_fifo:v <0x51cdc92d>
+			streams:  29, words:  8396
+		lx61102_lib.cm3_tpiu_apb_if:v <0x37892412>
+			streams:  64, words: 22965
+		lx61102_lib.cm3_tpiu:v <0x01af587a>
+			streams:  21, words:  2472
+		lx61102_lib.DAPDpSync:v <0x494bd6bf>
+			streams:   4, words:   920
+		lx61102_lib.DAPSwDpSync:v <0x5364e9ac>
+			streams:   4, words:   435
+		lx61102_lib.DAPDpEnSync:v <0x491c40e9>
+			streams:   4, words:   974
+		lx61102_lib.DAPDpApbSync:v <0x04615a9c>
+			streams:   2, words:   216
+		lx61102_lib.DAPSwDpApbIf:v <0x744f064f>
+			streams:  39, words: 14527
+		lx61102_lib.DAPDpIMux:v <0x346ef7f0>
+			streams:  30, words:  6162
+		lx61102_lib.DAPJtagDpProtocol:v <0x28003643>
+			streams:  93, words: 42971
+		lx61102_lib.DAPSwDpProtocol:v <0x78ca1be3>
+			streams: 140, words: 72813
+		lx61102_lib.DAPSwjWatcher:v <0x501d4f10>
+			streams:   9, words: 10784
+		lx61102_lib.DAPSWJDP:v <0x64b03067>
+			streams:  22, words:  2501
+		lx61102_lib.cm3_wic:v <0x5f272bc4>
+			streams:  22, words:  6172
+		lx61102_lib.cm3_htm_port:v <0x7a357cb6>
+			streams:  36, words: 10601
+		lx61102_lib.cm3_itm_emit:v <0x56e0168c>
+			streams:  49, words: 21686
+		lx61102_lib.cm3_itm_fifo_byte:v <0x7dc83608>
+			streams:  24, words:  6408
+		lx61102_lib.cm3_itm_fifo:v <0x29c34daa>
+			streams:  27, words: 11376
+		lx61102_lib.cm3_itm_arb:v <0x4f4854c0>
+			streams:  22, words:  6523
+		lx61102_lib.cm3_itm_ts:v <0x0e21ed96>
+			streams:  42, words: 11800
+		lx61102_lib.cm3_itm_if:v <0x362bea41>
+			streams:  89, words: 34058
+		lx61102_lib.cm3_itm:v <0x20660015>
+			streams:   7, words:   799
+		lx61102_lib.cm3_ppb_ahb_to_apb:v <0x343e1741>
+			streams:  19, words:  6212
+		lx61102_lib.cm3_dwt_packet_state:v <0x0cbdf5a4>
+			streams:   6, words:  2842
+		lx61102_lib.cm3_dwt_packet_gen:v <0x0135803d>
+			streams:  51, words: 21586
+		lx61102_lib.cm3_dwt_comp:v <0x63aa2cca>
+			streams:  53, words: 22410
+		lx61102_lib.cm3_dwt_apb_if:v <0x35f98557>
+			streams: 256, words: 76308
+		lx61102_lib.cm3_dwt:v <0x339949c5>
+			streams:  23, words:  6872
+		lx61102_lib.cm3_fpb:v <0x4f177553>
+			streams: 138, words: 45659
+		lx61102_lib.cm3_ppb_decoder:v <0x1f5e8e72>
+			streams:  35, words: 11285
+		lx61102_lib.cm3_dap_ahb_ap_sync:v <0x11db1a1b>
+			streams:   4, words:   877
+		lx61102_lib.cm3_dap_ahb_ap_mst:v <0x36400602>
+			streams:  62, words: 17532
+		lx61102_lib.cm3_dap_ahb_ap_slv:v <0x145a8743>
+			streams:  63, words: 29458
+		lx61102_lib.cm3_mtx_output_stage_ppb:v <0x7f8826c5>
+			streams:  10, words:  8468
+		lx61102_lib.cm3_mtx_output_stage_sys:v <0x62f806a4>
+			streams:  46, words: 13724
+		lx61102_lib.cm3_mtx_output_stage_dcode:v <0x1130059c>
+			streams:  34, words:  9795
+		lx61102_lib.cm3_mtx_output_stage_icode:v <0x677690f8>
+			streams:  16, words:  3137
+		lx61102_lib.cm3_mtx_bit_master:v <0x312d840a>
+			streams: 160, words: 76534
+		lx61102_lib.cm3_mtx_decode_dap:v <0x099eab6b>
+			streams:  25, words:  7602
+		lx61102_lib.cm3_mtx_decode_icore:v <0x4cc92906>
+			streams:  24, words:  8084
+		lx61102_lib.cm3_mtx_decode_dcore:v <0x73af3596>
+			streams:  28, words:  9565
+		lx61102_lib.cm3_mtx_input_stage_dap:v <0x479bc1dc>
+			streams:  33, words:  6962
+		lx61102_lib.cm3_mtx_input_stage_icore:v <0x1bd16064>
+			streams:  19, words:  4099
+		lx61102_lib.cm3_mtx_input_stage_dcore:v <0x7533bae4>
+			streams:  27, words:  9207
+		lx61102_lib.cm3_bus_matrix:v <0x3ec3f403>
+			streams:  48, words:  6016
+		lx61102_lib.cm3_mpu_default:v <0x4cf74437>
+			streams:  61, words: 17371
+		lx61102_lib.cm3_mpu_ahb_ctl:v <0x4420b328>
+			streams:  71, words: 22273
+		lx61102_lib.cm3_mpu_comp:v <0x67539914>
+			streams:   8, words:  3817
+		lx61102_lib.cm3_mpu_maskgen:v <0x5568c9be>
+			streams:   4, words:  3289
+		lx61102_lib.cm3_mpu_region:v <0x785c2d2d>
+			streams:  33, words: 14060
+		lx61102_lib.cm3_mpu_regions:v <0x6b12aeb4>
+			streams:  59, words: 16798
+		lx61102_lib.cm3_mpu_align:v <0x2e23e300>
+			streams:  25, words:  6092
+		lx61102_lib.cm3_mpu_ppb_intf:v <0x2e62f725>
+			streams:  43, words: 20824
+		lx61102_lib.cm3_mpu_full:v <0x4a5be705>
+			streams:  11, words:  1887
+		lx61102_lib.cm3_mpu:v <0x4f52ef5c>
+			streams:  11, words:  1762
+		lx61102_lib.cm3_nvic_cell:v <0x44aeee4d>
+			streams:  12, words:  4524
+		lx61102_lib.cm3_nvic_cell:v <0x3bfa9f0f>
+			streams:  12, words:  4521
+		lx61102_lib.cm3_nvic_cell:v <0x75e3baf0>
+			streams:  12, words:  4515
+		lx61102_lib.cm3_nvic_cell:v <0x4e1f9afe>
+			streams:  12, words:  4509
+		lx61102_lib.cm3_nvic_cell:v <0x1133de23>
+			streams:  12, words:  4509
+		lx61102_lib.cm3_nvic_cell:v <0x79f5a167>
+			streams:  12, words:  4509
+		lx61102_lib.cm3_nvic_cell:v <0x4a1bf686>
+			streams:  12, words:  4506
+		lx61102_lib.cm3_nvic_cell:v <0x677268c3>
+			streams:   9, words:  3933
+		lx61102_lib.cm3_nvic_tree:v <0x5b0655c1>
+			streams: 258, words: 36579
+		lx61102_lib.cm3_nvic_preempt:v <0x14d45fc7>
+			streams:  12, words: 10071
+		lx61102_lib.cm3_nvic_int_state:v <0x1eb053fd>
+			streams:  17, words:  9489
+		lx61102_lib.cm3_nvic_reg:v <0x51690e86>
+			streams: 330, words: 128273
+		lx61102_lib.cm3_nvic_ppb_intf:v <0x02a3e445>
+			streams:  24, words: 39533
+		lx61102_lib.cm3_nvic:v <0x2a3a6356>
+			streams:  25, words:  3360
+		lx61102_lib.cm3_dpu_etmintf:v <0x131106ca>
+			streams:  42, words: 11362
+		lx61102_lib.cm3_dpu_lsu_ahbintf:v <0x72fd0d35>
+			streams: 217, words: 124937
+		lx61102_lib.cm3_dpu_lsu_ctl:v <0x5a0ecefa>
+			streams: 147, words: 120327
+		lx61102_lib.cm3_dpu_lsu:v <0x3c483144>
+			streams:  24, words:  2872
+		lx61102_lib.cm3_dpu_alu_srtdiv:v <0x76f85519>
+			streams:  21, words:  4217
+		lx61102_lib.cm3_dpu_alu_bshift:v <0x45c0d8dc>
+			streams:  26, words: 10371
+		lx61102_lib.cm3_dpu_alu_dp:v <0x33f813c6>
+			streams: 104, words: 45591
+		lx61102_lib.cm3_dpu_alu_ctl:v <0x00242c57>
+			streams: 126, words: 45022
+		lx61102_lib.cm3_dpu_alu:v <0x7b23bc60>
+			streams:  11, words:  1332
+		lx61102_lib.cm3_dpu_br_dec:v <0x2b683ffd>
+			streams:  67, words: 24844
+		lx61102_lib.cm3_dpu_32bit_dec:v <0x02c4ac39>
+			streams: 122, words: 77512
+		lx61102_lib.cm3_dpu_16bit_dec:v <0x20f19139>
+			streams:  60, words: 47863
+		lx61102_lib.cm3_dpu_fetch_ahbintf:v <0x1d1fe175>
+			streams: 127, words: 54223
+		lx61102_lib.cm3_dpu_fetch_ctl:v <0x3667bced>
+			streams:  10, words: 10982
+		lx61102_lib.cm3_dpu_fetch:v <0x79d0a50c>
+			streams:  10, words:  1189
+		lx61102_lib.cm3_clk_gate:v <0x468f7862>
+			streams:   7, words:   923
+		lx61102_lib.cm3_sync:v <0x5b27e64d>
+			streams:   4, words:   894
+		lx61102_lib.DTOP:sv <0x764e0dad>
+			streams: 230, words: 40616
+		lx61102_lib.lx61102:sv <0x18bd5ef7>
+			streams: 157, words: 26515
+		lx61102_lib.CORTEXM3INTEGRATION:v <0x3760477c>
+			streams:  84, words: 23043
+		lx61102_lib.uart_wrapper:sv <0x44231a9b>
+			streams:  29, words:  5951
+		lx61102_lib.i2c_master:v <0x1dac32c3>
+			streams:  43, words: 19300
+		lx61102_lib.i2cs_wrapper:sv <0x45870c54>
+			streams:  15, words:  2924
+		lx61102_lib.syscon:sv <0x1561a434>
+			streams: 108, words: 46216
+		lx61102_lib.rcu:sv <0x59549399>
+			streams: 172, words: 55889
+		lx61102_lib.anacon_top:v <0x71a6ebcb>
+			streams:   7, words:  3752
+		lx61102_lib.uart:v <0x71d47c90>
+			streams:  21, words:  5570
+		lx61102_lib.i2cm_wrapper:sv <0x711ec3e8>
+			streams:  16, words:  2973
+		lx61102_lib.spi_wrapper:sv <0x10adb65f>
+			streams:  27, words:  5284
+		lx61102_lib.cac_wrapper:sv <0x0b123fd9>
+			streams:  11, words:  2009
+		lx61102_lib.gpio_wrapper:sv <0x304b2915>
+			streams: 199, words: 100088
+		lx61102_lib.mtu_e_top:vp <0x2e7cb6ac>
+			streams:   1, words:  2917
+		lx61102_lib.timers:v <0x4594f0e3>
+			streams:   4, words:  1186
+		lx61102_lib.dma:sv <0x700ab6ce>
+			streams:  14, words:  2867
+		lx61102_lib.eflash_top_A:v <0x3f553278>
+			streams:   8, words:  1637
+		lx61102_lib.eflash_top_B:v <0x0c0d32d7>
+			streams:   8, words:  1561
+		lx61102_lib.ccu:sv <0x1161d78c>
+			streams: 467, words: 108689
+		lx61102_lib.pmu:sv <0x7973e732>
+			streams:  34, words:  7591
+		lx61102_lib.eflash_ctrl:v <0x0ff8f90d>
+			streams: 572, words: 447695
+		lx61102_lib.iwdt_wrapper:sv <0x75b27344>
+			streams:  14, words:  2816
+		lx61102_lib.dma_wrapper:sv <0x2b283831>
+			streams:  50, words: 15941
+		lx61102_lib.CIP_TOP_LX61100_S_r00:sv <0x469e642a>
+			streams:   0, words:     0
+		lx61102_lib.sf_eflash16kx39x4_s300_lfr6lp_4000:sv <0x6245354d>
+			streams: 260, words: 581862
+		lx61102_lib.sf_eflash16kx39x4_s300_lfr6lp_4000:sv <0x60df1c65>
+			streams: 260, words: 581862
+		lx61102_lib.sf_eflash1kx39x4_s300_lfr6lp_4000:sv <0x5bf38abd>
+			streams: 260, words: 582345
+			streams:  96, words: 43637
+			streams:  31, words: 54011
+			streams:  96, words: 43622
+			streams:  31, words: 54011
+		lx61102_lib.syscon_pmureg:sv <0x3aa1f06d>
+			streams:  43, words: 17307
+		lx61102_lib.syscon_ccureg:sv <0x51036bca>
+			streams: 110, words: 49825
+		lx61102_lib.syscon_rcureg:sv <0x034ff866>
+			streams:  86, words: 31579
+		lx61102_lib.syscon_ircreg:sv <0x4e1e0bfa>
+			streams:  10, words:  3339
+		lx61102_lib.gpio_top:v <0x5d00f86e>
+			streams:   9, words:  2994
+			streams:  40, words: 131773
+			streams:  40, words: 129100
+			streams:  38, words: 101767
+			streams:  38, words: 98926
+		lx61102_lib.cmsdk_ahb_busmatrix_5x9_lite:v <0x4d2ec438>
+			streams:   6, words:   965
+		lx61102_lib.fpi:v <0x08221e1a>
+			streams:   4, words:   756
+		lx61102_lib.eflash_top_16:v <0x4fdaff3d>
+			streams:   9, words:  2101
+		lx61102_lib.e_sse050_f0_ahb_to_sram:v <0x5d50dbb4>
+			streams:  43, words: 38549
+		lx61102_lib.timers_wrapper:sv <0x64aa7467>
+			streams:  12, words:  2553
+		lx61102_lib.mtue_wrapper:sv <0x299cbeb4>
+			streams:  68, words: 13831
+		lx61102_lib.uart_wrapper:sv <0x597e5ac1>
+			streams:  29, words:  5951
+		lx61102_lib.anacon_wrapper:sv <0x621247ea>
+			streams: 119, words: 22996
+		lx61102_lib.pmu_ps:sv <0x39c10399>
+			streams:  94, words: 27526
+		lx61102_lib.PIP_TOP_LX61100_S_r00:sv <0x68f4e543>
+			streams:   2, words:   839
+		lx61102_lib.lfr6lp_mc_vrom_hd_rvt_2048x39m8:v <0x09ef0fb4>
+			streams:  30, words: 41063
+		lx61102_lib.lfr6lp_mc_ra1w_hs_rvtm6t_9216x39m32:v <0x76582faa>
+			streams: 128, words: 426463
+		lx61102_lib.CORTEXM3:v <0x60be184b>
+			streams:  93, words: 20871
+		lx61102_lib.irc:sv <0x3f0e5399>
+			streams: 151, words: 33260
+		lx61102_lib.apb_dualtimers:v <0x61e2f2b3>
+			streams:   9, words:  4386
+		lx61102_lib.cac_ctrl:v <0x25341fc1>
+			streams:  41, words: 17745
+		lx61102_lib.spi:v <0x13a6935e>
+			streams:   7, words:  2264
+		lx61102_lib.i2c_slave:v <0x2d356265>
+			streams:  97, words: 54354
+		lx61102_lib.anacon_adc_type_a:v <0x35569c71>
+			streams: 105, words: 80763
+		lx61102_lib.anacon_dac_ctrl:v <0x102dd384>
+			streams:  17, words:  6604
+		lx61102_lib.cm3_dpu:v <0x0f871f03>
+			streams:  24, words:  8485
+		lx61102_lib.cm3_dap_ahb_ap:v <0x64569135>
+			streams:  19, words:  2170
+		lx61102_lib.cm3:sv <0x016659a4>
+			streams:  72, words: 15284
+		lx61102_lib.clkmux5x1:sv <0x622c94fd>
+			streams:  12, words:  2568
+		lx61102_lib.cm3_dpu_regbank:v <0x17d1e339>
+			streams:  52, words: 15895
+		lx61102_lib.cm3_dpu_dec:v <0x5a17f9ab>
+			streams:  96, words: 28412
+		lx61102_lib.cm3_dpu_exec:v <0x03de9b1c>
+			streams: 195, words: 60580
+		lx61102_lib.cm3_dpu_regfile:v <0x7ce7e6d9>
+			streams:  37, words: 19908
+		lx61102_lib.cm3_dpu_status:v <0x4f490bbb>
+			streams:  80, words: 35676
+		lx61102_lib.cm3_nvic_main:v <0x2d504b16>
+			streams: 167, words: 68941
+		lx61102_lib.\$unit_0x72854a89 :compilation_unit <0x350c639b>
+			streams:   8, words: 11194
+output real Y;
+            |
+xmelab: *W,COVUTA (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/PIP_TOP/PIP_TOP_module_instance.sv,8|12): Toggle coverage is not supported for SystemVerilog integer, real, string, dynamic array, sparse memory and reference ports. It is also not supported for VHDL multi-dimensional array and array of record. There may also be other such objects in the design.
+reg		[07:00] rFIFO0[07:00]               ;
+   		             |
+xmelab: *W,COVMDD (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/dma_fifo.v,66|18): Toggle coverage for bit, logic, reg, wire, enum and struct multi-dimensional static arrays and vectors is not supported by default. To enable toggle coverage for enum multi-dimensional static arrays specify 'set_toggle_scoring -sv_enum enable_mda' and for other multi-dimensional static arrays, specify 'set_toggle_scoring -sv_mda [<max_bit_base2_exponent>] [-sv_mda_of_struct]' ccf command in the coverage configuration file.
+	Building instance specific data structures.
+    wand I2C_SCL_bus            ;
+                   |
+xmelab: *W,CSAOBW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb.sv,615|19): wand/wor net connected to bidirectional primitive data input 'soc_tb.I2C_SCL_bus'.
+    wand I2C_SDA_bus            ;
+                   |
+xmelab: *W,CSAOBW (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb.sv,616|19): wand/wor net connected to bidirectional primitive data input 'soc_tb.I2C_SDA_bus'.
+    .RESETn_PAD_C	        (RESETn_PAD_C	    	),
+                 	                    |
+xmelab: *W,CSINFI (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/top/lx61102/rtl_codes/lx61102.sv,475|38): implicit wire has no fanin (top.dut.RESETn_PAD_C).
+    .MODE_PAD_C		        (MODE_PAD_C		    	),
+               		                  |
+xmelab: *W,CSINFI (/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/top/lx61102/rtl_codes/lx61102.sv,467|35): implicit wire has no fanin (top.dut.MODE_PAD_C).
+    .PDE(tm2pad_gpd_pde[8]), .PUE(tm2pad_gpd_pue[8]), .PAD_C(net30));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,174|65): implicit wire has no fanin (top.dut.u_PTOP.net30).
+    .PDE(tm2pad_gpd_pde[9]), .PUE(tm2pad_gpd_pue[9]), .PAD_C(net29));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,180|65): implicit wire has no fanin (top.dut.u_PTOP.net29).
+    .PDE(tm2pad_gpd_pde[7]), .PUE(tm2pad_gpd_pue[7]), .PAD_C(net28));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,186|65): implicit wire has no fanin (top.dut.u_PTOP.net28).
+    .PDE(tm2pad_gpd_pde[10]), .PUE(tm2pad_gpd_pue[10]), .PAD_C(net27));
+                                                                   |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,192|67): implicit wire has no fanin (top.dut.u_PTOP.net27).
+    .PDE(tm2pad_gpd_pde[6]), .PUE(tm2pad_gpd_pue[6]), .PAD_C(net26));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,198|65): implicit wire has no fanin (top.dut.u_PTOP.net26).
+    .PDE(tm2pad_gpd_pde[5]), .PUE(tm2pad_gpd_pue[5]), .PAD_C(net25));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,204|65): implicit wire has no fanin (top.dut.u_PTOP.net25).
+    .PDE(tm2pad_gpd_pde[2]), .PUE(tm2pad_gpd_pue[2]), .PAD_C(net24));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,210|65): implicit wire has no fanin (top.dut.u_PTOP.net24).
+    .PDE(tm2pad_gpd_pde[1]), .PUE(tm2pad_gpd_pue[1]), .PAD_C(net23));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,216|65): implicit wire has no fanin (top.dut.u_PTOP.net23).
+    .PDE(tm2pad_gpd_pde[4]), .PUE(tm2pad_gpd_pue[4]), .PAD_C(net34));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,222|65): implicit wire has no fanin (top.dut.u_PTOP.net34).
+    .PDE(tm2pad_gpd_pde[3]), .PUE(tm2pad_gpd_pue[3]), .PAD_C(net14));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,228|65): implicit wire has no fanin (top.dut.u_PTOP.net14).
+    .PDE(tm2pad_gpd_pde[0]), .PUE(tm2pad_gpd_pue[0]), .PAD_C(net32));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,234|65): implicit wire has no fanin (top.dut.u_PTOP.net32).
+    .PDE(tm2pad_gpb_pde[7]), .PUE(tm2pad_gpb_pue[7]), .PAD_C(net12));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,265|65): implicit wire has no fanin (top.dut.u_PTOP.net12).
+    .PDE(tm2pad_gpb_pde[4]), .PUE(tm2pad_gpb_pue[4]), .PAD_C(net20));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,284|65): implicit wire has no fanin (top.dut.u_PTOP.net20).
+    .PDE(tm2pad_gpb_pde[3]), .PUE(tm2pad_gpb_pue[3]), .PAD_C(net21));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,290|65): implicit wire has no fanin (top.dut.u_PTOP.net21).
+    .PDE(tm2pad_gpb_pde[0]), .PUE(tm2pad_gpb_pue[0]), .PAD_C(net18));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,296|65): implicit wire has no fanin (top.dut.u_PTOP.net18).
+    .PDE(tm2pad_gpb_pde[5]), .PUE(tm2pad_gpb_pue[5]), .PAD_C(net19));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,302|65): implicit wire has no fanin (top.dut.u_PTOP.net19).
+    .PDE(tm2pad_gpd_pde[11]), .PUE(tm2pad_gpd_pue[11]), .PAD_C(net35));
+                                                                   |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,315|67): implicit wire has no fanin (top.dut.u_PTOP.net35).
+    .PDE(tm2pad_gpa_pde[5]), .PUE(tm2pad_gpa_pue[5]), .PAD_C(net2));
+                                                                |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,321|64): implicit wire has no fanin (top.dut.u_PTOP.net2).
+    .PDE(tm2pad_gpa_pde[4]), .PUE(tm2pad_gpa_pue[4]), .PAD_C(net7));
+                                                                |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,327|64): implicit wire has no fanin (top.dut.u_PTOP.net7).
+    .PDE(tm2pad_gpa_pde[0]), .PUE(tm2pad_gpa_pue[0]), .PAD_C(net17));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,333|65): implicit wire has no fanin (top.dut.u_PTOP.net17).
+    .PDE(tm2pad_gpa_pde[7]), .PUE(tm2pad_gpa_pue[7]), .PAD_C(net16));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,358|65): implicit wire has no fanin (top.dut.u_PTOP.net16).
+    .PDE(tm2pad_gpa_pde[6]), .PUE(tm2pad_gpa_pue[6]), .PAD_C(net33));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,364|65): implicit wire has no fanin (top.dut.u_PTOP.net33).
+    .PDE(tm2pad_gpa_pde[2]), .PUE(tm2pad_gpa_pue[2]), .PAD_C(net31));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,376|65): implicit wire has no fanin (top.dut.u_PTOP.net31).
+    .PDE(tm2pad_gpb_pde[2]), .PUE(tm2pad_gpb_pue[2]), .PAD_C(net8));
+                                                                |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,382|64): implicit wire has no fanin (top.dut.u_PTOP.net8).
+    .PDE(tm2pad_gpb_pde[1]), .PUE(tm2pad_gpb_pue[1]), .PAD_C(net1625));
+                                                                   |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,388|67): implicit wire has no fanin (top.dut.u_PTOP.net1625).
+    .PDE(tm2pad_gpb_pde[6]), .PUE(tm2pad_gpb_pue[6]), .PAD_C(net9));
+                                                                |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,429|64): implicit wire has no fanin (top.dut.u_PTOP.net9).
+    .PDE(tm2pad_gpa_pde[1]), .PUE(tm2pad_gpa_pue[1]), .PAD_C(net22));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,459|65): implicit wire has no fanin (top.dut.u_PTOP.net22).
+    .PDE(tm2pad_gpa_pde[3]), .PUE(tm2pad_gpa_pue[3]), .PAD_C(net15));
+                                                                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,465|65): implicit wire has no fanin (top.dut.u_PTOP.net15).
+    .PDE(tm2pad_gpx_pde[0]), .PUE(tm2pad_gpx_pue[0]), .PAD_C(net4));
+                                                                |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,607|64): implicit wire has no fanin (top.dut.u_PTOP.net4).
+    .PDE(tm2pad_gpx_pde[1]), .PUE(tm2pad_gpx_pue[1]), .PAD_C(net1));
+                                                                |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,614|64): implicit wire has no fanin (top.dut.u_PTOP.net1).
+    .AY1000(net1863), .AY200(PIP_SHDN_C), .AY(net1862), .VDDPST(DVDD5), 
+                                                    |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,691|52): implicit wire has no fanin (top.dut.u_PTOP.net1862).
+    .AY1000(net1863), .AY200(PIP_SHDN_C), .AY(net1862), .VDDPST(DVDD5), 
+                  |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv,691|18): implicit wire has no fanin (top.dut.u_PTOP.net1863).
+IPLL0_r00  IPLL0 ( .IPLL0_VCP(net1), .IPLL0_TM_IN(net2), 
+                                                     |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/240104/CoAsia_240103/CIP_TOP/CIP_TOP_LX61100_S_r00_DUT.sv,83|53): implicit wire has no fanin (top.dut.u_CIP_TOP.net2).
+    .IN23(TIELO_HV), .AVDD5_AMUX0(AVDD5_AIP0), 
+                 |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AFE_TOP/AIP_TOP_LX61100_S_r00_DUT.sv,72|17): implicit wire has no fanin (top.dut.u_AIP_TOP.TIELO_HV).
+    .LDO2P4_OCP_TRIM(L2P4_OCP_TRIM[2:0]), .PIP_SHDN(net23), 
+                                                        |
+xmelab: *W,CSINFI (/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/PIP_TOP/PIP_TOP_LX61100_S_r00_DUT.sv,249|56): implicit wire has no fanin (top.dut.u_PIP_TOP.net23).
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                        Instances  Unique
+		Modules:                     3167     466
+		Interfaces:                   170      96
+		Verilog packages:              35      35
+		Primitives:                  1047       8
+		Timing outputs:               115      92
+		Registers:                 120720   69980
+		Scalar wires:               30778       -
+		Expanded wires:              5493     548
+		Vectored wires:              7047       -
+		Named events:                 525     169
+		Always blocks:               6520    2539
+		Initial blocks:              4564    1571
+		Parallel blocks:              143     140
+		Cont. assignments:          16177   11013
+		Pseudo assignments:          5089    3381
+		Timing checks:               1574     219
+		Assertions:                   414      51
+		Covergroup Instances:           0      52
+		Compilation units:              2       2
+		SV Class declarations:       1360    1477
+		SV Class specializations:    2964    2964
+		Simulation timescale:         1ps
+	Writing initial simulation snapshot: worklib.specman:sv
+TOOL:	xrun(64)	20.09-s018: Exiting on Jan 30, 2024 at 17:20:58 KST  (total: 00:03:04)

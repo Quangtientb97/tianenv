@@ -1,0 +1,55 @@
+//
+// Written by NGen Library ver.1.2.6 2024-01-30 17:20:58
+//
+
+header vsof {
+        runner_version : <text>2</text> ;
+        version : <text>3</text> ;
+        vmanager_version : <text>10.20.xxx-yyy</text> ;
+}
+
+session_output "test" {
+        original_session_dir : <text>/mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/lx61102-dbs/cov_work/scope</text>;
+        runs_in_session : 1;
+        session_description : <text>Single run of 'test'</text>;
+        session_dir : <text>/mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/lx61102-dbs/cov_work/scope</text>;
+        session_end_time : <text>1706602858</text>;
+        session_name : <text>test</text>;
+        session_owner : <text>tientq</text>;
+        session_start_time : <text>1706602678</text>;
+        session_status : <text>post_session_script_done</text>;
+        session_type : <text>single_run</text>;
+        top_dir : <text>$ATTR(session_dir)/..</text>;
+}
+
+run 1 {
+        cpu_time : 379;
+        end_time : <text>1706602858</text>;
+        engine : <text>xmsim</text>;
+        full_title : <text>test</text>;
+        host_name : <text>soc12</text>;
+        job_status : <text>running</text>;
+        log_file : <text>/mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/lx61102-dbs/xrun.log<__SEPARATOR__>/mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/lx61102-dbs/xrun.log</text>;
+        original_test_path : <text>___test</text>;
+        owner : <text>tientq</text>;
+        run_dir : <text>/mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/lx61102-dbs/cov_work/scope/test</text>;
+        run_id : 1;
+        run_type : <text>simulation</text>;
+        simulator : <text>xmelab</text>;
+        start_time : <text>1706602678</text>;
+        system_time : 150;
+        test_name : <text>test</text>;
+        user_time : 229;
+
+        filter "xmvlog" {
+                filter_files : <text>cdns_sim.flt ovm_sv_lib.flt</text>;
+                filter_id : <text>xmvlog</text>;
+                log_file : <text>/mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/lx61102-dbs/xrun.log</text>;
+        }
+
+        filter "xmelab" {
+                filter_files : <text>cdns_sim.flt ovm_sv_lib.flt</text>;
+                filter_id : <text>xmelab</text>;
+                log_file : <text>/mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/lx61102-dbs/xrun.log</text>;
+        }
+}

@@ -1,0 +1,1303 @@
+*design* DebussyLib (btIdent Verdi_Q-2020.03-SP2)
+Command arguments:
+    +define+verilog
+    -2012
+    -uvm-1.2
+    -error=noMPD
+    -define SIMULATION
+    -define SIM_POWER_PINS
+    -define SIM_FAST_ERASE
+    -define RTL
+    -define UVM_HDL_MAX_WIDTH=1248
+    -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/top/lx61102/rtl_codes/vcode.f
+        /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/top/lx61102/rtl_codes/lx61102.sv
+        -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/top/DTOP/rtl_codes/vcode.f
+            /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/top/DTOP/rtl_codes/DTOP.sv
+            -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/blk/BLK_CPU/rtl_codes/vcode.f
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/blk/BLK_CPU/rtl_codes/BLK_CPU.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_ahblite_master.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_ahblite_slave.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_apb3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2adc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2atop.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2dac.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2hosc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2ldo.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2lvd.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2pll.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2xosc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cac2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_ccureg2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_dcode.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_icode.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_system.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32iwdt.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dma2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2flash.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2fpi.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iom2sram.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_irc2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_ircreg2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iwdt2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iwdt2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2adc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pad.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2fctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmureg2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_rcureg2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_srctrl2sram.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_stc2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_syscon2busmtx.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_timers2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fdm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dacctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_adcctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2adcctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/stretch_pulse.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_ccu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_irc_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_pmu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_rcu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_adcctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dacctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fdm2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pad2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_srctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_bootrom2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2adcctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fdm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fpi.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pad.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2srctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2bootrom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2pmu.svh
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_regbank.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_16bit_dec.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_lsu_ctl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_exec.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_alu_ctl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_dec.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_status.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_fetch_ahbintf.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_lsu_ahbintf.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_fetch.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_32bit_dec.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_alu_bshift.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_alu.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_etmintf.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_alu_dp.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_br_dec.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_lsu.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_alu_srtdiv.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_regfile.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu/cm3_dpu_fetch_ctl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_fpb/cm3_fpb.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dap_ahb_ap/cm3_dap_ahb_ap_slv.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dap_ahb_ap/cm3_dap_ahb_ap_mst.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dap_ahb_ap/cm3_dap_ahb_ap_sync.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dap_ahb_ap/cm3_dap_ahb_ap.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_itm/cm3_itm_emit.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_itm/cm3_itm.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_itm/cm3_itm_if.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_itm/cm3_itm_fifo_byte.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_itm/cm3_itm_ts.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_itm/cm3_itm_arb.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_itm/cm3_itm_fifo.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_nvic/cm3_nvic_int_state.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_nvic/cm3_nvic_reg.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_nvic/cm3_nvic_cell.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_nvic/cm3_nvic_tree.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_nvic/cm3_nvic_main.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_nvic/cm3_nvic.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_nvic/cm3_nvic_ppb_intf.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_nvic/cm3_nvic_preempt.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_tpiu/cm3_tpiu_apb_if.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_tpiu/cm3_tpiu.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_tpiu/cm3_tpiu_trace_out.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_tpiu/cm3_tpiu_trace_clk.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_tpiu/cm3_tpiu_formatter.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_tpiu/cm3_tpiu_trace_sync.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_tpiu/cm3_tpiu_atb_fifo.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_tpiu/cm3_tpiu_atb_sync.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_tpiu/cm3_tpiu_trace_fifo.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_mtx_decode_dcore.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_mtx_decode_dap.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_mtx_decode_icore.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_mtx_input_stage_icore.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_mtx_output_stage_icode.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_mtx_input_stage_dcore.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_mtx_input_stage_dap.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_bus_matrix.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_mtx_output_stage_sys.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_mtx_output_stage_dcode.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_mtx_output_stage_ppb.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix/cm3_mtx_bit_master.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dwt/cm3_dwt_packet_gen.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dwt/cm3_dwt_comp.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dwt/cm3_dwt_apb_if.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dwt/cm3_dwt.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dwt/cm3_dwt_packet_state.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cortexm3/cm3_htm_port.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cortexm3/cm3_ppb_ahb_to_apb.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cortexm3/CORTEXM3.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cortexm3/cm3_ppb_decoder.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/models/cm3_sync.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/models/cm3_cdc_capt_sync.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/models/cm3_std_clk_gate.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/models/cm3_clk_gate.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/models/cm3_cdc_connect.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_wic/cm3_wic.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_mpu/cm3_mpu_align.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_mpu/cm3_mpu_regions.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_mpu/cm3_mpu_region.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_mpu/cm3_mpu_maskgen.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_mpu/cm3_mpu_ppb_intf.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_mpu/cm3_mpu.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_mpu/cm3_mpu_default.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_mpu/cm3_mpu_ahb_ctl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_mpu/cm3_mpu_comp.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_mpu/cm3_mpu_full.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cortexm3_integration/cm3_code_mux.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cortexm3_integration/cm3_rom_table.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cortexm3_integration/cm3_flash_mux.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cortexm3_integration/CORTEXM3INTEGRATION.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPDpClamp0.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPDpIMux.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPDpApbSync.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPSwDpProtocol.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPDpSync.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPSwjWatcher.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPDpApbIfClamp.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPDpEnSync.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPSwDpSync.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPSWJDP.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPJtagDpProtocol.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp/DAPSwDpApbIf.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3.sv
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_bus_matrix
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dap_ahb_ap
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dwt
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_fpb
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_lic_defs
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_mpu
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_nvic
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_tpiu
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/dapswjdp
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/ualdis
+            -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/blk/BLK_BUS/rtl_codes/vcode.f
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/blk/BLK_BUS/rtl_codes/BLK_BUS.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_ahblite_master.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_ahblite_slave.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_apb3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2adc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2atop.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2dac.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2hosc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2ldo.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2lvd.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2pll.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2xosc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cac2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_ccureg2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_dcode.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_icode.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_system.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32iwdt.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dma2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2flash.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2fpi.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iom2sram.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_irc2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_ircreg2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iwdt2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iwdt2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2adc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pad.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2fctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmureg2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_rcureg2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_srctrl2sram.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_stc2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_syscon2busmtx.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_timers2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fdm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dacctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_adcctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2adcctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/stretch_pulse.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_ccu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_irc_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_pmu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_rcu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_adcctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dacctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fdm2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pad2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_srctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_bootrom2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2adcctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fdm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fpi.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pad.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2srctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2bootrom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2pmu.svh
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_decode_5x9s0.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_decode_5x9s1.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_decode_5x9s2.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_decode_5x9s3.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_decode_5x9s4.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_input_stage_5x9.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_arb_5x9m0.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_arb_5x9m1.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_arb_5x9m2.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_arb_5x9m3.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_arb_5x9m4.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_arb_5x9m5.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_arb_5x9m6.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_arb_5x9m7.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_arb_5x9m8.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_stage_5x9m0.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_stage_5x9m1.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_stage_5x9m2.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_stage_5x9m3.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_stage_5x9m4.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_stage_5x9m5.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_stage_5x9m6.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_stage_5x9m7.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_bm_output_stage_5x9m8.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_busmatrix_5x9.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_busmatrix_5x9_default_slave.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/cmsdk_ahb_busmatrix_5x9/rtl_codes/cmsdk_ahb_busmatrix_5x9_lite.v
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_ahb_to_apb.v
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_apb_slave_mux.v
+            -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/blk/BLK_MEM/rtl_codes/vcode.f
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/blk/BLK_MEM/rtl_codes/BLK_MEM.sv
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_ahb_to_apb.v
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_apb_slave_mux.v
+                /PROJECT/DK/LFR6LP/DK/RELEASE/MEMORY/rom/v2/lfr6lp_mc_vrom_hd_rvt_2048x39m8/lfr6lp_mc_vrom_hd_rvt_2048x39m8.v
+                /PROJECT/DK/LFR6LP/DK/RELEASE/MEMORY/rom/v2/lfr6lp_mc_vrom_hd_rvt_2048x39m8/lfr6lp_mc_vrom_hd_rvt_2048x39m8_wrapper.v
+                /PROJECT/DK/LFR6LP/DK/RELEASE/MEMORY/sram/v2/lfr6lp_mc_ra1w_hs_rvtm6t_9216x39m32/lfr6lp_mc_ra1w_hs_rvtm6t_9216x39m32.v
+                /PROJECT/DK/LFR6LP/DK/RELEASE/MEMORY/sram/v2/lfr6lp_mc_ra1w_hs_rvtm6t_9216x39m32/lfr6lp_mc_ra1w_hs_rvtm6t_9216x39m32_wrapper.v
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/ecc_wrapper/ssf_dec.v
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/DCT_REG_64_for_DNA.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/sf_eflash_dna_v1p22.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/sf_eflash_dna_v1p22.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/EFLASH_RTL_RSTnSYNCH_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/EFLASH_RTL_SYNCHRONIZER_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/ua_ctrl_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/external_bridge_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/bist_ctrl_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/bist_trim_TREG08_DCT32_DIN08_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/bist_trim_TREG16_DCT32_DIN32_and_above_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/bist_trim_TREG16_DCT64_DIN32_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/bist_trim_TREG16_DCT64_DIN64_and_above_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/bist_mat_REDNUM1_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/bist_mat_REDNUM2_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/ctrl_mux_secded_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/SECDED_39_32_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/SECDED_72_64_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/EFLASH_ECC_TOP_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/Process_related/EFLASH_GENERIC_LFR6LP.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/SWD_INTERFACE/SWD_Interface_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/SWD_INTERFACE/dp_sw_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/SWD_INTERFACE/ap_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/SWD_INTERFACE/ap_reg_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/ncsim/RTL/SWD_INTERFACE/dp_ncsim.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash1kx39x4_s300_lfr6lp_4000.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash16kx39x4_s300_lfr6lp_4000.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/sf_eflash1kx39x4_s300_lfr6lp_4000_wrapper.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/sf_eflash16kx39x4_s300_lfr6lp_4000_wrapper.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/eflash_apb_mux.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/ecc_wrapper/ssf_dec.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/ecc_wrapper/ssf_enc.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/ecc_check.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/eflash_red.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/checksum.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/eflash_ahb.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/eflash_ctrl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/eflash_sfr.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/eflash_sub_top.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/eflash_top_A.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/eflash_top_B.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/eflash_top_16.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/NX_SYNCHRONIZER/rtl_codes/NX_SYNCHRONIZER.v
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_ahblite_master.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_ahblite_slave.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_apb3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2adc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2atop.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2dac.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2hosc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2ldo.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2lvd.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2pll.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2xosc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cac2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_ccureg2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_dcode.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_icode.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_system.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32iwdt.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dma2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2flash.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2fpi.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iom2sram.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_irc2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_ircreg2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iwdt2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iwdt2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2adc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pad.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2fctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmureg2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_rcureg2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_srctrl2sram.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_stc2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_syscon2busmtx.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_timers2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fdm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dacctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_adcctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2adcctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/stretch_pulse.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_ccu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_irc_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_pmu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_rcu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_adcctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dacctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fdm2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pad2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_srctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_bootrom2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2adcctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fdm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fpi.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pad.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2srctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2bootrom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2pmu.svh
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sram_ecc_ctrl/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sram_ecc_ctrl/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sram_ecc_ctrl/rtl_codes/sram_ecc_ctrl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sram_ecc_ctrl/rtl_codes/e_sse050_f0_ahb_to_sram.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sram_ecc_ctrl/rtl_codes/apb_slave.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sram_ecc_ctrl/rtl_codes/s_ecc_check.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/ecc_wrapper/ssf_dec.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/ecc_wrapper/ssf_enc.v
+            -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/blk/BLK_SYS/rtl_codes/vcode.f
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/blk/BLK_SYS/rtl_codes/BLK_SYS.sv
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_apb_slave_mux.v
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/models/cm3_sync.v
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_ahblite_master.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_ahblite_slave.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_apb3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2adc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2atop.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2dac.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2hosc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2ldo.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2lvd.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2pll.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2xosc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cac2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_ccureg2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_dcode.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_icode.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_system.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32iwdt.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dma2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2flash.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2fpi.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iom2sram.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_irc2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_ircreg2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iwdt2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iwdt2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2adc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pad.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2fctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmureg2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_rcureg2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_srctrl2sram.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_stc2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_syscon2busmtx.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_timers2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fdm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dacctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_adcctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2adcctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/stretch_pulse.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_ccu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_irc_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_pmu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_rcu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_adcctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dacctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fdm2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pad2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_srctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_bootrom2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2adcctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fdm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fpi.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pad.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2srctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2bootrom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2pmu.svh
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/syscon/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/syscon/rtl_codes/if_syscon_apbif2reg.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/syscon/rtl_codes/syscon.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/syscon/rtl_codes/syscon_apbif.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/syscon/rtl_codes/syscon_ccureg.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/syscon/rtl_codes/syscon_ircreg.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/syscon/rtl_codes/syscon_pmureg.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/syscon/rtl_codes/syscon_rcureg.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/irc/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/irc/rtl_codes/irc.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/pmu_cm3/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/pmu_cm3/rtl_codes/cm3_pmu.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/pmu_cm3/rtl_codes/pmu_ps.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/pmu_cm3/rtl_codes/pmu.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/rcu/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/rcu/rtl_codes/rcu.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/ccu.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_and.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_buf.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_div.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_gate.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_inv.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_mux.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkdiv.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkdm6_wo_gf.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkgb.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkm5d.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkm5dgb.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkm5gb.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkmux2x1.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkmux5x1.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkmux5x1_wo_gf.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/stc/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/stc/rtl_codes/cmsdk_mcu_stclkctrl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/stc/rtl_codes/stc.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/dma_wrapper.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/dma.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/dma_ahbif.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/dma_chctrl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/dma_chmux.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/dma_dreq.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/dma_ldreq.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/dma_fifo.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/dma_crc16.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/dma/rtl_codes/dma_libs.v
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/i2c_uart/fpi_buffer.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/i2c_uart/fpi_i2c_slave.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/i2c_uart/fpi_std_clk_gate.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/i2c_uart/fpi_uart.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/i2c_uart/i2c_deglitch.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/i2c_uart/serial2bus_bridge.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/i2c_uart/serial_ahb_master.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/i2c_uart/serial_if.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/fpi.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/fpi_wrapper.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/fpi/rtl_codes/sys_cfg.v
+            -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/blk/BLK_PERI/rtl_codes/vcode.f
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/blk/BLK_PERI/rtl_codes/BLK_PERI.sv
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_ahb_to_apb.v
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_apb_slave_mux.v
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_ahblite_master.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_ahblite_slave.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_amba_apb3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2adc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2atop.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2dac.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2hosc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2ldo.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2lvd.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2pll.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2xosc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cac2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_ccureg2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_dcode.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_icode.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32busmtx_system.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32iwdt.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_cm32rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dma2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2flash.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2fpi.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2ccu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cm2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_i2cs2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iom2sram.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_irc2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_ircreg2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iwdt2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_iwdt2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2adc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_mtue2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pad.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2fctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmureg2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_rcureg2rcu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_spi2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_srctrl2sram.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_stc2cm3.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_syscon2busmtx.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_timers2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fdm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2dma.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2iom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_uart2irc.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dacctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_adcctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2adcctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/stretch_pulse.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_ccu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_irc_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_pmu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/t_reg_rcu_define.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_adcctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_anacon2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_dacctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fdm2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fpi2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pad2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_pmu2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_srctrl2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_bootrom2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_gpio2tm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2adcctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2anacon.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fdm.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2fpi.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pad.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2pmu.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2srctrl.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2bootrom.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_tm2gpio.svh
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes/if_fctrl2pmu.svh
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/iwdt/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_mux.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/iwdt/rtl_codes/iwdt.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/iwdt/rtl_codes/iwdt_ctrl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/iwdt/rtl_codes/iwdt_divider.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/iwdt/rtl_codes/iwdt_reg.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/iwdt/rtl_codes/iwdt_wrapper.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/timers/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/timers/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/timers/rtl_codes/dtc_rstsync.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/timers/rtl_codes/apb_dualtimers.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/timers/rtl_codes/apb_dualtimers_defs.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/timers/rtl_codes/apb_dualtimers_frc.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/timers/rtl_codes/dual_timer.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/timers/rtl_codes/synchronizer.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/timers/rtl_codes/synchronizer_async.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/timers/rtl_codes/timers.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/timers/rtl_codes/timers_wrapper.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_core_inp_ab.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_core_out_ac.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_core_out_bd.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_core_reg_ab.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_core_reg_xy.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_core_tmng.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_core_tmng_dnf.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_core_tmng_tgen.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_e_dbgmux.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_e_intf.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_e_reg_map.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_e_sync.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_e_top.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_mtclk_dnf.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_type_e_v2.vp
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtue_wrapper.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/gpio/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/gpio/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_buf.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_mux.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_inv.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/gpio/rtl_codes/gpio_top.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/gpio/rtl_codes/gpio_sync.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/gpio/rtl_codes/gpio_reg_map.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/gpio/rtl_codes/gpio_mux.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/gpio/rtl_codes/gpio_int.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/gpio/rtl_codes/gpio_dnf.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/gpio/rtl_codes/gpio_apbif.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/gpio/rtl_codes/gpio_wrapper.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cac/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cac/rtl_codes/cac.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cac/rtl_codes/cac_ctrl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cac/rtl_codes/cac_df.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cac/rtl_codes/cac_div_measure.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cac/rtl_codes/cac_div_ref.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cac/rtl_codes/cac_edge.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cac/rtl_codes/cac_reg.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cac/rtl_codes/cac_wrapper.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspApbif.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspDMA.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspDataStp.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspDefs.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspIntGen.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspMTxRxCntl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspRegCore.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspRevAnd.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspRxFCntl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspRxFIFO.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspRxRegFile.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspSTxRxCntl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspScaleCntr.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspSynctoPCLK.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspSynctoSSPCLK.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspTest.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspTxFCntl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspTxFIFO.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspTxLJustify.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspTxRegFile.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/SspUnDefs.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/spi.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/spi/rtl_codes/spi_wrapper.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_master/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_master/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_master/rtl_codes/i2c_master.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_master/rtl_codes/i2c_master_bit_ctrl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_master/rtl_codes/i2c_master_byte_ctrl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_master/rtl_codes/i2c_master_defines.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_master/rtl_codes/i2cm_filt.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_master/rtl_codes/i2cm_scanmx2.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_master/rtl_codes/i2cm_wrapper.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_slave/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_slave/rtl_codes/i2c_ff.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_slave/rtl_codes/i2c_slave.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_slave/rtl_codes/i2cs_filt.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_slave/rtl_codes/i2cs_scanmx2.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/i2c_slave/rtl_codes/i2cs_wrapper.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartApbif.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartBaudCntr.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartDMA.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartDataStp.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartInterrupt.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartRXCntl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartRXFCntl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartRXFIFO.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartRXParShft.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartRXRegFile.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartReceive.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartRegBlock.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartRevAnd.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartSynctoPCLK.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartSynctoUCLK.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartTXCntl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartTXFCntl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartTXFIFO.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartTXRegFile.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/UartTest.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/uart.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/uart/rtl_codes/uart_wrapper.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes/vcode.f
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes
+                    +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/common/rtl_codes
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_gate.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes/anacon_adc_core_a_grp.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes/anacon_adc_core_mctrl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes/anacon_adc_core_tconv.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes/anacon_adc_core_trg.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes/anacon_adc_type_a.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes/anacon_dac_ctrl.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes/anacon_intf.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes/anacon_reg_map.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes/anacon_top.v
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/anacon/rtl_codes/anacon_wrapper.sv
+                -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/vcode.f
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/ccu.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_and.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_buf.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_div.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_gate.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_inv.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clk_mux.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkdiv.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkdm6_wo_gf.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkgb.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkm5d.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkm5dgb.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkm5gb.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkmux2x1.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkmux5x1.sv
+                    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/ccu/rtl_codes/clkmux5x1_wo_gf.sv
+            -f /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/vcode.f
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/tm.sv
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/um_tmux.sv
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/um_tst.v
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/ssf_tst.v
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/IHSOSC10MA_CAL_DUT_V2.sv
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/ILSOSC32K_CAL_DUT_V2.sv
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/tm_std_mux.v
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/tm_std_nand.v
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/tm_std_clk_buf.v
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/clib/clib_cbuf.sv
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/clib/clib_cgate.sv
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/clib/clib_cmux2.sv
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/clib/clib_cmux4.sv
+                /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes/clib/clib_cmux7.sv
+                +incdir+/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/tm/rtl_codes
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/231030/IO_TOP_02A_r00_PG_231031.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61102/IOPAD/IO_TOP_module_instance.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/Common_function.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/AMUX0_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/ADC0_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/TSENSE_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/DAC0_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/POR_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/LDO1P2V_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/LDO2P4V_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/BGR_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/LXOSC_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/HXOSC_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/IHSOSC9MA_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/ILSOSC32K_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/ShareFiles/IPLL0_r00_define_info.svh
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AFE_TOP/AIP_TOP_LX61100_S_r00_DUT.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/ADC0/ADC0_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/ADC0/ADC0_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/EHOSC/HXOSC_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/EHOSC/HXOSC_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/ELOSC/LXOSC_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/ELOSC/LXOSC_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/IHSOSC9MA/IHSOSC9MA_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/IHSOSC9MA/IHSOSC9MA_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/ILSOSC32K/ILSOSC32K_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/ILSOSC32K/ILSOSC32K_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/IPLL/IPLL0_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/240104/CoAsia_240103/CIP_TOP/CIP_TOP_LX61100_S_r00_DUT.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/240104/CoAsia_240103/IPLL0_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/PIP_TOP/PIP_TOP_module_instance.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/PIP_TOP/PIP_TOP_LX61100_S_r00_DUT.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LSH2L/PIP_LVSH2L_r00_DUT.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LSL2H/PIP_LVSL2H_r00_DUT.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_CORE.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/TSENSE/TSENSE_r00_DUT_REGWr.sv
+        /PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/TSENSE/TSENSE_r00_DUT_CORE.sv
+    -define LX61102_DE
+    -define UVM_NO_DEPRECATED
+    -define UVM_HDL_MAX_WIDTH=1248
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_clk_se/nx_ext_clk_se_if.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_clk_se/nx_ext_clk_se_pkg.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_rst/nx_ext_rst_if.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_rst/nx_ext_rst_pkg.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliMem.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliCdn_apb.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_apb/cdnApbUvmTop.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_apb2_m/cdn_apb2_m_if.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_apb2_m/cdn_apb2_m_pkg.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliCdn_ahb.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_ahb/cdnAhbUvmTop.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_ahb2_m/cdn_ahb2_m_if.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_ahb2_m/cdn_ahb2_m_pkg.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliSpi.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/spi/cdnSpiUvmTop.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_spi/spi_env_pkg.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/hdl_interfaces/spi/cdnSpiActiveInterface.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/hdl_interfaces/spi/cdnSpiPassiveInterface.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliJtag.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/jtag/cdnJtagUvmTop.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_jtag/cdnJtagInterface.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_jtag/cdn_jtag_pkg.sv
+    /mnt/users/DV/lx61102/SIM/ML4_DEV04/lx61102_tientq_ws_9/compile/cdn-vip-lib/cdn_vip_lib/64bit/xmsim_psui.sv
+    -top
+    specman
+    -top
+    specman_wave
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliUart.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/uart/cdnUartUvmTop.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_uart/cdn_uart_if.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_uart/cdn_uart_pkg.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/denaliCdn_i2c.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_i2c/cdnI2cUvmTop.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/cdn_i2c_env/cdnI2cUser_pkg.sv
+    /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/hdl_interfaces/cdn_i2c/cdnI2cInterface.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/i2c_env_pkg.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_intf.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_defines.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_div_chk.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_source_clk_input_chk.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_pll_chk.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_ip_chk.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_freq_chk.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_sel_chk.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_freq.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_mux.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/wdt/wdt_intf.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_intf.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_defines.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_sysrst_deassert_chk.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_sysrst_ip_chk.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_bind_sysrst.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_trim_data_chk.sv
+    -incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv
+    -incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_apb
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_apb2_m
+    -incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_ahb
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_ahb2_m
+    -incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/spi
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_spi
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_spi/cdn_spi_env
+    -incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/jtag
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_jtag
+    -incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/uart
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_uart
+    -incdir /tools/cadence/VIP/Update_VIPCAT11.30.087/Update_VIPCAT11.30.087/vipcat_11.30.087-08_Nov_2022_08_15_03/tools.lnx86/denali_64bit/ddvapi/sv/uvm/cdn_i2c
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c/cdn_i2c_env
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_i2c
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/wdt
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk
+    -define DENALI_UVM
+    -define CDN_AUTO_TEST
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cm3/uvm/cm3_nvic_if.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cm3/uvm/cm3_pkg.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tube/tube_pkg.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cmsdk/cmsdk_uart_capture_ard.v
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cmsdk/cmsdk_uart_capture_ard_bind.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/csv_uvmc_sdk/uvm/csv_uvmc_sdk_pkg.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/csv_uvmc_sdk/sv/csv_svc_sdk.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/reg_model/reg_model_pkg.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/lx61102/lx61102_pkg.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/common/common_pkg.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_if.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_env_pkg.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_sva_dnf_chk.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio/gpio_sva_bind_dnf.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_if.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb_pkg.sv
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb.sv
+    -top
+    soc_tb
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/top/top.sv
+    -define SIM_POWER_PINS
+    -define SIM_FAST_ERASE
+    -top
+    top
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac_defs.v
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacB.v
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacE.v
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacI.v
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacM.v
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacR.v
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac.v
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmacDSM.v
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac_undefs.v
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac/tarmac_bind.sv
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cm3/uvm
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tube/
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/csv_uvmc_sdk/uvm
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/reg_model
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/lx61102
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/common
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/gpio
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/intr
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/tarmac
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_dpu
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/ualdis
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/cm3_lic_defs
+    -define USE_TUBE
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_clk_se
+    -incdir /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/nx_ext_rst
+    -define LX61102_VE
+
+*Info* The Verdi default UVM library, /tools/synopsys/Verdi/Q-2020.03-SP2/share/vmlib/uvm/uvm-1.2/lib, is used.
+
+
+
+*Warning* Module p_sse050_interconnect_f0_ahb_to_apb redefined
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_ahb_to_apb.v", 33: 
+
+*Warning* Module p_sse050_interconnect_f0_apb_slave_mux redefined
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_apb_slave_mux.v", 29: 
+
+*Warning* Module sf_eflash_dna_v1p22 redefined
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/sf_eflash_dna_v1p22.v", 12: 
+
+*Warning* macro SEC_LPV_STARTTIME redefined from (0.0) to (10)
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash1kx39x4_s300_lfr6lp_4000.sv", 140: 
+
+*Warning* macro DELAY_FOR_STOP redefined from (0.0) to (1000000)
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash1kx39x4_s300_lfr6lp_4000.sv", 141: 
+
+*Warning* macro PRELOAD_MCS redefined from (0) to (1)
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash16kx39x4_s300_lfr6lp_4000.sv", 26: 
+
+*Warning* macro USED_FUSE redefined from (4'b0001) to (4'b0011)
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash16kx39x4_s300_lfr6lp_4000.sv", 77: 
+
+*Warning* macro tPERSBUSY redefined from (20000000.0) to (2000000.0)
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash16kx39x4_s300_lfr6lp_4000.sv", 114: 
+
+*Warning* macro tSERSBUSY redefined from (20000000.0) to (2000000.0)
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash16kx39x4_s300_lfr6lp_4000.sv", 115: 
+
+*Warning* macro tMERSBUSY redefined from (80000000.0) to (8000000.0)
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/model/sf_eflash16kx39x4_s300_lfr6lp_4000.sv", 116: 
+
+*Warning* Module ssf_dec redefined
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/ecc_wrapper/ssf_dec.v", 2: 
+
+*Warning* Module ssf_dec redefined
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/ecc_wrapper/ssf_dec.v", 2: 
+
+*Warning* Module ssf_enc redefined
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/ecc_wrapper/ssf_enc.v", 2: 
+
+*Warning* Module p_sse050_interconnect_f0_apb_slave_mux redefined
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_apb_slave_mux.v", 29: 
+
+*Warning* Module cm3_sync redefined
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/cm3/rtl_codes/models/cm3_sync.v", 21: 
+
+*Warning* Module p_sse050_interconnect_f0_ahb_to_apb redefined
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_ahb_to_apb.v", 33: 
+
+*Warning* Module p_sse050_interconnect_f0_apb_slave_mux redefined
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/sse050/p_sse050_interconnect_f0_apb_slave_mux.v", 29: 
+
+*Warning* mtu_e_top is a protected module, some related errors will be reported as warnings.
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/LXS_IP/mtu_e/rtl_codes/mtu_e_top.vp", 19: 
+
+*Error* expect input signal ADEN to be net type
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AFE_TOP/AIP_TOP_LX61100_S_r00_DUT.sv", 115: 
+
+*Error* expect input signal ADEN to be net type
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AFE_TOP/AIP_TOP_LX61100_S_r00_DUT.sv", 118: 
+
+*Warning* incompatible range declaration of CKPLL_CPCUR
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/240104/CoAsia_240103/CIP_TOP/CIP_TOP_LX61100_S_r00_DUT.sv", 68: 
+
+*Warning* incompatible range declaration of OSC_T
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/240104/CoAsia_240103/CIP_TOP/CIP_TOP_LX61100_S_r00_DUT.sv", 70: 
+
+*Warning* Block name is inconsistent.
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/rcu/rcu_chk/rcu_sva_trim_data_chk.sv", 72: 
+
+*Warning* Block name is inconsistent.
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/tests/intr/intr_connection_check.sv", 36: 
+
+*Error* `include file "rcu_conn_vseq_c.sv" cannot be read
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb.sv", 41: 
+
+*Error* `include file "ccu_conn_vseq_c.sv" cannot be read
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb.sv", 42: 
+
+*Error* `include file "pmu_conn_vseq_c.sv" cannot be read
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb.sv", 43: 
+
+*Error* `include file "wdt_conn_vseq_c.sv" cannot be read
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/soc_tb/soc_tb.sv", 44: 
+Highest level modules:
+if_anacon2adc
+if_anacon2dac
+if_anacon2hosc
+if_anacon2ldo
+if_anacon2pll
+if_anacon2xosc
+if_fctrl2flash
+if_pad
+if_srctrl2sram
+if_syscon2busmtx
+cm3_std_clk_gate
+cm3_code_mux
+cm3_flash_mux
+DAPDpApbIfClamp
+lfr6lp_mc_ra1w_hs_rvtm6t_9216x39m32_error_injection
+EFLASH_GENERIC_CLKBUF
+EFLASH_GENERIC_CLKMUX2
+EFLASH_GENERIC_SYNCHRONIZER
+NX_SYNCHRONIZER
+clkgb
+clkm5d
+clkm5dgb
+clkm5gb
+dma_std_clk_gate
+ssf_tst
+clib_cgate
+PFILLER_30_M5V3A_M6
+PVDD5_LDO_M5V3A_M6
+PDVDD1_LDO_M5V3A_M6
+DFFRPQ_D1_N_7TR_L90_QN
+POR_TIEHIM
+trpmos
+cdn_apb2_m_if
+cdnSpiPassiveInterface
+specman
+specman_wave
+soc_tb
+top
+
+Total	6 error(s),   22 warning(s),   1 info(s)

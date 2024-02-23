@@ -1,0 +1,4 @@
+XM_RESTART_PATH=/mnt/users/tientq/working_space/sv/save_restart
+XM_COLD_SVIO_LOG=/mnt/users/tientq/working_space/sv/save_restart/xrun.log
+XM_COLD_RESTART=1
+CDS_LIC_FILE=2727@192.168.140.204:5280@192.168.140.15

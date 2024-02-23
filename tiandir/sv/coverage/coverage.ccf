@@ -1,0 +1,4 @@
+#set_toggle_includez
+#set_toggle_includex
+set_toggle_portsonly
+select_coverage -all -instance top.dut...

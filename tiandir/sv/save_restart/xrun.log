@@ -1,0 +1,49 @@
+xrun(64): 20.09-s018: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s018: Started on Jan 07, 2024 at 02:29:32 KST
+xrun
+	-64bit
+	-process_save
+	-R
+	-xmlibdirname /mnt/users/tientq/working_space/sv/save_restart/lib_dbs
+Loading snapshot worklib.tb:sv .................... Done
+xcelium> source /tools/cadence/XCELIUM/XCELIUM2009/tools/xcelium/files/xmsimrc
+xcelium> run
+[RTL]               100000
+[RTL]               300000
+[RTL]               500000
+[RTL]               700000
+[RTL]               900000
+[ti] this is boot
+SVSEED from checkpointed snapshot: 1
+Loading snapshot worklib.dynamic_test_pkg:sv
+Restarted process snapshot: worklib.boot:sv
+xcelium> task dynamic_test_pkg::body; run;exit
+[ti] wait for end test
+[ti] run from dynamic_test_pkg
+[RTL]              1100000
+[RTL]              1300000
+[RTL]              1500000
+[RTL]              1700000
+[RTL]              1900000
+[RTL]              2100000
+[RTL]              2300000
+[RTL]              2500000
+[RTL]              2700000
+[RTL]              2900000
+[RTL]              3100000
+[RTL]              3300000
+[RTL]              3500000
+[RTL]              3700000
+[RTL]              3900000
+[RTL]              4100000
+[RTL]              4300000
+[RTL]              4500000
+[RTL]              4700000
+[RTL]              4900000
+[RTL]              5100000
+[RTL]              5300000
+[RTL]              5500000
+[RTL]              5700000
+[RTL]              5900000
+[ti] end test from dynamic_test_pkg
+TOOL:	xrun(64)	20.09-s018: Exiting on Jan 07, 2024 at 02:29:40 KST  (total: 00:00:04)

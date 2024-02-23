@@ -1,0 +1,471 @@
+*design* DebussyLib (btIdent Verdi_Q-2020.03-SP2)
+Command arguments:  -top  work.top work.soc_tb 
+
+*Warning* port sizes differ (3 vs 2) in port connection (port 32)
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/top/lx61102/rtl_codes/lx61102.sv", 570: 
+
+*Warning* port sizes differ (8 vs 7) in port connection (port 47)
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/top/lx61102/rtl_codes/lx61102.sv", 573: 
+
+*Error* view external_bridge is not defined for instance u_external_bridge
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/sf_eflash_dna_v1p22.v", 456: 
+
+*Error* view ctrl_mux is not defined for instance u_ctrl_mux
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/sf_eflash_dna_v1p22.v", 488: 
+
+*Error* view ua_ctrl is not defined for instance u_ua_ctrl
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/sf_eflash_dna_v1p22.v", 608: 
+
+*Error* view bist_ctrl is not defined for instance u_bist_ctrl
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/sf_eflash_dna_v1p22.v", 669: 
+
+*Error* view SWD_Interface is not defined for instance u_SWD_Interface
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/sf_eflash_dna_v1p22.v", 339: 
+
+*Error* view SWD_Interface is not defined for instance u_SWD_Interface
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/design/softmacro/eflash_top/rtl_codes/BIST/sf_eflash_dna_v1p22.v", 339: 
+
+*Warning* port sizes differ (4 vs 1) in port connection (port IHSOSC10MA_NTC_ADJ)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/240104/CoAsia_240103/CIP_TOP/CIP_TOP_LX61100_S_r00_DUT.sv", 114: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_N2P5U_IPLL0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/IPLL/IPLL0_r00_DUT_REGWr.sv", 61: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port HXOSC_CLK)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/IPLL/IPLL0_r00_DUT_REGWr.sv", 62: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IHSOSC10MA_CLK)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/IPLL/IPLL0_r00_DUT_REGWr.sv", 63: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPLL0_TM_IN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/IPLL/IPLL0_r00_DUT_REGWr.sv", 77: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N1U_LXOSC)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/ELOSC/LXOSC_r00_DUT_REGWr.sv", 32: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_HXOSC)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/EHOSC/HXOSC_r00_DUT_REGWr.sv", 45: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_N2P5U_IHSOSC10MA)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/IHSOSC9MA/IHSOSC9MA_r00_DUT_REGWr.sv", 51: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port VFBC)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/IHSOSC9MA/IHSOSC9MA_r00_DUT_REGWr.sv", 62: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port VFB)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/CIP/IHSOSC9MA/IHSOSC9MA_r00_DUT_REGWr.sv", 63: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT2_P2N2P5U_TSENSE)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/TSENSE/TSENSE_r00_DUT_REGWr.sv", 29: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port AVDD5_AMUX0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 58: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port AVSS5_AMUX0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 59: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port DVSS1P2_AMUX0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 61: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO1P2_POKB)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 62: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 63: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN1)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 64: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN2)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 65: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN3)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 66: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN4)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 67: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN5)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 68: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN6)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 69: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN7)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 70: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN8)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 71: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN9)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 72: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN10)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 73: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN11)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 74: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN12)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 75: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN13)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 76: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN14)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 77: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN15)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 78: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN16)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 79: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN17)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 80: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN18)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 81: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN19)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 82: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN20)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 83: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN21)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 84: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN22)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 85: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IN23)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 86: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port AMUX0_OUTP)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/AMUX0/AMUX0_r00_DUT_REGWr.sv", 89: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port AVDD5_DAC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv", 49: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port AVSS5_DAC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv", 50: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port DVSS1P2_DAC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv", 52: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_DAC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv", 53: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port VREFH_DAC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv", 54: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port VREFL_DAC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv", 55: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port ATESTO_IN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv", 56: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port LDO1P2_POKB)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/DAC/DAC0_r00_DUT_REGWr.sv", 61: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO1P2_POKB)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/ADC0/ADC0_r00_DUT_REGWr.sv", 60: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_ADC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/ADC0/ADC0_r00_DUT_REGWr.sv", 61: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port EXT_VREFH_ADC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/ADC0/ADC0_r00_DUT_REGWr.sv", 62: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port VREFH_ADC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/ADC0/ADC0_r00_DUT_REGWr.sv", 63: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port VREFL_ADC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/AFE/ADC0/ADC0_r00_DUT_REGWr.sv", 64: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port PVDD5)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/PIP_TOP/PIP_TOP_LX61100_S_r00_DUT.sv", 273: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port PVSS5)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/PIP_TOP/PIP_TOP_LX61100_S_r00_DUT.sv", 273: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port Y)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/PIP_TOP/PIP_TOP_LX61100_S_r00_DUT.sv", 273: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PVSS5_L2P4V)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 120: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PIP_SHDND)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 122: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO2P4_EN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 123: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port LDO2P4_IBP2N1U)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 124: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PIP_STOP)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 125: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port POR_PDM33)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 129: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PORH)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 130: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO2P4_TEST_OFF)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 132: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO2P4_OV_EN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 133: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO2P4_UVTEST_EN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 134: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO2P4_OCP_EN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 135: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO2P4_SS_DONE)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 142: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO1P2_UVFILT_HV)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 143: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port ACI)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 144: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port ACO)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 145: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port ACI2)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 146: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port ACO2)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 147: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port OCP_HYS_CTRL)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 148: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port UVLOI)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 149: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port OVPI)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 150: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port LDO2P4_EN_POR_UV)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO2P4V/LDO2P4V_r00_DUT_REGWr.sv", 159: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PVSS5_POR)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv", 133: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PIP_SHDND)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv", 135: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PIP_STOP)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv", 136: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO1P2_POKB)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv", 137: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBP0P5U_6)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv", 141: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBP0P5U_5)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv", 142: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBP0P5U_4)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv", 143: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBP0P5U_3)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv", 144: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBP0P5U_2)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv", 145: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBP0P5U_1)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv", 146: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBP0P5U_0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/POR/POR_r00_DUT_REGWr.sv", 147: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port PVSS5_BGR)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 145: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBN0P5U_0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 146: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBN0P5U_1)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 147: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBN0P5U_2)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 148: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBN0P5U_3)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 149: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBN0P5U_4)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 150: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBN0P5U_5)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 151: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBN0P5U_6)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 152: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_ADC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 153: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_ADC1)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 154: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_PGA0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 155: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_PGA1)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 156: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_DAC0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 157: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_DAC1)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 158: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_COMP0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 159: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_COMP1)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 160: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N5U_HXOSC)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 161: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_P2N1U_LXOSC)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 162: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT2_P2N2P5U_TSENSE)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 163: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_N2P5U_IPLL0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 164: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IPTAT_N2P5U_IHSOSC10MA)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 165: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port LDO1P2_IBP2N1U)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 166: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port LDO2P4_IBP2N1U)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 167: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port VREF_1P1V)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 169: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port VREF_0P1V)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 175: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBP0P5U_0)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 180: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port POR_IBP0P5U_1)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 181: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port LDO_LVSH_IBN0P5U)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 182: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port PIP_SHDN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 185: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port PIP_SHDND)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 186: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port IREF_P2N20U_TEST)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 188: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port PIP_STOP)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 192: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port PIP_VOUT12_DOWN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 193: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port PORL_EN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/BGR/BGR_r00_DUT_REGWr.sv", 194: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PVSS5_L1P2V)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 106: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PIP_SHDND)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 113: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO1P2_TEST_OFF)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 114: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO1P2_UVTEST_EN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 115: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO1P2_OV_EN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 116: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port LDO1P2_IBP2N1U)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 121: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PIP_STOP)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 122: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO1P2_OCP_EN)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 124: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port LDO2P4_SS_DONE)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 125: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port ACI)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 127: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port ACO)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 128: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port ACI2)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 129: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port ACO2)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 130: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port OCP_HYS_CTRL)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 131: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port UVLOI)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 132: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port OVPI)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 133: 
+
+*Warning* port sizes differ (64 vs 1) in port connection (port UV_AVREFI)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 134: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PORH)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 140: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port L2P4_UUV)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 141: 
+
+*Warning* port sizes differ (64 vs 32) in port connection (port PIP_SHDNB_DLY)
+"/PROJECT/DK/LFR6LP/DK/IP/LXS/ANALOG/Analog_230915/VerilogModels_LX61100/VerilogModels_230913/PIP/LDO1P2V/LDO1P2V_r00_DUT_REGWr.sv", 142: 
+
+*Warning* too few port instance connections on instance 'SVA_IHOCLK_CHECK'
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_freq.sv", 46: 
+
+*Warning* too few port instance connections on instance 'SVA_EHOCLK_CHECK'
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_freq.sv", 49: 
+
+*Warning* too few port instance connections on instance 'SVA_PLL_CLK_CHECK'
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_freq.sv", 56: 
+
+*Warning* too few port instance connections on instance 'SVA_ELOCLK_CHECK'
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_freq.sv", 59: 
+
+*Warning* too few port instance connections on instance 'SVA_ES1CLK_CHECK'
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_freq.sv", 62: 
+
+*Warning* too few port instance connections on instance 'SVA_ES2CLK_CHECK'
+"/mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/ccu/ccu_chk/ccu_sva_bind_freq.sv", 65: 
+Total	6 error(s),   150 warning(s)

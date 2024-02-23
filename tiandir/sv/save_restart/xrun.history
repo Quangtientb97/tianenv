@@ -1,0 +1,5 @@
+s1(07Jan2024:02:25:52):  xrun -64bit -process_save -dbsname run@/mnt/users/tientq/working_space/sv/save_restart/lib_dbs dynamic_test_pkg.sv -input "@task dynamic_test_pkg::body; run;exit" -dbssnap boot 
+s2(07Jan2024:02:26:17):  xrun -64bit -process_save -dbsname run@/mnt/users/tientq/working_space/sv/save_restart/lib_dbs dynamic_test_pkg.sv -input "@task dynamic_test_pkg::body; run;exit" -dbssnap boot 
+s3(07Jan2024:02:27:07):  xrun -64bit -process_save -dbsname run@/mnt/users/tientq/working_space/sv/save_restart/lib_dbs dynamic_test_pkg.sv -input "@task dynamic_test_pkg::body; run;exit" -dbssnap boot 
+s4(07Jan2024:02:28:52):  xrun -64bit -process_save -dbsname run@/mnt/users/tientq/working_space/sv/save_restart/lib_dbs dynamic_test_pkg.sv -input "@task dynamic_test_pkg::body; run;exit" -dbssnap boot 
+s5(07Jan2024:02:29:37):  xrun -64bit -process_save -dbsname run@/mnt/users/tientq/working_space/sv/save_restart/lib_dbs dynamic_test_pkg.sv -input "@task dynamic_test_pkg::body; run;exit" -dbssnap boot 
