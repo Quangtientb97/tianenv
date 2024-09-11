@@ -1,26 +1,30 @@
 #!/usr/bin/python3
-#--------------------------------------------------------------------
+#----------------------------------------------------------------------
 #  File name     : excel.py
 #  Function      : <empty>
 #  Author        : Tian
 #  Email         : tientq@coasia.com
-#  Created time  : 2024-02-18 23:59:20
-#--------------------------------------------------------------------
-user_library_path = "/mnt/users/tientq/.local/lib/python3/site-packages"
-tian_path         = "/mnt/users/tientq/tiandir/python/"
+#  Created time  : 2024-04-10 17:46:02
+#----------------------------------------------------------------------
+import re, os
+import sys ; sys.path.append("/mnt/users/tientq/tiandir/python/")
+import tian; sys.path.append(tian.user_library_path)
+from   tian            import run, print_banner, excel
+from   tian.global_var import *
 
-import re, os, sys
-sys.path.append(user_library_path) 
-sys.path.append(tian_path) 
+# ----------------------------------------------------------------+
+# Import                                                          |
+# ----------------------------------------------------------------+
 import xlrd
 import openpyxl
-
 from openpyxl                          import formatting, styles
 from openpyxl.formatting.rule          import FormulaRule, CellIsRule
 from openpyxl.styles                   import PatternFill, Font, NamedStyle
 from openpyxl.styles.borders           import Border, Side
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.styles.numbers           import FORMAT_PERCENTAGE_00
+from openpyxl.worksheet.table          import Table, TableStyleInfo
+from openpyxl.worksheet.hyperlink      import Hyperlink
 from .global_func                      import print_banner
 
 #-------------------------------------------------------------------|
@@ -45,27 +49,26 @@ class excel:
     link        = ""
     sheet_names = []
     wb          = None
+    table_idx   = 0
 
     # ----------------------------------------------------------------|
     # Methods                                                         |
     # ----------------------------------------------------------------|
     def __init__(self, excel_link):
-        #xls --> xlsx
         if ("xlsx" not in excel_link):
+            print(f"Warning: Cannot open {excel_link}")
             print(f"Info: Cant not open xls format directly")
-            print(f"      Automatic converting to xlsx format")
-            print(f"      Please handles new file: {excel_link}x")
-            self.convert_xls_to_xlsx(excel_link, f"{excel_link}x")
-            excel_link = excel_link + "x"
+            print(f"      Please convert it to xlsx by: tian.excel.convert_xls_to_xlsx(xls_link)")
+            exit()
 
         self.link = excel_link
         try:
+            print_banner(f"{excel_link} is loading ...")
             self.wb          = openpyxl.load_workbook(f"{excel_link}")
             self.sheet_names = self.wb.get_sheet_names()
-            print_banner(f"{BLUE}{excel_link} is loading ...")
-        except open_xlsx_error as e:
+        except Exception as e:
             print(f"[open_xlsx_error]: {e}")
-            os.system(f"echo {excel_link} >> file_error.log")
+            os.system(f"echo {excel_link} >> open_excel_error.log")
 
     def get_sheet_by_name(self, sheet_name:str):
         try:
@@ -73,11 +76,13 @@ class excel:
         except:
             print(f"{self.link}.{sheet_name} is not exist")
 
-    def resize_col(self, sheet_name:str, col_str:str, width:int):
-        self.wb[sheet_name].column_dimensions[col_str].width = width
+    def resize_col(self, cell, width:int):
+        sheet = cell.parent
+        sheet.column_dimensions[self.get_column_letter(cell)].width = width
 
-    def resize_row(self, sheet_name:str, row_int:int, height:int):
-        self.wb[sheet_name].row_dimensions[row_int].height = height
+    def resize_row(self, cell, height:int):
+        sheet = cell.parent
+        sheet.row_dimensions[cell.row].height = height
 
     def fmt_wrap_text(self, cell):
         cell.alignment = openpyxl.styles.Alignment(wrapText=True)
@@ -107,11 +112,11 @@ class excel:
         rule.add(cell)
         cell.value       = choices[0]
 
-    def save(self, f_name:str):
-        print(f"saving {self.link}")
-        self.wb.save(f_name)
+    def save(self, link:str):
+        print(f"saving {link}...")
+        self.wb.save(link)
 
-    def isMergeCell(self, i_sheet:openpyxl.worksheet.worksheet.Worksheet, i_cell:openpyxl.cell.cell.Cell):
+    def isMergeCell(self, i_sheet, i_cell):
         is_merged_cell = False
         for merged_range in i_sheet.merged_cells.ranges:
             if i_cell.coordinate in merged_range:
@@ -121,6 +126,9 @@ class excel:
 
     def set_value(self, sheet_name:str, cell_addr:str, str_value:str):
         self.wb[sheet_name][cell_addr].value = str_value
+
+    def set_value_by_index(self, irow:int, icol:int, ivalue):
+        worksheet.cell(row=irow, column=icol, value=value)
 
     def get_value(self, sheet_name:str, cell_addr:str):
         return self.wb[sheet_name][cell_addr].value
@@ -136,32 +144,63 @@ class excel:
         return openpyxl.utils.get_column_letter(cell.column)
 
     def create_sheet(self, sheet_name):
+        print(f"Creating sheet: {sheet_name}...")
         new_sheet = self.wb.create_sheet(title = sheet_name)
     
-    def create_excel_file(self, excel_link):
+    def create_excel_file(excel_link):
         workbook = openpyxl.Workbook()
         workbook.save(excel_link)
 
     def remove_sheet(self, sheet_name):
         self.wb.remove(self.get_sheet_by_name(sheet_name))
 
-    def fmt_hyperlink(self, cell, dst_sheet:str, dst_addr:str, message:str, filetype='microsoft'):
-        if (filetype == 'microsoft'):
-            cell.value = f'=HYPERLINK("#{dst_sheet}!{dst_addr}", "{message}")'
-            cell.font  = Font(color='0000FF', underline='single') #Blue
-        elif (filetype == 'googlesheet'):
-            print("fmt_hyperlink for googlesheet")
-            cell.value = f'=HYPERLINK("#gid=" & sheetid("{dst_sheet}"); "{message}")'
-            cell.font  = Font(color='0000FF', underline='single') #Blue
+    def fmt_hyperlink(self, cell, dst_sheet:str, dst_addr:str, message:str):
+        #cell.value = f'=HYPERLINK("#{dst_sheet}!{dst_addr}", "{message}")'
+        cell.value = f'{message}'
+        hyperlink = Hyperlink(ref=f"#{dst_sheet}!{dst_addr}", location=f'{dst_sheet}!{dst_addr}')
+        cell.hyperlink = hyperlink
+        cell.font  = Font(color='0000FF') #Blue
+        #cell.font  = Font(color='0000FF', underline='single') #Blue
 
-    def fmt_boder_cell(self, cell, align='center'):
-        cell.border          = Border(left = Side(style='medium'), right = Side(style='medium'), top = Side(style='medium'), bottom = Side(style='medium'))
+    # align  : 'left'    'right'     'center'
+    # istyle : 'medium'  'thin'
+    def fmt_boder_cell(self, cell, align='center', istyle='medium'):
+        cell.border          = Border(left = Side(style=istyle), right = Side(style=istyle), top = Side(style=istyle), bottom = Side(style=istyle))
         if   (align == 'left' ):
             cell.alignment       = openpyxl.styles.Alignment(horizontal = 'left',   vertical = 'center')
         elif (align == 'right'):
             cell.alignment       = openpyxl.styles.Alignment(horizontal = 'right',  vertical = 'center')
         else:
             cell.alignment       = openpyxl.styles.Alignment(horizontal = 'center', vertical = 'center')
+
+    def fmt_alignment_cell(self, cell, align='center'):
+        if   (align == 'left' ):
+            cell.alignment       = openpyxl.styles.Alignment(horizontal = 'left',   vertical = 'center')
+        elif (align == 'right'):
+            cell.alignment       = openpyxl.styles.Alignment(horizontal = 'right',  vertical = 'center')
+        else:
+            cell.alignment       = openpyxl.styles.Alignment(horizontal = 'center', vertical = 'center')
+
+    def fmt_freeze_cell(self, cell):
+        sheet = cell.parent
+        sheet.freeze_panes = cell.coordinate 
+
+    # input: fmt_table("A1:B12")
+    def fmt_table(self, ws, table_range:str):
+        # Create a table
+        tab = Table(displayName=f"Table{self.table_idx}", ref=table_range)
+        # Add a style to the table
+        tab.tableStyleInfo = TableStyleInfo(name="TableStyleLight8", showFirstColumn=False,
+                                                    showLastColumn=False, showRowStripes=True, showColumnStripes=True)
+        # Add the table to the worksheet
+        ws.add_table(tab)
+        self.table_idx += 1
+
+    def fmt_table_allcell(self, ws):
+        last_row    = ws.max_row
+        last_column = ws.max_column
+        last_cell   = ws.cell(row   = last_row, column = last_column)
+        self.fmt_table(ws, f"A1:{last_cell.coordinate}")
 
     def get_color(self, color='green'):
         if  (color == 'green'):
@@ -176,6 +215,9 @@ class excel:
         elif (color == 'gray' or color == 'grey'):
             self.font       = Font(color='000000')
             background = 'A5A5A5'
+        elif (color == 'blue'):
+            self.font  = Font(color='000000')
+            background = '95B3D7'
         elif (color == 'header'):
             self.font       = Font(color='000000' )
             background      = '95B3D7'
@@ -185,6 +227,10 @@ class excel:
         self.get_color(color)
         cell.font  = self.font
         cell.fill  = self.color_fill
+
+    def fmt_cell_color_bg(self, cell, color='gray'):
+#        cell.fill  = PatternFill(start_color = '808080', end_color = '808080', fill_type = 'solid') 
+        cell.fill  = PatternFill(start_color = 'CCCCCC', end_color = 'CCCCCC', fill_type = 'solid') 
 
     def fmt_color_condition(self, cell, keyword:str, color:str):
         sheet = cell.parent
@@ -257,7 +303,15 @@ class excel:
                             cell.value = None
         self.save(self.link)
 
-    def convert_xls_to_xlsx(self, input_file, output_file):
+    def convert_xls_to_xlsx(input_file):
+        if (tian.get_file_type(input_file) == ".xlsx"):
+            return 0
+        elif (tian.get_file_type(input_file) != ".xls"):
+            print("Error: Only be able to convert .xls -> .xlsx ")
+            print(f"Filename: {input_file}")
+            exit()
+
+        output_file = input_file.replace(".xls", ".xlsx")
         print(f"convert {input_file} --> {output_file}")
         try:
             # Read the xls file using xlrd
@@ -304,3 +358,17 @@ class excel:
             print_banner(f"Copying successful. File saved as {output_file}")
         except Exception as e:
             print(f"Error during copying: {e}")
+
+
+#--------------------------------------------------------------------+
+# Note                                                               |
+#--------------------------------------------------------------------+
+# group
+"""
+for row in range(1, 9):
+    new_sheet.row_dimensions[row].outline_level = 1
+
+for col in col_symbol:
+    new_sheet.column_dimensions[col].outline_level = 1
+"""
+

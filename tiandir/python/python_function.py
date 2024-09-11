@@ -1,10 +1,20 @@
-import re, os, sys
-import readline
-sys.path.append("/mnt/users/tientq/python_dir") 
-sys.path.append("/mnt/users/tientq/.local/lib/python3/site-packages") 
+#!/usr/bin/python3
+#----------------------------------------------------------------------
+#  File name     : python_function.py
+#  Function      : <empty>
+#  Author        : Tian
+#  Email         : tientq@coasia.com
+#  Created time  : 2024-04-01 16:48:17
+#----------------------------------------------------------------------
+import re, os
+import sys ; sys.path.append("/mnt/users/tientq/tiandir/python/")
+import tian; sys.path.append(tian.user_library_path)
+from   tian            import run, print_banner, excel
+from   tian.global_var import *
 
-from tian import print_banner
-
+# --------------------------------------------------------------------+
+# Main                                                                |
+# --------------------------------------------------------------------+
 # Print color 
 BLACK   = '\033[30;1m'
 RED     = '\033[31;1m'
@@ -52,13 +62,21 @@ if len(sys.argv) > 1:
 else:
     input_var = input("""
 Choose the funtion:
-  0: Hex -> Bin              2: Bin -> Hex
-  1: Hex -> Dec              3: Dec -> Hex
+  0 : Hex -> Bin              2: Bin -> Hex
+  1 : Hex -> Dec              3: Dec -> Hex
 
-  4: ns  -> MHz              5: Size -> addr
+  4 : ns  -> MHz              5: Size -> addr
 
-  6: add Hex                 7: minus Hex
-  8: mul Hex                 9: div   Hex
+  6 : add Hex                 7: minus Hex
+  8 : mul Hex                 9: div   Hex
+
+  10: print 0x0 to 0xf -> Bin
+
+  11: uvm phase flow
+
+  12: gen incremental xrun flow
+
+  13: uvm_do detail
 
 >>> """)
 
@@ -160,3 +178,77 @@ if (int(input_var) == 9):
         ans = hex(int(ans))
         print(f"0x{num_0} / 0x{num_1} = {ans}")
         print("")
+
+if (int(input_var) == 10):
+    print(f"{BLUE}0x0 {RESET}= {YELLOW}0000")
+    print(f"{BLUE}0x1 {RESET}= {YELLOW}0001")
+    print(f"{BLUE}0x2 {RESET}= {YELLOW}0010")
+    print(f"{BLUE}0x3 {RESET}= {YELLOW}0011")
+    print(f"{BLUE}0x4 {RESET}= {YELLOW}0100")
+    print(f"{BLUE}0x5 {RESET}= {YELLOW}0101")
+    print(f"{BLUE}0x6 {RESET}= {YELLOW}0110")
+    print(f"{BLUE}0x7 {RESET}= {YELLOW}0111")
+    print(f"{BLUE}0x8 {RESET}= {YELLOW}1000")
+    print(f"{BLUE}0x9 {RESET}= {YELLOW}1001")
+    print(f"{BLUE}0xa {RESET}= {YELLOW}1010")
+    print(f"{BLUE}0xb {RESET}= {YELLOW}1011")
+    print(f"{BLUE}0xc {RESET}= {YELLOW}1100")
+    print(f"{BLUE}0xd {RESET}= {YELLOW}1101")
+    print(f"{BLUE}0xe {RESET}= {YELLOW}1110")
+    print(f"{BLUE}0xf {RESET}= {YELLOW}1111")
+
+if (int(input_var) == 11):
+    message = f"""
+    {BLUE}Build:{RESET}
+        build_phase
+        connect_phase
+        end_of_elaboration_phase
+        start_of_simualation_phase
+
+    {BLUE}Run:{RESET}
+        run_phase  
+            run <also has pre_* and post_*>
+                reset
+                configure
+                main
+                shutdown
+
+    {BLUE}Clean:{RESET}
+        extract_phase
+        check_phase
+        report_phase
+        final_phase
+
+    ----------------------------------------
+    {BLUE}Sequence (body):{RESET}
+        sub_seq.pre_start()          (task)
+        sub_seq.pre_body()           (task)  if call_pre_post==1
+            parent_seq.pre_do(0)     (task)  if parent_sequence!=null
+            parent_seq.mid_do(this)  (func)  if parent_sequence!=null
+        sub_seq.body                 (task)  YOUR STIMULUS CODE
+            parent_seq.post_do(this) (func)  if parent_sequence!=null
+        sub_seq.post_body()          (task)  if call_pre_post==1
+        sub_seq.post_start()         (task)
+        
+
+        """
+    print(message)
+
+if (int(input_var) == 12):
+    run("cp /mnt/users/tientq/tiandir/xrunflow/incremental/incr_flow.py ./")
+    tian.file.execute("./incr_flow.py")
+
+if (int(input_var) == 13):
+    print("""
+    1. `uvm_do(seq_item)
+            `uvm_create(seq_or_item);
+            assert(seq_item.randomize());
+            // can edit the seq_item here
+            `uvm_send(seq_item)
+    2. `uvm_do_on(seq_item, seqr)
+            `uvm_create_on(seq_or_item, seqr);
+            assert(seq_item.randomize());
+            // can edit the seq_item here
+            `uvm_send(seq_or_item)
+            // OR seq.start(seqr);
+    """)

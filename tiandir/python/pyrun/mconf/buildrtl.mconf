@@ -1,0 +1,12 @@
+buildrtl-<DE>:
+	xrun \
+		-64bit \
+		-access +rwc \
+		-sv \
+		-disable_sem2009 \
+		-licq \
+		-timescale 1ns/10ps \
+		-compile \
+		-makelib ./<DE>_lib \
+		-f $PROJECT_RTL_DIR/vcode.f \
+		-endlib \

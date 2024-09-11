@@ -26,7 +26,7 @@ xrun -64bit -access +rwc -sv -disable_sem2009 -licq \
     /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_apb2_m/cdn_apb2_m_pkg.sv \
     $DENALI/ddvapi/sv/denaliCdn_ahb.sv \
     $DENALI/ddvapi/sv/uvm/cdn_ahb/cdnAhbUvmTop.sv \
-    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_ahb2_m/cdn_ahb2_m_if.sv \
+    /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_ahfdsafb2_m/cdn_ahb2_m_if.sv \
     /mnt/users/DV/lx61102/WS/ML4_DEV04/lx61102_tientq_ws_9/verification/soc/libs/cdn_ahb2_m/cdn_ahb2_m_pkg.sv \
     $DENALI/ddvapi/sv/denaliSpi.sv \
     $DENALI/ddvapi/sv/uvm/spi/cdnSpiUvmTop.sv \

@@ -25,6 +25,8 @@ from .file            import file          # file.py
 from .time            import time          # time.py
 from .argv            import argv          # argv.py
 from .convert         import convert       # convert.py
+from .random          import random        # random.py
+from .command_parse   import command_parse # random.py
 
 # ------------------------------------------------------------------------------|
 # Note                                                                          |

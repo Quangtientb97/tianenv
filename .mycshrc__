@@ -10,14 +10,18 @@ if (-e ~/.Xresources) then
 	xrdb ~/.Xresources
 endif
 
-setenv TIENTQ_HOME /mnt/users/tientq
-setenv CURRENT_DIR `pwd`
-setenv PERL5LIB /mnt/users/tientq/perl_lib
+setenv TIENTQ_HOME      /mnt/users/tientq
+setenv CURRENT_DIR      `pwd`
+setenv VIM_DIR          ~/.vim/plugged/csh/
 
 #-------------------------------------------------
 # 	set environment variable
 #-------------------------------------------------
-setenv VIM 						'~/.vim/plugged/'
+#setenv PYTHONPATH /mnt/users/tientq/tiandir/python/pylib
+# LSF
+source /mnt/share/common/env/cshrc.env
+setenv PATH_ORG            $PATH
+setenv LD_LIBRARY_PATH_ORG $LD_LIBRARY_PATH
 
 set BLACK       = "%{\033[1;30m%}"	;set DARK_BLACK       = "%{\033[0;30m%}"	
 set RED         = "%{\033[1;31m%}"	;set DARK_RED         = "%{\033[0;31m%}"	
@@ -59,17 +63,20 @@ alias bbb     		'cd ../../../'
 alias ma            'mkdir'
 alias mm            'mv'
 alias mc            'cp -rf'
-alias pl			'perl'
 alias py			'python3'
 
 alias mkae			make
 alias so		    source
-alias vi          'vim -X'
-alias compilec    'make clean; make all'
-alias py_func     'python3 ~/python_dir/python_function.py'
-alias pdf         'xdg-open'
-alias precomp     'python3 ~/python_dir/precomp.py'
-alias pyhelp      'csh ~/tiandir/python/pyhelp.csh'
+alias vi            'vim -X'
+alias compilec      'make clean; make all'
+alias py_func       'python3 ~/python_dir/python_function.py'
+alias pdf           'xdg-open'
+alias precomp       'python3 ~/python_dir/precomp.py'
+alias pyhelp        'csh ~/tiandir/python/pyhelp.csh'
+alias re            'realpath'
+alias stt           'ps aux | grep tientq'
+alias gows          'source csvrun.env; goto_ws'
+alias chatGPT       'echo "";echo "(need soc13) execute to open chat: /root/gpt4all/bin/chat";echo ""; cd /PROJECT/SOC2023/DESIGN/GPT4All_llama3.1/gpt4all; ./run_gpt4all_docker; '
 
 #-------------------------------------------------
 # 	Alias for project
@@ -90,9 +97,17 @@ alias lx61102_env "source /mnt/users/DV/utils/env.csh; \
     echo '#-------------------------------------------';  \
     goto_ws.pl"
 
-alias gosim       "goto_sim.pl"
+alias lx61204_env "source /mnt/users/DV/utils/env.csh; \
+    source /mnt/users/DV/lx61204/env.csh;              \
+    echo '#-------------------------------------------';  \
+    echo '#  Getting environment for lx61204 was done!';  \
+    echo '#-------------------------------------------';  \
+    goto_ws.pl"
 
-
+alias prun           "/mnt/users/tientq/tiandir/python/pyrun/pyrun.py"
+alias pcount         "/mnt/users/tientq/tiandir/python/pcount/count_test.py"
+alias pcheck_endif   "/mnt/users/tientq/tiandir/python/pcheck_endif/pcheck_endif.py"
+alias pdel_nfs       "/mnt/users/tientq/tiandir/python/pdel_nfs/pdel_nfs.py"
 
 #-------------------------------------------------
 # Git
@@ -109,12 +124,11 @@ alias gb 'git branch'
 alias gc 'git checkout'
 alias ga 'git add'
 
+
 #-------------------------------------------------
 # auto run  
 #-------------------------------------------------
 #cd
-# LSF
-source /mnt/share/common/env/cshrc.env
 
 if ($CURRENT_DIR == $TIENTQ_HOME) then
     clear
@@ -130,12 +144,13 @@ if ($CURRENT_DIR == $TIENTQ_HOME) then
 	date
     echo ""
     echo "------------------------------------"
-    echo "Which project you do?"
+    echo "Which project do you do?"
     echo "    >> \033[1;31mlx61100_env\033[0m"
     echo "    >> \033[1;32mlx61102_env\033[0m"
-    #project_env
     echo "------------------------------------"
 endif
+
+alias gopcie 'cd;cd PROJECT/nwp_dv/blksim/BLK_PCIE/'
 
 
 
@@ -161,8 +176,6 @@ endif
 # bsub -u all
 #
 
-# vim: set ft=csh:
-
 # bitbucket: "https://project.coasia.com/confluence/display/SOC/BITBUCKET"
 
 # for echo current git branch
@@ -171,3 +184,12 @@ endif
 #unalias cd
 #alias 	cd       'chdir \!*; set prompt = "\n${GREEN}[${GREEN}`hostname` ${GREEN}  : ${GREEN}`pwd`${GREEN}] ${RED}*${git_branch}\n${BLUE}  (${BLUE}>.<${BLUE})${MAGENTA}  @${RESET_COLOR} "; ls'
 #
+#ps aux | grep tientq | grep -i x11rdp: kill remote desktop
+# %s/\(create\)/\1_abc/g  : VIM  replace create -> create_abc
+# 's/(create)/${1}_abc/g' : PERL replace create -> create_abc
+# bjobs -u all            : show status of all user
+
+# vim: set ft=csh
+#
+# BG: terminal : #373434 
+#     Mobar    : #272822 ; #012a35

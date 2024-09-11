@@ -6,26 +6,31 @@
 #  Email         : tientq@coasia.com
 #  Created time  : 2024-02-19 00:16:07
 #--------------------------------------------------------------------
-import re, os, sys
+import re, os, sys, time
 sys.path.append("/mnt/users/tientq/.local/lib/python3/site-packages") 
 sys.path.append("/mnt/users/tientq/python_dir") 
 import tian
-
 
 # ------------------------------------------------------------------------------|
 # Class: file                                                                   |
 # It is a static class (dont create this class)                                 | 
 # ------------------------------------------------------------------------------|
 class file:
-    def read(link):
+    def read(link, return_type = "list"):
         output = []
         print(f"reading from {link} ...")
         with open(link, 'r') as f:
-            lines = f.readlines()
+            file_data = f.read()
+            lines     = file_data.split("\n")
 
-        for line in lines:
-            output.append(line.replace("\n", ""))
-        return output
+        if ( return_type == "str"):
+            return file_data
+        else:
+            for line in lines:
+                output.append(line)
+            if (output[-1] == ''):
+                output.pop()
+            return output
 
     def write(link, wdata):
         w = open(link, "w")
@@ -33,53 +38,57 @@ class file:
         if   (type(wdata) == str):
             w.write(wdata)
         elif (type(wdata) == list):
-            for line in wdata:
-                w.write(line)
+            if ("\n" not in ''.join(wdata)):
+                print(r"Warning: You may miss \n in wdata")
+                print(f"    File  {link}")
+            w.write(''.join(wdata))
 
-    def append(link, wdata):
+    # mode = "none"/"debug" to enter debug mode
+    def append(link, wdata, mode="none"):
         w = open(link, "a")
-        print(f"append to {link} ...")
+        if (mode=="debug"):
+            print(f"append to {link} ...")
         if   (type(wdata) == str):
             w.write(wdata)
         elif (type(wdata) == list):
-            for line in wdata:
-                w.write(line)
+            w.write(''.join(wdata))
 
-    # must use [a-z]*, [0-9]* to present regular expression
-    def replace(link, old:str, new:str):
-        print("{}   :   {}   -->   {}".format(link, old, new))
-        old = old.replace("/", "\/"); old = old.replace(".", "\.")
-        new = new.replace("/", "\/"); new = new.replace(".", "\.")
-        os.system("sed -i 's/{}/{}/g' {}".format(old, new, link))
+    def replace(old:str, new:str, link):
+        tian.run(f"perl -pi -e 's/{old}/{new}/g' {link}")
 
-    def make_uniq(link):
+    def make_uniq(link, overwrite = "not_overide"):
         os.system(f"sort {link} | uniq > {link}_uniq")
+        if (overwrite == "override"):
+            tian.run(f"mv {link}_uniq {link}")
 
     def remove_line(link, keyword):
-        fileout = []
-        filein = tian.file.read(link)
-        for line in filein:
-            if (key_remove in line):
-                continue
-            fileout.append(line)
-        write(link, fileout)
+        tian.run(f"sed -i '/{keyword}/d' {link}")
+
+    def remove_line_not_include(link, keyword):
+        tian.run(f"sed -ni '/{keyword}/p' {link}")
 
     def execute(link):
+        time.sleep(1)
         if (tian.is_file(link) == False):
             print(f"Error: [exccute] {link} is not exist")
             return
         curdir   = os.getcwd()
-        realpath = tian.run_with_output(f"realpath {link}")
+        #realpath = tian.run_with_output(f"realpath {link}")
+        realpath = os.path.realpath(link)
         rundir   = re.findall("\/.*\/", realpath)[0]
         rundir   = rundir[:-1] # remove last char
         runfile  = re.sub("\/.*\/", "", realpath)
         os.chdir(rundir)
-        print(f"{tian.BLUE}[{curdir}]{tian.RESET} $ cd {rundir}")
-        print(f"{tian.BLUE}[{rundir}]{tian.RESET} $ ")
-        tian.run(f"chmod 755 {runfile}")
-        tian.run(f"./{runfile}")
+        #print(f"{tian.BLUE}[{curdir}]{tian.RESET} $ cd {rundir}")
+        #print(f"{tian.BLUE}[{rundir}]{tian.RESET} $ ")
+        os.system(f"chmod 755 {runfile}")
+
+        time.sleep(1)
+        result = tian.run(f"./{runfile}")
+
         os.chdir(curdir)
-        print(f"{tian.BLUE}[{rundir}]{tian.RESET} $ cd {curdir}")
-        print(f"{tian.BLUE}[{curdir}]{tian.RESET} $ ")
+        #print(f"{tian.BLUE}[{rundir}]{tian.RESET} $ cd {curdir}")
+        #print(f"{tian.BLUE}[{curdir}]{tian.RESET} $ ")
 
-
+    def realpath(link):
+        return os.path.realpath(link)

@@ -7,31 +7,30 @@ set autowrite
 "set complete -=t
 set completeopt =menuone
 set encoding=UTF-8
-set foldmethod =marker
+set foldmethod=marker
 set guifont=Consolas:h11
-set laststatus =2
+set laststatus=2
 set linebreak
-set mouse =niv
+set mouse=niv
 set noswapfile
 set nowrap
 set number
-set numberwidth =6
+set numberwidth=6
 set readonly!
-set scrolloff =3
+set scrolloff=3
 set smarttab
-set t_Co =256
-set tabstop =4
-set shiftwidth =4
+set t_Co=256
+set tabstop=4
+set shiftwidth=4
 set expandtab " use 4 spaces instead of tab
+set hlsearch
+set diffopt+=iwhite "ignore space when use vimdiff
+
 colorscheme desert
 
 if &diff
     syntax off
 endif
-
-"if ($USER == "tientq")
-"    set viminfo+=n/coasiasemi/project/dv/tientq/.viminfo
-"endif
 
 "set incsearch
 "set autochdir
@@ -58,6 +57,8 @@ autocmd VimEnter * if argc()  | NERDTree | wincmd p | endif
 autocmd InsertEnter * set nocul | set timeoutlen=0
 "autocmd InsertLeave * set cul   | set timeoutlen=1000 | w!
 autocmd InsertLeave * set cul   | set timeoutlen=1000
+autocmd InsertLeave * set iskeyword -=.
+
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "---------------------------------------------------------------------------
@@ -93,7 +94,7 @@ vnoremap <F1> <esc>:q!<cr>
 
 nnoremap ss :w!<cr><esc>:echohl Search \| echo expand('%:t') 'is saved'<cr>
 
-inoremap <expr> ( ((getline('.')[col('.')-8 : col('.')-2]) == 'display') ? "(\"[ti] \");\<left>\<left>\<left>"   :
+inoremap <expr> ( ((getline('.')[col('.')-8 : col('.')-2]) == 'display') ? "(\"@ %0t [tian] \", $time);<esc>9hi"   :
             \ ((getline('.')[col('.')-4 : col('.')-2]) == 'new'    )     ? "();\<left>\<left>"                   :
             \ ((getline('.')[col('.')-7 : col('.')-2]) == 'create' )     ? "();\<left>\<left>"                   :
             \ ((getline('.')[col('.')])                =~ '\K')          ? "("                                   :
@@ -118,7 +119,8 @@ inoremap <expr> ] ((getline('.')[ col('.') - 1 ]) == ']') ? "]\<del>" : "]"
 inoremap <expr> <up>   (pumvisible()) ? "<c-p>" : "<up>"
 inoremap <expr> <down> (pumvisible()) ? "<c-n>" : "<down>"
 
-nnoremap <c-g> 1<c-g>
+"nnoremap <c-g> 1<c-g>
+nnoremap <c-g> :echo getcwd() . '/' . expand('%')<cr>
 
 "---------------------------------------------------------------------------
 " Set wrap
@@ -168,7 +170,11 @@ vnoremap K 10kzz
 
 nnoremap * evby<esc>:%s/\<<C-R>=escape(@",'/\')<cr>\>//gn<cr>0n
 nnoremap / :%s///gn<left><left><left><left>
-nnoremap <c-f> :%s///gn<left><left><left><left>
+"nnoremap <c-f> :%s///gn<left><left><left><left>
+
+nnoremap <c-f> evby<esc>:%s/\<<C-R>=escape(@",'/\')<cr>\>//g<left><left>
+nnoremap #     evby<esc>:%s/\<<C-R>=escape(@",'/\')<cr>\>//g<left><left>
+
 
 nnoremap vi  <esc>:vi
 nnoremap :Vi <esc>:vi
@@ -180,7 +186,7 @@ nnoremap <c-w>v <c-w>v<c-w>w
 nnoremap tn :tabnew<cr>:E<cr>
 
 "nnoremap :E<cr> :Explore<cr><c-w>w<c-w>W
-nnoremap :E<cr> :e %:h<cr>
+"nnoremap :E<cr> :e %:h<cr>
 
 nnoremap <c-@> <esc>A
 inoremap <c-@> <esc>A
@@ -220,22 +226,27 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
 "---------------------------------------------------------------------------
 " comment by ctrl + /
 "---------------------------------------------------------------------------
-function! Comment()
+function! Comment(is_vsmode)
+    let filetype   = &filetype
+    let pair       = getline('.')[col(0)]
+    let cur_line   = getline('.')
 
-    let filetype = &filetype
-    let pair = getline('.')[col(0)]
-    let cur_line = getline('.')
-    let isComment = 0
+    if (a:is_vsmode==0)
+        if (filetype=='verilog_systemverilog' || filetype=='c' || filetype=='fortran' || filetype=='systemC')
+            if cur_line =~ '^\s*//'
+                silent s:^\(\s*\)\//:\1:g
+            else
+                silent s:^\(\s*\):\1\//:g
+            endif
+        endif
+        return
+    endif
 
     if (filetype=='verilog_systemverilog' || filetype=='c' || filetype=='fortran' || filetype=='systemC')
-        if cur_line =~ "// "
-            silent s:^\(\s*\)\// :\1:g
-        elseif cur_line =~ "//"
+        if cur_line =~ '^\s*//'
             silent s:^\(\s*\)\//:\1:g
-        elseif pair == '/'
-            silent s:^\//::g
         else
-            silent s:^:\//\ :g
+            silent s:^:\//:g
         endif
     elseif (filetype == 'vim')
         if pair == '"'
@@ -252,11 +263,11 @@ function! Comment()
     endif
 endfunction
 
-vnoremap <c-_> :call Comment()<cr>
-nnoremap <c-_> :call Comment()<cr>
-inoremap <c-_> <esc>:call Comment()$a<cr>
-nnoremap ? :call Comment()<cr>
-vnoremap ? :call Comment()<cr>
+vnoremap <c-_> :call Comment(1)<cr>
+nnoremap <c-_> :call Comment(0)<cr>
+inoremap <c-_> <esc>:call Comment(0)$a<cr>
+vnoremap ? :call Comment(1)<cr>
+nnoremap ? :call Comment(0)<cr>
 
 "---------------------------------------------------------------------------
 " Comment for header
@@ -265,9 +276,9 @@ nnoremap <expr> <F7> <sid>add_minus()
 function s:add_minus() abort
     let cur_line    = getline('.')
     let max_col     = virtcol('$')
-    let num_char    = 80 - max_col
+    let num_char    = 70 - max_col
 
-    call feedkeys("A ",'m')
+    call feedkeys("A",'m')
     for i in range(1,num_char)
         if cur_line =~ '[a-zA-Z]'
             call feedkeys(" ",'m')
@@ -375,11 +386,11 @@ highlight PmenuSbar ctermfg=240 ctermbg=240
 " Highlight Cursorline
 "---------------------------------------------------------------------------
 set cursorline
-highlight CursorLine cterm=none ctermbg=239
-highlight CursorLineNr ctermfg=blue ctermbg=none guifg=Brown
-highlight LineNr ctermfg=245 ctermbg=none guifg=Grey
-highlight Visual cterm=underline ctermfg=none ctermbg=238
-highlight Cursor ctermfg=white ctermbg=white
+highlight CursorLine        cterm=none ctermbg=238
+highlight CursorLineNr      cterm=none ctermfg=blue ctermbg=none guifg=Brown
+highlight LineNr            ctermfg=245 ctermbg=none guifg=Grey
+highlight Visual            cterm=underline ctermfg=none ctermbg=238
+highlight Cursor            ctermfg=white ctermbg=white
 
 
 "---------------------------------------------------------------------------
@@ -475,7 +486,7 @@ function s:snipet() abort
     elseif (cur_line =~ '\s*case.*)')
         return "\<c-3>end cas e\<esc>hxhhhhx=O"
     elseif ((cur_line =~ '`ifdef') || (cur_line =~ '`ifndef'))
-        return "\<esc>$bveyA\<c-3>`end if\<esc>A //\<esc>=$p0f xO"
+        return "\<esc>$bveyA\<c-3>`endif\<esc>A //\<esc>=$pO\<esc>"
     elseif (pumvisible())
         return "\<space>\<bs>"
     else
@@ -522,6 +533,7 @@ au BufRead,BufNewFile Makefile*     set ft=make
 au BufRead,BufNewFile *.make        set ft=make
 au BufRead,BufNewFile *.lst         set ft=asm
 au BufRead,BufNewFile *.f           set ft=c
+au BufRead,BufNewFile vcode.f       set ft=tcsh
 au BufRead,BufNewFile *.h           set ft=c
 au BufRead,BufNewFile *.c           set ft=c
 au BufRead,BufNewFile *.cc          set ft=systemC
@@ -530,7 +542,7 @@ au BufRead,BufNewFile *autorun      set ft=tcsh
 au BufRead,BufNewFile *.note        set ft=note
 au BufRead,BufNewFile *tarmac*      set ft=asm
 au BufRead,BufNewFile *.help        set ft=help
-
+au BufRead,BufNewFile *.mconf       set ft=make
 
 "---------------------------------------------------------------------------
 " Auto syntax for filetype
@@ -542,6 +554,7 @@ au FileType c                          set dictionary +=~/.vim/plugged/C/syntax/
 au FileType c                          source ~/.vim/plugged/C/syntax/C.vim
 au FileType csh,tcsh                   source ~/.vim/plugged/csh/snipet_csh.vim
 au FileType csh,tcsh                   set dictionary +=~/.vim/plugged/csh/snipet_csh.vim
+au FileType tcl                        source ~/.vim/plugged/tcl/tcl.vim
 au FileType jinja2                     set dictionary +=~/.vim/plugged/jinja2/snipet_jinja2.vim
 au FileType jinja2                     source ~/.vim/plugged/jinja2/snipet_jinja2.vim
 au FileType jinja2                     source ~/.vim/plugged/jinja2/jinja2.vim
@@ -558,9 +571,10 @@ au FileType netrw                      nmap <buffer> md D
 au FileType netrw                      nmap <buffer> u gg7j<cr>
 au FileType python                     set dictionary +=~/.vim/plugged/python/py_dictionary.vim
 au FileType python                     set dictionary +=~/.vim/plugged/python/py_snipet.vim
-au FileType python                     set dictionary +=~/python_dir/tian/*
+au FileType python                     set dictionary +=~/tiandir/python/tian/*
 au FileType python                     source ~/.vim/plugged/python/py_snipet.vim
 au FileType python                     source ~/.vim/plugged/python/syntax/python.vim
+au FileType python                     source ~/.vim/plugged/show_tab/indentLine.vim
 au FileType systemC                    source ~/.vim/plugged/system_C/systemC.vim
 au FileType systemC                    source ~/.vim/plugged/system_C/systemC_indent.vim
 au FileType systemC                    set dictionary +=~/.vim/plugged/system_C/systemC.vim
@@ -568,7 +582,12 @@ au FileType tagbar                     nmap <buffer> <F1> :q!<cr>
 au FileType tagbar                     nmap <buffer> <space> 10j
 au FileType verilog_systemverilog      set dictionary +=~/.vim/plugged/verilog_systemverilog.vim/sv_snipet.vim
 au FileType verilog_systemverilog      set dictionary +=~/.vim/plugged/verilog_systemverilog.vim/uvm_keyword.vim
+au FileType verilog_systemverilog      set dictionary +=~/tiandir/sv/tian_pkg/tian_macros.svh
 au FileType verilog_systemverilog      source ~/.vim/plugged/verilog_systemverilog.vim/sv_snipet.vim
+au FileType xml                        so ~/.vim/plugged/xml/xml.vim
+au FileType xml                        set dictionary+=~/.vim/plugged/xml/xml.vim
+au FileType *                          set iskeyword=48-57,_,64 "0-9,_,@
+au FileType *                          set iskeyword-=-
 
 "-------------------------------------------------
 " Declare default color
@@ -586,7 +605,30 @@ au FileType * highlight PreProc    ctermfg=13
 
 
 " User command
-command! Compile !clear;python3 ~/python_dir/precomp.py %
+command! Compile !clear;python3 ~/tiandir/python/precomp.py %
+command! GoVim   vsplit ~/.vim/plugged | wincmd H | wincmd L | NERDTreeClose
+command! E       e %:h
+
+"-------------------------------------------------
+" For python
+"-------------------------------------------------
+inoremap <s-tab> <esc>:set iskeyword+=.<cr>a<c-n><c-p>
+au FileType python set dictionary+=~/tiandir/python/tian/auto_complete.py
+
+command! GoPy   vsplit ~/tiandir/python/tian/auto_complete.py 
+            \| wincmd H 
+            \| wincmd L 
+            \| NERDTreeClose 
+            \| vertical resize 80c
+            \| wincmd h
+
+autocmd VimEnter *.py vsplit ~/tiandir/python/tian/auto_complete.py
+            \| wincmd H 
+            \| wincmd L 
+            \| NERDTreeClose 
+            \| vertical resize 80c 
+            \| set ft=python
+            \| wincmd h
 
 "-------------------------------------------------
 " For tagbar
@@ -606,22 +648,11 @@ let g:tagbar_type_verilog_systemverilog = {
     \ ]
      \ }
 
-"-------------------------------------------------
-" For syntastic
-"-------------------------------------------------
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-"
 
 "-------------------------------------------------
 " Note
 "-------------------------------------------------
 " :r <file>         insert raw file under cursor
+"
 
-
+" vim: set filetype=vim :

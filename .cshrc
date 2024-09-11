@@ -9,7 +9,7 @@ alias makeenv 'source ~/.mycshrc__'
 alias myenv   'source ~/.mycshrc__'
 alias 1       'source ~/.mycshrc__'
 #alias gows    '1;goto_ws.pl       '
-alias gows    'goto_ws.pl       '
+#alias gows    'goto_ws.pl       '
 
 #clear
 #if ($auto_make_env != 1) then
