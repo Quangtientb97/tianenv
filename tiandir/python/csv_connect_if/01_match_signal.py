@@ -15,7 +15,7 @@ from   tian.global_var import *
 # --------------------------------------------------------------------+
 # Main                                                                |
 # --------------------------------------------------------------------+
-workexcel   = excel("tmp.xlsx")
+workexcel   = excel("initial_interface.xlsx")
 workbook    = workexcel.wb
 sheet_names = workbook.get_sheet_names()
 
@@ -35,8 +35,6 @@ for sheet_name in sheet_names:
                 sheet[f"D{row}"].value = item
             if ('prdata' in sheet[f"B{row}"].value.lower()) and ('prdata' in item.lower()):
                 sheet[f"D{row}"].value = item
-#            if ('resetn' in sheet[f"B{row}"].value.lower()) and ('rst' in item.lower()):
-#                sheet[f"D{row}"].value = item
 
 curtime = tian.time.getday().replace(" ", "").replace(":", "").replace("-", "")
 workexcel.save(f"{curtime}.xlsx")

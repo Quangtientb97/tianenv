@@ -1,7 +1,7 @@
 #python3 csv_connect_if.py -f PCIE_TOP.sv -axi x2_slv-x2_slv-master -axi x2_dbi-x2_dbi-master -axi x2_mstr-x2_mstr-slave -apb driver_apb-x2_driver-master \
 #    -axi x4_slv-x4_slv-master -axi x4_dbi-x4_dbi-master -axi x4_mstr-x4_mstr-slave -apb driver_apb-x4_driver-master
 
-python3 csv_connect_if.py -f PCIE_TOP.sv -axi x2_slv-x2_slv-master -axi x2_dbi-x2_dbi-master -axi x2_mstr-x2_mstr-slave -apb driver_apb-x2_driver-master
+python3 csv_connect_if.py -f corinth_cluster.sv -axi ace-axi-master -no_auto_ports
 
 sed -i 's/cdn_apb_m_if/cdn_apb2_m_if/g' result/*
 

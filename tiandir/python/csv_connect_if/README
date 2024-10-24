@@ -1,16 +1,20 @@
 
 Function:
-    Connect axi, apb, ahb of top design with interface
+    Connect axi, apb, ahb, ace of top design with interface
 
 Syntax:
-    python3 csv_connect_if.py -f <sv_file> -apb/axi/apb <keyword_search>-<interface_name>-<master/slave>
+    python3 csv_connect_if.py -apb/axi/ahb/ace <keyword_search>-<interface_name>-<master/slave>
 
 Note:
     master or slave option is type of VIP interface.
     if DUT is axi slave -> VIP is master
 
 Example:
-    python3 csv_connect_if.py -f <sv_file> -axi dbi-dbi-master
-    python3 csv_connect_if.py -f <sv_file> -axi dbi-dbi-master -apb apb_sfr-sfr-master
+    Step 1: prepare ports.sv that includes all portname
+
+    Step 2: 
+        $ python3 csv_connect_if.py -axi dbi-dbi-master
+        $ python3 csv_connect_if.py -axi dbi-dbi-master -apb apb_sfr-sfr-master
+        $ python3 csv_connect_if.py -ace AXI-cluster-master
 
     

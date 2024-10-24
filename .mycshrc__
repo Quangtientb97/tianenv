@@ -76,7 +76,9 @@ alias pyhelp        'csh ~/tiandir/python/pyhelp.csh'
 alias re            'realpath'
 alias stt           'ps aux | grep tientq'
 alias gows          'source csvrun.env; goto_ws'
+alias goca55        'cd /mnt/users/tientq/PROJECT/socplatform_dsu_ca55/corinth/logical/testbench/execution_tb'
 alias chatGPT       'echo "";echo "(need soc13) execute to open chat: /root/gpt4all/bin/chat";echo ""; cd /PROJECT/SOC2023/DESIGN/GPT4All_llama3.1/gpt4all; ./run_gpt4all_docker; '
+alias gocpucl0      'cd PROJECT/PROJECT_LK/soc2023/design/blk2/BLK_CPUCL0; source ~/PROJECT/PROJECT_LK/soc2023/env_soc2023.csh'
 
 #-------------------------------------------------
 # 	Alias for project
@@ -104,7 +106,7 @@ alias lx61204_env "source /mnt/users/DV/utils/env.csh; \
     echo '#-------------------------------------------';  \
     goto_ws.pl"
 
-alias prun           "/mnt/users/tientq/tiandir/python/pyrun/pyrun.py"
+alias prun           "/mnt/users/tientq/tiandir/python/prun/prun.py"
 alias pcount         "/mnt/users/tientq/tiandir/python/pcount/count_test.py"
 alias pcheck_endif   "/mnt/users/tientq/tiandir/python/pcheck_endif/pcheck_endif.py"
 alias pdel_nfs       "/mnt/users/tientq/tiandir/python/pdel_nfs/pdel_nfs.py"
@@ -150,7 +152,8 @@ if ($CURRENT_DIR == $TIENTQ_HOME) then
     echo "------------------------------------"
 endif
 
-alias gopcie 'cd;cd PROJECT/nwp_dv/blksim/BLK_PCIE/'
+alias gopcie 'cd;cd PROJECT/PROJECT_LK/nwp_dv/blksim/BLK_PCIE/'
+alias gohdx  'cd;cd /PROJECT/SOC2023/DV/tientq/PROJECT/Hdx'
 
 
 

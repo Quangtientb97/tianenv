@@ -31,6 +31,7 @@ pass_tests           = []
 fail_tests           = []
 hang_tests           = []
 notrun_tests         = []
+running_tests        = []
 assertion_fail_tests = []
 
 for test_name in test_names:
@@ -50,17 +51,35 @@ for test_name in test_names:
         continue
 
     # PASS
-    if (tian.run_with_output(f"grep -c 'TEST PASS' {test_dir}/xrun.log") == '1'):
+    if (tian.run_with_output(f"grep -c 'TEST PASS' {test_dir}/xrun.log") != '0'):
         pass_tests.append(f"PASS  : {sim_dir}/{test_name}")
         continue
 
     # FAIL
-    if (tian.run_with_output(f"grep -c 'TEST FAIL' {test_dir}/xrun.log") == '1'):
+    if (tian.run_with_output(f"grep -c 'TEST FAIL' {test_dir}/xrun.log") != '0'):
         fail_tests.append(f"FAIL  : {sim_dir}/{test_name}")
         continue
 
+    # RUNNING
+    start_info = tian.run_with_output(f"grep 'Started on' {test_dir}/xrun.log")
+    day_run   = re.findall("\d+,", start_info)[0].replace(",", "")
+    day_run   = int(day_run)
+    day_now   = tian.time.getday().split("-")[2] 
+    day_now   = int(day_now)
+    hour_run  = re.findall(" \d+:", start_info)[0].replace(":", "").replace(" ", "")
+    hour_run  = int(hour_run)
+    hour_now  = tian.time.gethour().split(":")[0]
+    hour_now  = int(hour_now)
+    if   (day_now  - day_run != 0): 
+        pass 
+    elif (hour_now - hour_run > 4): 
+        pass
+    else: 
+        running_tests.append(f"RUNNING: {sim_dir}/{test_name}  ~{hour_now-hour_run}hour")
+        continue
+
     # HANG
-    hang_tests.append(f"HANG  : {sim_dir}/{test_name}")
+    hang_tests.append(f"HANG  : {sim_dir}/{test_name}  ~{day_now-day_run}day {hour_now-hour_run}hour")
 
 def print_test_info(test_array, message):
     print("")
@@ -71,6 +90,7 @@ def print_test_info(test_array, message):
 
 print_test_info(pass_tests           , "PASS")
 print_test_info(fail_tests           , "FAIL")
-print_test_info(hang_tests           , "HANG")
 print_test_info(notrun_tests         , "NOTRUN")
 print_test_info(assertion_fail_tests , "ASSERTION FAIL")
+print_test_info(running_tests        , "RUNNING")
+print_test_info(hang_tests           , "HANG")

@@ -119,8 +119,8 @@ inoremap <expr> ] ((getline('.')[ col('.') - 1 ]) == ']') ? "]\<del>" : "]"
 inoremap <expr> <up>   (pumvisible()) ? "<c-p>" : "<up>"
 inoremap <expr> <down> (pumvisible()) ? "<c-n>" : "<down>"
 
-"nnoremap <c-g> 1<c-g>
-nnoremap <c-g> :echo getcwd() . '/' . expand('%')<cr>
+nnoremap <c-g> 1<c-g>
+"nnoremap <c-g> :echo getcwd() . '/' . expand('%')<cr>
 
 "---------------------------------------------------------------------------
 " Set wrap
@@ -226,22 +226,10 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
 "---------------------------------------------------------------------------
 " comment by ctrl + /
 "---------------------------------------------------------------------------
-function! Comment(is_vsmode)
+function! Comment_vsmode()
     let filetype   = &filetype
     let pair       = getline('.')[col(0)]
     let cur_line   = getline('.')
-
-    if (a:is_vsmode==0)
-        if (filetype=='verilog_systemverilog' || filetype=='c' || filetype=='fortran' || filetype=='systemC')
-            if cur_line =~ '^\s*//'
-                silent s:^\(\s*\)\//:\1:g
-            else
-                silent s:^\(\s*\):\1\//:g
-            endif
-        endif
-        return
-    endif
-
     if (filetype=='verilog_systemverilog' || filetype=='c' || filetype=='fortran' || filetype=='systemC')
         if cur_line =~ '^\s*//'
             silent s:^\(\s*\)\//:\1:g
@@ -263,11 +251,36 @@ function! Comment(is_vsmode)
     endif
 endfunction
 
-vnoremap <c-_> :call Comment(1)<cr>
-nnoremap <c-_> :call Comment(0)<cr>
-inoremap <c-_> <esc>:call Comment(0)$a<cr>
-vnoremap ? :call Comment(1)<cr>
-nnoremap ? :call Comment(0)<cr>
+function! Comment()
+    let filetype   = &filetype
+    let pair       = getline('.')[col(0)]
+    let cur_line   = getline('.')
+    if (filetype=='verilog_systemverilog' || filetype=='c' || filetype=='fortran' || filetype=='systemC')
+        if cur_line =~ '^\s*//'
+            silent s:^\(\s*\)\//:\1:g
+        else
+            silent s:^\(\s*\):\1\//:g
+        endif
+    elseif (filetype == 'vim')
+        if pair == '"'
+            silent s:^\"::g
+        else
+            silent s:^:\":g
+        endif
+    else
+        if pair == '#'
+            silent s:^#::g
+        else
+            silent s:^:#:g
+        endif
+    endif
+endfunction
+
+vnoremap <c-_> :call Comment_vsmode()<cr>
+nnoremap <c-_> :call Comment()<cr>
+inoremap <c-_> <esc>:call Comment()$a<cr>
+vnoremap ? :call Comment()<cr>
+nnoremap ? :call Comment()<cr>
 
 "---------------------------------------------------------------------------
 " Comment for header
@@ -538,11 +551,12 @@ au BufRead,BufNewFile *.h           set ft=c
 au BufRead,BufNewFile *.c           set ft=c
 au BufRead,BufNewFile *.cc          set ft=systemC
 au BufRead,BufNewFile *.cpp         set ft=systemC
-au BufRead,BufNewFile *autorun      set ft=tcsh
+au BufRead,BufNewFile *autorun*     set ft=tcsh
 au BufRead,BufNewFile *.note        set ft=note
 au BufRead,BufNewFile *tarmac*      set ft=asm
 au BufRead,BufNewFile *.help        set ft=help
 au BufRead,BufNewFile *.mconf       set ft=make
+au BufRead,BufNewFile *.md          set ft=markdown
 
 "---------------------------------------------------------------------------
 " Auto syntax for filetype
@@ -586,6 +600,7 @@ au FileType verilog_systemverilog      set dictionary +=~/tiandir/sv/tian_pkg/ti
 au FileType verilog_systemverilog      source ~/.vim/plugged/verilog_systemverilog.vim/sv_snipet.vim
 au FileType xml                        so ~/.vim/plugged/xml/xml.vim
 au FileType xml                        set dictionary+=~/.vim/plugged/xml/xml.vim
+au FileType markdown                   so ~/.vim/plugged/markdown/markdown.vim
 au FileType *                          set iskeyword=48-57,_,64 "0-9,_,@
 au FileType *                          set iskeyword-=-
 

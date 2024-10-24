@@ -1,2 +1,0 @@
-# tianenv
-Tian environment

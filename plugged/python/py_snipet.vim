@@ -10,8 +10,12 @@ inorea py_env_Ent <esc>:set formatoptions-=cro<cr>i
             \import re, os<cr>
             \import sys ; sys.path.append("/mnt/users/tientq/tiandir/python/")<cr>
             \import tian; sys.path.append(tian.user_library_path)<cr>
-            \from   tian            import run, print_banner, excel<cr>
-            \from   tian.global_var import *<cr>
+            \from   tian           import print_banner, excel<cr>
+            \<cr>
+            \# --------------------------------------------------------------------+<cr>
+            \# Handles arguments                                                   \|<cr>
+            \# --------------------------------------------------------------------+<cr>
+            \<cr>
             \<cr>
             \# --------------------------------------------------------------------+<cr>
             \# Main                                                                \|<cr>

@@ -193,8 +193,8 @@ class uvm_report_format_c extends uvm_report_server;
 
     function string cutstr(string msg, int fix_len=50);
         string rt = msg.substr(msg.len()-fix_len-1, msg.len()-1);
-        if (msg.len() > 50) return {"...", rt};
-        else                return msg;
+        if (msg.len() > fix_len) return {"...", rt};
+        else                     return msg;
     endfunction
 
 endclass: uvm_report_format_c

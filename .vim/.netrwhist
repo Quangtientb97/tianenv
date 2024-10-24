@@ -1,3 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/mnt/users/DV/lx61102/SIM/ML4_DEV03/lx61102_tientq_ws_8/testdbscp-lx61102-cpu_test_c-bios+bios_jump_flasha-flash+flasha_erase_flashb-time+35000000000-fsdb_all'

@@ -8,4 +8,6 @@ xrun -top $top \
     -reflib /mnt/users/tientq/tiandir/xrunflow/incremental/SIM/compile \
 	+define+SYNTHESIS \
     -mkprimsnap \
-    -href href.txt -snapshot dut \
+    -href "@: ... *" \
+#    -href href.txt \
+    -snapshot dut \

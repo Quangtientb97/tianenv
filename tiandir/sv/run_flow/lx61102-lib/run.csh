@@ -18,7 +18,6 @@ xrun -64bit -access +rwc -sv -disable_sem2009 -licq \
     -define RTL \
     -define UVM_HDL_MAX_WIDTH=1248 \
     -f $PROJECT_RTL_DIR/top/lx61102/rtl_codes/vcode.f \
-    -roelab \
     -endlib \
 
 #   Postrun

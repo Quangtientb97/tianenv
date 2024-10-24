@@ -19,22 +19,13 @@ if (tian.argv.len() == 1):
     tian.run("cat README")
     exit()
 
-if not tian.argv.has_argument("-f"):
-    print("missing -f <sv file>")
-    exit()
-
-sv_file = tian.argv.get_argument_by_prefix("-f")
-
-# get ports
-tian.run(f"python3 get_ports.py -f {sv_file}")
-
-
 apb_list = []
 ahb_list = []
 axi_list = []
+ace_list = []
 
 
-# format -apb dbi-dbi-m
+# format -apb dbi-dbi-master
 # keyword : dbi
 # if name : dbi
 # kind    : master
@@ -49,6 +40,10 @@ while tian.argv.has_argument("-ahb"):
 while tian.argv.has_argument("-axi"):
     axi_info = tian.argv.get_argument_by_prefix("-axi").split("-")
     axi_list.append(axi_info)
+
+while tian.argv.has_argument("-ace"):
+    ace_info = tian.argv.get_argument_by_prefix("-ace").split("-")
+    ace_list.append(ace_info)
 
 option_00 = ""
 
@@ -85,12 +80,20 @@ for axi_info in axi_list:
         option_00 += f"axi_{axi_name}_s "
         tian.run(f"grep {axi_filter} ports.sv > inout/axi_{axi_name}_s")
 
+for ace_info in ace_list:
+    ace_filter = ace_info[0]
+    ace_name   = ace_info[1]
+    ace_kind   = ace_info[2]
+    if (ace_kind == "master"):
+        option_00 += f"ace_{ace_name}_m "
+        tian.run(f"grep {ace_filter} ports.sv > inout/ace_{ace_name}_m")
+    elif (ace_kind == "slave"):
+        option_00 += f"ace_{ace_name}_s "
+        tian.run(f"grep {ace_filter} ports.sv > inout/ace_{ace_name}_s")
+
 tian.run(f"python3 00_create_init_file.py {option_00}")
 tian.run(f"python3 01_match_signal.py")
 
 curtime = tian.time.getday().replace(" ", "").replace(":", "").replace("-", "")
 tian.run(f"python3 02_connect_signal.py {curtime}.xlsx")
-
-# Create ports list for each interface
-
-
+print("check result on: ./result/assign.sv")

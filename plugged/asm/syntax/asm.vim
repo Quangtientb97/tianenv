@@ -14,6 +14,7 @@ syn keyword asm_keyword rsbmi rsbne rsbs rsbsgt rsc rscs sbc sbcs sdiv smull stm
 syn keyword asm_keyword strcc strd streq strge strgt strh strheq strhi strhlt strhne strls strlt strmi strne strpl sub subcs containedin=ALLBUT, asm_comment 
 syn keyword asm_keyword subeq subgt suble subne subs subseq svc teq teqeq teqne tst ubfx udiv udiveq umlal umull uxtah uxtb containedin=ALLBUT, asm_comment 
 syn keyword asm_keyword uxtbne uxth vmov vmsr wfi bs 
+syn keyword asm_keyword mrs msr adr dc csel containedin=ALLBUT,asm_comment
 
 syn keyword asm_keyword ADC ADCS ADD ADDCC ADDEQ ADDGE ADDGT ADDLE ADDLS ADDLT ADDNE ADDPL ADDS AND ANDCC ANDEQ ANDGT CONTAINEDIN=ALLBUT, ASM_COMMENT 
 syn keyword asm_keyword ANDHI ANDLE ANDLS ANDNE ANDS ANDSNE ASR ASRCS ASRS B BCC BCS BEQ BFI BGE BGT BHI BIC BICEQ BICGE CONTAINEDIN=ALLBUT, ASM_COMMENT 
@@ -30,17 +31,25 @@ syn keyword asm_keyword STRCC STRD STREQ STRGE STRGT STRH STRHEQ STRHI STRHLT ST
 syn keyword asm_keyword SUBEQ SUBGT SUBLE SUBNE SUBS SUBSEQ SVC TEQ TEQEQ TEQNE TST UBFX UDIV UDIVEQ UMLAL UMULL UXTAH UXTB CONTAINEDIN=ALLBUT, ASM_COMMENT 
 syn keyword asm_keyword UXTBNE UXTH VMOV VMSR WFI BS 
 
+syn match asm_block      "^\w\w*:"         containedin=ALLBUT,asm_comment
 syn match asm_num        "\s[0-9a-z]*\s"   containedin=ALLBUT,asm_comment,asm_addr,asm_keyword
 syn match asm_num        "^[0-9a-z]*\s"    containedin=ALLBUT,asm_comment,asm_addr,asm_keyword
-syn match asm_num        "\s0x[0-9a-z]*$"  containedin=ALLBUT,asm_comment,asm_addr,asm_keyword
+syn match asm_num        "\s0x[0-9abcdefABCDEF]*$"  containedin=ALLBUT,asm_comment,asm_addr,asm_keyword
 syn match asm_comment    ";.*"             containedin=ALL
+syn match asm_comment    "//.*"            containedin=ALL
 syn match asm_type_data  "\.\w*"           containedin=ALL,asm_comment
-syn match asm_addr       "\w*:"            containedin=ALL,asm_comment
+"syn match asm_addr       "\w*:"            containedin=ALL,asm_comment
 syn match asm_in_braket  "{.*}"            containedin=ALLBUT,asm_comment
 syn match asm_in_braket  "\[.*\]"          containedin=ALLBUT,asm_comment,asm_function
 syn match asm_function   "<.*>"            containedin=ALLBUT,asm_comment
-syn match asm_constant   "#\d*"            containedin=ALLBUT,asm_comment
+syn match asm_constant   "#\w*"            containedin=ALLBUT,asm_comment,asm_string
+syn match asm_constant   "#0x[0-9a-fA-F]*" containedin=ALLBUT,asm_comment
 syn match asm_constant   "#-\d*"           containedin=ALLBUT,asm_comment
+syn match asm_string     "\".*\""          containedin=ALLBUT,asm_comment
+syn match asm_string     "%\w*"            containedin=ALLBUT,asm_comment
+syn match asm_string     "=\w*"            containedin=ALLBUT,asm_comment
+syn match asm_constant   "\s[A-Z_][A-Z0-9_][A-Z0-9_][A-Z0-9_]*"            containedin=ALLBUT,asm_comment
+syn match asm_num        "\sx[0-9]"        containedin=ALLBUT,asm_comment
 
 highlight   asm_num         ctermfg=blue
 highlight   asm_comment     ctermfg=107
@@ -50,4 +59,6 @@ highlight   asm_in_braket   ctermfg=42
 highlight   asm_function    ctermfg=139
 highlight   Normal          ctermfg=252
 highlight   asm_keyword     ctermfg=130"215
-highlight   asm_constant     ctermfg=139
+highlight   asm_constant    ctermfg=139
+highlight   asm_block       ctermfg=darkcyan
+highlight   asm_string      ctermfg=215

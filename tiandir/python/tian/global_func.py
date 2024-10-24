@@ -163,9 +163,35 @@ def parse_xml(xml_link):
     root     = tree.getroot()
     return root
 
+#--------------------------------------------------------------------+
+# print_xml                                                          |
+#--------------------------------------------------------------------+
+def print_element(element, level):
+    level = level + 1
+    for e in element:
+        if (e.text is None):
+            continue
+
+        if (e.text.isspace()):
+            print(level*4*" " + f"|-- {e.tag}")
+        else:
+            tag = "%-20s" % (e.tag) 
+            print(level*4*" " + f"|-- {tag}: {e.text}")
+
+        try:
+            print_element(e, level)
+        except:
+            pass
+    level = level - 1
+def print_xml(xml_link):
+    root = parse_xml(xml_link)
+    print_element(root, 0)
+
+
+#  jj2_write
 def jj2_write(fin_path, fout_path, **kwargs):
     from jinja2 import Template
-    if (is_file == False):
+    if (is_file(fin_path) == False):
         exit()
     with open(fin_path) as f:
         template_data = f.read()
@@ -173,7 +199,7 @@ def jj2_write(fin_path, fout_path, **kwargs):
 
 def jj2_append(fin_path, fout_path, **kwargs):
     from jinja2 import Template
-    if (is_file == False):
+    if (is_file(fin_path) == False):
         exit()
     with open(fin_path) as f:
         template_data = f.read()
@@ -202,17 +228,25 @@ def len_fmt(mess, width:int):
     else:
         return mess
 
+# Example
+# register:
+#   Name: A
+#   Addr: 0x0
+# register:
+#   Name: B
+#   Addr: 0x1
+#
+# Result [["Name:A", "Addr: 0x0], ["Name:B", "Addr: 0x1]]
 def divide_by_key(input_lst:list, key:str):
     line_include_key = []
-    line_idx = 0
-    return_list = []
+    return_list      = []
+    line_idx         = 0
 
     for line in input_lst:
         if (key in line):
             line_include_key.append(line_idx)
         if (line == input_lst[-1]):
             line_include_key.append(line_idx)
-
         line_idx += 1
     
     for i in range(0, len(line_include_key)-1):
